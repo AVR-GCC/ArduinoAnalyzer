@@ -22,5 +22,3 @@ git pull
 for single file:
 git checkout <file path>
 
-user name: AVR-GCC
-password: 1alon2bar3yakov
