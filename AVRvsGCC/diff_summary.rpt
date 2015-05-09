@@ -1,0 +1,302 @@
+Only in gcc/: .gitignore
+Only in avr/: build
+Files avr/gcc/alias.c and gcc/gcc/alias.c differ
+Only in avr/gcc/c: ChangeLog.AVR
+Files avr/gcc/c/c-typeck.c and gcc/gcc/c/c-typeck.c differ
+Files avr/gcc/c-family/c-common.c and gcc/gcc/c-family/c-common.c differ
+Only in avr/gcc/c-family: ChangeLog.AVR
+Files avr/gcc/cfgexpand.c and gcc/gcc/cfgexpand.c differ
+Only in avr/gcc: ChangeLog.Atmel
+Only in avr/gcc: ChangeLog.AVR
+Files avr/gcc/common.opt and gcc/gcc/common.opt differ
+	Files avr/gcc/config/avr/avr.c and gcc/gcc/config/avr/avr.c differ
+	Files avr/gcc/config/avr/avr.h and gcc/gcc/config/avr/avr.h differ
+	Files avr/gcc/config/avr/avr.md and gcc/gcc/config/avr/avr.md differ
+	Files avr/gcc/config/avr/avr.opt and gcc/gcc/config/avr/avr.opt differ
+	Files avr/gcc/config/avr/avr-arch.h and gcc/gcc/config/avr/avr-arch.h differ
+	Files avr/gcc/config/avr/avr-c.c and gcc/gcc/config/avr/avr-c.c differ
+	Files avr/gcc/config/avr/avr-devices.c and gcc/gcc/config/avr/avr-devices.c differ
+	Files avr/gcc/config/avr/avr-fixed.md and gcc/gcc/config/avr/avr-fixed.md differ
+	Files avr/gcc/config/avr/avr-mcus.def and gcc/gcc/config/avr/avr-mcus.def differ
+	Files avr/gcc/config/avr/avr-protos.h and gcc/gcc/config/avr/avr-protos.h differ
+	Files avr/gcc/config/avr/avr-stdint.h and gcc/gcc/config/avr/avr-stdint.h differ
+	Files avr/gcc/config/avr/avr-tables.opt and gcc/gcc/config/avr/avr-tables.opt differ
+	Files avr/gcc/config/avr/driver-avr.c and gcc/gcc/config/avr/driver-avr.c differ
+	Files avr/gcc/config/avr/gen-avr-mmcu-texi.c and gcc/gcc/config/avr/gen-avr-mmcu-texi.c differ
+	Files avr/gcc/config/avr/genmultilib.awk and gcc/gcc/config/avr/genmultilib.awk differ
+	Files avr/gcc/config/avr/t-multilib and gcc/gcc/config/avr/t-multilib differ
+Files avr/gcc/cse.c and gcc/gcc/cse.c differ
+Files avr/gcc/cselib.c and gcc/gcc/cselib.c differ
+Only in gcc/gcc/doc: aot-compile.1
+Files avr/gcc/doc/avr-mmcu.texi and gcc/gcc/doc/avr-mmcu.texi differ
+Only in gcc/gcc/doc: cpp.1
+Only in gcc/gcc/doc: cpp.info
+Only in gcc/gcc/doc: cppinternals.info
+Only in gcc/gcc/doc: fsf-funding.7
+Only in gcc/gcc/doc: g++.1
+Only in gcc/gcc/doc: gc-analyze.1
+Only in gcc/gcc/doc: gcc.1
+Only in gcc/gcc/doc: gcc.info
+Only in gcc/gcc/doc: gccinstall.info
+Only in gcc/gcc/doc: gccint.info
+Only in gcc/gcc/doc: gcj.1
+Only in gcc/gcc/doc: gcj.info
+Only in gcc/gcc/doc: gcj-dbtool.1
+Only in gcc/gcc/doc: gcov.1
+Only in gcc/gcc/doc: gfdl.7
+Only in gcc/gcc/doc: gfortran.1
+Only in gcc/gcc/doc: gij.1
+Only in gcc/gcc/doc: gpl.7
+Only in gcc/gcc/doc: grmic.1
+Files avr/gcc/doc/invoke.texi and gcc/gcc/doc/invoke.texi differ
+Only in gcc/gcc/doc: jcf-dump.1
+Only in gcc/gcc/doc: jv-convert.1
+Only in gcc/gcc/doc: rebuild-gcj-db.1
+Only in gcc/gcc/fortran: gfortran.info
+Files avr/gcc/gcc.c and gcc/gcc/gcc.c differ
+Only in gcc/gcc: gengtype-lex.c
+Files avr/gcc/opts.c and gcc/gcc/opts.c differ
+Only in gcc/gcc/po: be.gmo
+Only in gcc/gcc/po: da.gmo
+Only in gcc/gcc/po: de.gmo
+Only in gcc/gcc/po: el.gmo
+Only in gcc/gcc/po: es.gmo
+Only in gcc/gcc/po: fi.gmo
+Only in gcc/gcc/po: fr.gmo
+Only in gcc/gcc/po: hr.gmo
+Only in gcc/gcc/po: id.gmo
+Only in gcc/gcc/po: ja.gmo
+Only in gcc/gcc/po: nl.gmo
+Only in gcc/gcc/po: ru.gmo
+Only in gcc/gcc/po: sr.gmo
+Only in gcc/gcc/po: sv.gmo
+Only in gcc/gcc/po: tr.gmo
+Only in gcc/gcc/po: vi.gmo
+Only in gcc/gcc/po: zh_CN.gmo
+Only in gcc/gcc/po: zh_TW.gmo
+Files avr/gcc/postreload.c and gcc/gcc/postreload.c differ
+Files avr/gcc/reload.c and gcc/gcc/reload.c differ
+Files avr/gcc/rtl.h and gcc/gcc/rtl.h differ
+Only in gcc/gcc/testsuite/ada: .gitignore
+Files avr/gcc/testsuite/c-c++-common/scal-to-vec1.c and gcc/gcc/testsuite/c-c++-common/scal-to-vec1.c differ
+Files avr/gcc/testsuite/c-c++-common/simulate-thread/bitfields-2.c and gcc/gcc/testsuite/c-c++-common/simulate-thread/bitfields-2.c differ
+Only in avr/gcc/testsuite: ChangeLog.Atmel
+Only in avr/gcc/testsuite: ChangeLog.AVR
+Files avr/gcc/testsuite/gcc.c-torture/compile/limits-externdecl.c and gcc/gcc/testsuite/gcc.c-torture/compile/limits-externdecl.c differ
+Only in avr/gcc/testsuite/gcc.c-torture/execute: pr53366-1.x
+Only in avr/gcc/testsuite/gcc.c-torture/execute: pr56799.x
+Only in avr/gcc/testsuite/gcc.c-torture/execute: pr57344-2.x
+	Files avr/gcc/testsuite/gcc.dg/c1x-align-3.c and gcc/gcc/testsuite/gcc.dg/c1x-align-3.c differ
+	Files avr/gcc/testsuite/gcc.dg/c99-stdint-1.c and gcc/gcc/testsuite/gcc.dg/c99-stdint-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/aranges-fnsec-1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/aranges-fnsec-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/asm-line1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/asm-line1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/c99-typedef1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/c99-typedef1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/const-2.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/const-2.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/const-2b.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/const-2b.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf2.exp and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf2.exp differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf2-macro.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf2-macro.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char2.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char2.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char3.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char3.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-dfp.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-dfp.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die2.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die2.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die3.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die3.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die5.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die5.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die6.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die6.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die7.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die7.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-file1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-file1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-float.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-float.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-merge.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-merge.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-uninit.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-uninit.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-any.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-any.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-baseonly.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-baseonly.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-none.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-none.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-reduced.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-reduced.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-sys.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-sys.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/global-used-types.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/global-used-types.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/inline1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/inline1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/inline2.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/inline2.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/inline3.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/inline3.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/ipa-cp1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/ipa-cp1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr29609-1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr29609-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr29609-2.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr29609-2.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr31230.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr31230.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-2.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-2.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-3.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-3.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr37616.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr37616.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr37726.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr37726.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-2.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-2.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-3.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-3.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-4.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-4.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-5.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-5.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-6.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-6.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41543.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41543.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41695.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41695.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr43237.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr43237.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-2.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-2.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-3.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-3.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-4.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-4.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr51410.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr51410.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr53948.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr53948.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/short-circuit.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/short-circuit.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/static1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/static1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/struct-loc1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/struct-loc1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/var1.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/var1.c differ
+	Files avr/gcc/testsuite/gcc.dg/debug/dwarf2/var2.c and gcc/gcc/testsuite/gcc.dg/debug/dwarf2/var2.c differ
+	Files avr/gcc/testsuite/gcc.dg/ipa/ipa-pta-14.c and gcc/gcc/testsuite/gcc.dg/ipa/ipa-pta-14.c differ
+	Only in avr/gcc/testsuite/gcc.dg: large-size-array-6.c
+	Files avr/gcc/testsuite/gcc.dg/pr44214-1.c and gcc/gcc/testsuite/gcc.dg/pr44214-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/pr44214-3.c and gcc/gcc/testsuite/gcc.dg/pr44214-3.c differ
+	Files avr/gcc/testsuite/gcc.dg/pr46647.c and gcc/gcc/testsuite/gcc.dg/pr46647.c differ
+	Files avr/gcc/testsuite/gcc.dg/pr53265.c and gcc/gcc/testsuite/gcc.dg/pr53265.c differ
+	Files avr/gcc/testsuite/gcc.dg/strlenopt-10.c and gcc/gcc/testsuite/gcc.dg/strlenopt-10.c differ
+	Files avr/gcc/testsuite/gcc.dg/strlenopt-11.c and gcc/gcc/testsuite/gcc.dg/strlenopt-11.c differ
+	Files avr/gcc/testsuite/gcc.dg/strlenopt-13.c and gcc/gcc/testsuite/gcc.dg/strlenopt-13.c differ
+	Files avr/gcc/testsuite/gcc.dg/torture/alias-1.c and gcc/gcc/testsuite/gcc.dg/torture/alias-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/torture/pr53366-1.c and gcc/gcc/testsuite/gcc.dg/torture/pr53366-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/torture/pr56488.c and gcc/gcc/testsuite/gcc.dg/torture/pr56488.c differ
+	Only in avr/gcc/testsuite/gcc.dg/torture: pr57425-1.c
+	Only in avr/gcc/testsuite/gcc.dg/torture: pr57425-2.c
+	Only in avr/gcc/testsuite/gcc.dg/torture: pr57425-3.c
+	Only in avr/gcc/testsuite/gcc.dg/torture: pr57569.c
+	Files avr/gcc/testsuite/gcc.dg/torture/stackalign/builtin-apply-2.c and gcc/gcc/testsuite/gcc.dg/torture/stackalign/builtin-apply-2.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/pr21090.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/pr21090.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/pr31261.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/pr31261.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/pr42585.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/pr42585.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/pr54245.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/pr54245.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/pr57385.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/pr57385.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-1.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-2.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-2.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-3.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-3.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-1.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-1.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-2.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-2.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-27.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-27.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-28.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-28.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-29.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-29.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-3.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-3.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/sra-13.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/sra-13.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/ssa-ccp-23.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/ssa-ccp-23.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/ssa-dom-thread-4.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/ssa-dom-thread-4.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/ssa-pre-21.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/ssa-pre-21.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/ssa-pre-30.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/ssa-pre-30.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/unreachable.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/unreachable.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/vector-4.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/vector-4.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/vrp55.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/vrp55.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/vrp58.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/vrp58.c differ
+	Files avr/gcc/testsuite/gcc.dg/tree-ssa/vrp66.c and gcc/gcc/testsuite/gcc.dg/tree-ssa/vrp66.c differ
+	Only in avr/gcc/testsuite/gcc.dg/tree-ssa: vrp66-int16-sw.c
+Only in avr/gcc/testsuite/gcc.target/avr: dev-specific-rmw.c
+Only in avr/gcc/testsuite/gcc.target/avr: misspelled-handler-warning.c
+Only in avr/gcc/testsuite/gcc.target/avr: pr52472.c
+Only in avr/gcc/testsuite/gcc.target/avr: pr60991.c
+Files avr/gcc/testsuite/gcc.target/avr/progmem-error-1.cpp and gcc/gcc/testsuite/gcc.target/avr/progmem-error-1.cpp differ
+Files avr/gcc/testsuite/gcc.target/avr/torture/builtins-4-roundfx.c and gcc/gcc/testsuite/gcc.target/avr/torture/builtins-4-roundfx.c differ
+Only in avr/gcc/testsuite/gcc.target/avr/torture: pr57631.c
+Only in avr/gcc/testsuite/gcc.target/avr: xmega_const_hi_io_address.c
+Only in avr/gcc/testsuite/gcc.target/avr: xmega_const_qi_io_address.c
+Only in avr/gcc/testsuite/gcc.target/avr: xmega_interrupt_no_cli.c
+Only in avr/gcc/testsuite/gcc.target/avr: xmega_sfr_offsets.c
+Files avr/gcc/testsuite/lib/target-supports.exp and gcc/gcc/testsuite/lib/target-supports.exp differ
+Only in gcc/INSTALL: binaries.html
+Only in gcc/INSTALL: build.html
+Only in gcc/INSTALL: configure.html
+Only in gcc/INSTALL: download.html
+Only in gcc/INSTALL: finalinstall.html
+Only in gcc/INSTALL: gfdl.html
+Only in gcc/INSTALL: index.html
+Only in gcc/INSTALL: old.html
+Only in gcc/INSTALL: prerequisites.html
+Only in gcc/INSTALL: specific.html
+Only in gcc/INSTALL: test.html
+Only in gcc/: LAST_UPDATED
+Only in gcc/libatomic: .gitignore
+Only in gcc/libcpp/po: be.gmo
+Only in gcc/libcpp/po: ca.gmo
+Only in gcc/libcpp/po: da.gmo
+Only in gcc/libcpp/po: de.gmo
+Only in gcc/libcpp/po: el.gmo
+Only in gcc/libcpp/po: eo.gmo
+Only in gcc/libcpp/po: es.gmo
+Only in gcc/libcpp/po: fi.gmo
+Only in gcc/libcpp/po: fr.gmo
+Only in gcc/libcpp/po: id.gmo
+Only in gcc/libcpp/po: ja.gmo
+Only in gcc/libcpp/po: nl.gmo
+Only in gcc/libcpp/po: ru.gmo
+Only in gcc/libcpp/po: sr.gmo
+Only in gcc/libcpp/po: sv.gmo
+Only in gcc/libcpp/po: tr.gmo
+Only in gcc/libcpp/po: uk.gmo
+Only in gcc/libcpp/po: vi.gmo
+Only in gcc/libcpp/po: zh_CN.gmo
+Only in gcc/libcpp/po: zh_TW.gmo
+Only in gcc/libdecnumber: .gitignore
+Only in gcc/libffi/doc: libffi.info
+Only in avr/libgcc: ChangeLog.Atmel
+Only in avr/libgcc: ChangeLog.AVR
+	Files avr/libgcc/config/avr/lib1funcs.S and gcc/libgcc/config/avr/lib1funcs.S differ
+	Files avr/libgcc/config/avr/lib1funcs-fixed.S and gcc/libgcc/config/avr/lib1funcs-fixed.S differ
+	Files avr/libgcc/config/avr/t-avr and gcc/libgcc/config/avr/t-avr differ
+Only in gcc/libgomp: libgomp.info
+Only in gcc/libiberty: .gitignore
+Only in gcc/libitm: libitm.info
+Only in gcc/libjava/classpath: .cvsignore
+Only in gcc/libjava/classpath/doc: .cvsignore
+Only in gcc/libjava/classpath/doc/api: .cvsignore
+Only in gcc/libjava/classpath/doc: cp-tools.info
+Only in gcc/libjava/classpath/doc: gappletviewer.1
+Only in gcc/libjava/classpath/doc: gjar.1
+Only in gcc/libjava/classpath/doc: gjarsigner.1
+Only in gcc/libjava/classpath/doc: gjavah.1
+Only in gcc/libjava/classpath/doc: gjdoc.1
+Only in gcc/libjava/classpath/doc: gkeytool.1
+Only in gcc/libjava/classpath/doc: gnative2ascii.1
+Only in gcc/libjava/classpath/doc: gorbd.1
+Only in gcc/libjava/classpath/doc: grmid.1
+Only in gcc/libjava/classpath/doc: grmiregistry.1
+Only in gcc/libjava/classpath/doc: gserialver.1
+Only in gcc/libjava/classpath/doc: gtnameserv.1
+Only in gcc/libjava/classpath/examples: .cvsignore
+Only in gcc/libjava/classpath/external: .cvsignore
+Only in gcc/libjava/classpath/external/jsr166: .cvsignore
+Only in gcc/libjava/classpath/external/relaxngDatatype: .cvsignore
+Only in gcc/libjava/classpath/external/sax: .cvsignore
+Only in gcc/libjava/classpath/external/w3c_dom: .cvsignore
+Only in gcc/libjava/classpath/gnu/classpath: .cvsignore
+Only in gcc/libjava/classpath/gnu/java/locale: .cvsignore
+Only in gcc/libjava/classpath/gnu/java/security: .cvsignore
+Only in gcc/libjava/classpath/gnu/test: .cvsignore
+Only in gcc/libjava/classpath/include: .cvsignore
+Only in gcc/libjava/classpath/java/util: .cvsignore
+Only in gcc/libjava/classpath/lib: .cvsignore
+Only in gcc/libjava/classpath/native: .cvsignore
+Only in gcc/libjava/classpath/native/fdlibm: .cvsignore
+Only in gcc/libjava/classpath/native/jawt: .cvsignore
+Only in gcc/libjava/classpath/native/jni: .cvsignore
+Only in gcc/libjava/classpath/native/jni/classpath: .cvsignore
+Only in gcc/libjava/classpath/native/jni/gconf-peer: .cvsignore
+Only in gcc/libjava/classpath/native/jni/gtk-peer: .cvsignore
+Only in gcc/libjava/classpath/native/jni/java-io: .cvsignore
+Only in gcc/libjava/classpath/native/jni/java-lang: .cvsignore
+Only in gcc/libjava/classpath/native/jni/java-net: .cvsignore
+Only in gcc/libjava/classpath/native/jni/java-nio: .cvsignore
+Only in gcc/libjava/classpath/native/jni/java-util: .cvsignore
+Only in gcc/libjava/classpath/native/jni/midi-alsa: .cvsignore
+Only in gcc/libjava/classpath/native/jni/midi-dssi: .cvsignore
+Only in gcc/libjava/classpath/native/jni/native-lib: .cvsignore
+Only in gcc/libjava/classpath/native/jni/qt-peer: .cvsignore
+Only in gcc/libjava/classpath/native/jni/xmlj: .cvsignore
+Only in gcc/libjava/classpath/native/plugin: .cvsignore
+Only in gcc/libjava/classpath/resource: .cvsignore
+Only in gcc/libjava/classpath/resource/META-INF/services: .cvsignore
+Only in gcc/libjava/classpath/scripts: .cvsignore
+Only in gcc/libjava/classpath/tools: .cvsignore
+Only in gcc/libjava/classpath/vm: .cvsignore
+Only in gcc/libjava/classpath/vm/reference: .cvsignore
+Only in gcc/libquadmath: libquadmath.info
+Only in gcc/: MD5SUMS
+Only in gcc/: NEWS

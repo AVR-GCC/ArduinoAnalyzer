@@ -1,0 +1,410 @@
+diff -r avr/libgcc/config/avr/lib1funcs.S gcc/libgcc/config/avr/lib1funcs.S
+24,27d23
+< #if defined (__AVR_TINY__)
+< #define __zero_reg__ r17
+< #define __tmp_reg__ r16
+< #else
+30d25
+< #endif
+122,130d116
+< .macro wsubi r_arg1, i_arg2
+< #if defined (__AVR_TINY__)
+<     subi \r_arg1,   lo8(\i_arg2)
+<     sbci \r_arg1+1, hi8(\i_arg2)
+< #else
+<     sbiw \r_arg1, \i_arg2
+< #endif
+< .endm
+< 
+151d136
+< #if defined(__AVR_TINY__)
+153,155d137
+< #else
+< #define skip cpse 16,16
+< #endif
+228,232c210,214
+< #define A0  22
+< #define A1  23
+< #define B0  24
+< #define BB0 20
+< #define B1  25
+---
+> #define A0  r22
+> #define A1  r23
+> #define B0  r24
+> #define BB0 r20
+> #define B1  r25
+234,235c216,217
+< #define C0  24
+< #define C1  25
+---
+> #define C0  r24
+> #define C1  r25
+237c219
+< #define CC1  21
+---
+> #define CC1  R21
+303c285
+<     wsubi   B0, 0
+---
+>     sbiw    B0, 0
+411,422d392
+< #if defined (__AVR_TINY__)
+<     in     r26, __SP_L__ ; safe to use X, as it is CC0/CC1
+<     in     r27, __SP_H__
+<     subi   r26, lo8(-3)   ; Add 3 to point past return address
+<     sbci   r27, hi8(-3)
+<     push   B0    ; save callee saved regs
+<     push   B1
+<     ld     B0, X+   ; load from caller stack
+<     ld     B1, X+
+<     ld     B2, X+
+<     ld     B3, X
+< #endif
+448c418
+<     wsubi   A2, 0
+---
+>     sbiw    A2, 0
+454,458d423
+< #if defined (__AVR_TINY__)
+<     pop     B1      ; restore callee saved regs
+<     pop     B0 
+< #endif  /* defined (__AVR_TINY__) */
+< 
+707a673
+> 
+709,711d674
+< #if defined (__AVR_TINY__)
+< #define C0  16
+< #else
+713d675
+< #endif /* defined (__AVR_TINY__) */
+721,731d682
+< #if defined (__AVR_TINY__)
+<     in r26,__SP_L__ 
+<     in r27,__SP_H__
+<     subi r26, lo8(-3)   ; Add 3 to point past return address
+<     sbci r27, hi8(-3)
+<     push B0    ; save callee saved regs
+<     push B1
+<     ld B0,X+   ; load from caller stack 
+<     ld B1,X+
+<     ld B2,X+
+< #endif /* defined (__AVR_TINY__) */
+758,761d708
+< #if defined (__AVR_TINY__)
+<     pop B1
+<     pop B0
+< #endif /* (__AVR_TINY__) */
+853d799
+< #ifndef __AVR_TINY__
+854a801
+> 
+1056d1002
+< #endif /* if not __AVR_TINY__ */
+1214c1160
+< #ifndef __AVR_TINY__ /* if not __AVR_TINY__ */
+---
+> 
+1310c1256
+< #endif /* if not __AVR_TINY__ */
+---
+> 
+1482c1428
+< ;; R24:R22 = R24:R24  udiv  R20:R18
+---
+> ;; R24:R22 = R24:R22  udiv  R20:R18
+1717,1720d1662
+< /* *di routines use registers below R19 and won't work with tiny arch
+<    right now. */
+< 
+< #if !defined (__AVR_TINY__)
+2136,2137d2077
+< #endif /* !defined (__AVR_TINY__) */
+< 
+2144d2083
+< #if !defined (__AVR_TINY__)
+2250d2188
+< #endif /* !defined (__AVR_TINY__) */
+2295,2301c2233,2234
+< #elif defined (__AVR_TINY__)
+< 	wsubi 30, -(__AVR_TINY_PM_BASE_ADDRESS__) ; Add PM offset to Z
+< 	ld __tmp_reg__, Z+
+< 	ld r31, Z   ; Use ld instead of lpm to load Z
+< 	mov r30, __tmp_reg__    
+< 	ijmp
+< #else /* !HAVE_LPMX && !AVR_TINY */
+---
+> 
+> #else /* !HAVE_LPMX */
+2316,2335d2248
+< #if defined(__AVR_TINY__)
+< #ifdef L_copy_data
+<         .section .init4,"ax",@progbits
+<         .global __do_copy_data
+< __do_copy_data:
+<         ldi     r18, hi8(__data_end)
+<         ldi     r26, lo8(__data_start)
+<         ldi     r27, hi8(__data_start)
+<         ldi     r30, lo8(__data_load_start + __AVR_TINY_PM_BASE_ADDRESS__)
+<         ldi     r31, hi8(__data_load_start + __AVR_TINY_PM_BASE_ADDRESS__)
+<         rjmp    .L__do_copy_data_start
+< .L__do_copy_data_loop:
+<         ld      r19, z+
+<         st      X+, r19
+< .L__do_copy_data_start:
+<         cpi     r26, lo8(__data_end)
+<         cpc     r27, r18
+<         brne    .L__do_copy_data_loop
+< #endif
+< #else
+2401d2313
+< #endif /* !defined (__AVR_TINY__) */
+2408c2320
+< 	ldi	r18, hi8(__bss_end)
+---
+> 	ldi	r17, hi8(__bss_end)
+2416c2328
+< 	cpc	r27, r18
+---
+> 	cpc	r27, r17
+2427,2441c2339
+< #if defined(__AVR_TINY__)
+<         ldi     r18, hi8(__ctors_start)
+<         ldi     r28, lo8(__ctors_end)
+<         ldi     r29, hi8(__ctors_end)
+<         rjmp    .L__do_global_ctors_start
+< .L__do_global_ctors_loop:
+<         wsubi   28, 2
+<         mov_h   r31, r29
+<         mov_l   r30, r28
+<         XCALL   __tablejump__
+< .L__do_global_ctors_start:
+<         cpi     r28, lo8(__ctors_start)
+<         cpc     r29, r18
+<         brne    .L__do_global_ctors_loop
+< #elif defined(__AVR_HAVE_ELPM__)
+---
+> #if defined(__AVR_HAVE_ELPM__)
+2481,2495c2379
+< #if defined(__AVR_TINY__)
+<         ldi     r18, hi8(__dtors_end)
+<         ldi     r28, lo8(__dtors_start)
+<         ldi     r29, hi8(__dtors_start)
+<         rjmp    .L__do_global_dtors_start
+< .L__do_global_dtors_loop:
+<         mov_h   r31, r29
+<         mov_l   r30, r28
+<         XCALL   __tablejump__
+<         wsubi   28, -2
+< .L__do_global_dtors_start:
+<         cpi     r28, lo8(__dtors_end)
+<         cpc     r29, r18
+<         brne    .L__do_global_dtors_loop
+< #elif defined(__AVR_HAVE_ELPM__)
+---
+> #if defined(__AVR_HAVE_ELPM__)
+2523,2527c2407
+< #if defined (__AVR_TINY__)
+< 	wsubi	28, -2
+< #else
+< 	adiw    r28, 2
+< #endif
+---
+> 	adiw	r28, 2
+2538d2417
+< #if !defined (__AVR_TINY__)
+2569d2447
+< #endif /* !defined (__AVR_TINY__) */
+2571d2448
+< #if !defined (__AVR_TINY__)
+2617d2493
+< #endif /* !defined (__AVR_TINY__) */
+2619d2494
+< #if !defined (__AVR_TINY__)
+2745d2619
+< #endif /* if !defined (__AVR_TINY__) */
+2747d2620
+< #if !defined (__AVR_TINY__)
+2819d2691
+< #endif /* !defined (__AVR_TINY__) */ 
+diff -r avr/libgcc/config/avr/lib1funcs-fixed.S gcc/libgcc/config/avr/lib1funcs-fixed.S
+34,50d33
+< #if defined __AVR_TINY__
+< #define __zero_reg__ r17
+< #define __tmp_reg__ r16
+< #else                                                                                                                                              
+< #define __zero_reg__ r1
+< #define __tmp_reg__ r0
+< #endif
+< 
+< .macro waddi r_arg1, i_arg2
+< #if defined (__AVR_TINY__)
+<     subi \r_arg1,   lo8(-\i_arg2)
+<     sbci \r_arg1+1, hi8(-\i_arg2)
+< #else
+<     adiw \r_arg1, \i_arg2
+< #endif
+< .endm
+< 
+53,54d35
+< #ifndef __AVR_TINY__
+< 
+1486,1487c1467
+<     ldi     C0, 0x7f
+<     rjmp 9f
+---
+>     ldi     A0, 0x7f
+1492c1472
+< 9:  mov     C1, __tmp_reg__
+---
+>     mov     C1, __tmp_reg__
+1511,1512c1491
+<     ldi     C0, 0xff
+<     rjmp 9f
+---
+>     ldi     A0, 0xff
+1517c1496
+< 9:  mov     C1, __tmp_reg__
+---
+>     mov     C1, __tmp_reg__
+1589c1568
+<     ldi     C1, 0x7f
+---
+>     ldi     A1, 0x7f
+1596c1575
+<     ldi     C1, 0xff
+---
+>     ldi     A1, 0xff
+1598,1599c1577
+<     ldi     C0, 0xff
+<     rjmp 9f
+---
+>     ldi     A0, 0xff
+1611c1589
+< 9:  ret
+---
+>     ret
+1706c1684
+<     ldi     C3, 0x7f
+---
+>     ldi     A3, 0x7f
+1713c1691
+<     ldi     C3, 0xff
+---
+>     ldi     A3, 0xff
+1715,1718c1693,1695
+<     ldi     C2, 0xff
+<     ldi     C1, 0xff
+<     ldi     C0, 0xff
+<     rjmp 9f
+---
+>     ldi     A2, 0xff
+>     ldi     A1, 0xff
+>     ldi     A0, 0xff
+1733c1710
+< 9:  ret
+---
+>     ret
+1873,1879c1850,1855
+< 2:  ldi     C7, 0xff
+<     ldi     C6, 0xff
+<     wmov    C0, C6
+<     wmov    C2, C6
+<     wmov    C4, C6
+<     bld     C7, 7
+<     rjmp 9f
+---
+> 2:  ldi     A7, 0xff
+>     ldi     A6, 0xff
+>     wmov    A0, A6
+>     wmov    A2, A6
+>     wmov    A4, A6
+>     bld     A7, 7
+1896c1872
+< 9:  ;; Epilogue
+---
+>     ;; Epilogue
+1935,1936d1910
+< 
+< #endif /* if not __AVR_TINY__ */
+diff -r avr/libgcc/config/avr/t-avr gcc/libgcc/config/avr/t-avr
+6c6,11
+< 	_mulpsi3 \
+---
+> 	_mulpsi3 _mulsqipsi3 \
+> 	_mulhisi3 \
+> 	_umulhisi3 \
+> 	_usmulhisi3 \
+> 	_muluhisi3 \
+> 	_mulshisi3 \
+15c20,26
+< 	_negsi2 \
+---
+> 	_divdi3 _udivdi3 \
+> 	_muldi3 _muldi3_6 \
+> 	_mulsidi3 _umulsidi3 \
+> 	_udivmod64 \
+> 	_negsi2 _negdi2 \
+> 	_prologue \
+> 	_epilogue \
+18a30,33
+> 	_tablejump_elpm \
+> 	_load_3 _load_4 \
+> 	_xload_1 _xload_2 _xload_3 _xload_4 \
+> 	_movmemx \
+27a43
+> 	_clzdi2 \
+29a46
+> 	_paritydi2 \
+33a51
+> 	_popcountdi2 \
+36,69d53
+< 	_fmul _fmuls _fmulsu
+< 
+< # The below functions either use registers that are not present
+< # in tiny core, or use a different register conventions (don't save
+< # callee saved regs, for example)
+< # _mulhisi3 and variations - clobber R18, R19
+< # All *di funcs - use regs < R16 or expect args in regs < R20
+< # _prologue and _epilogue save registers < R16
+< # _tablejump/_tablejump_elmp - expect lpm and elpm support
+< # _load ad _xload variations - expect lpm and elpm support
+< # _movmemx - expects elpm/lpm
+< 
+< ifneq ($(MULTIFLAGS),-mmcu=avrtiny)
+< LIB1ASMFUNCS += \
+<     _mulsqipsi3 \
+< 	_mulhisi3 \
+< 	_umulhisi3 \
+< 	_usmulhisi3 \
+< 	_muluhisi3 \
+< 	_mulshisi3 \
+<     _muldi3 _muldi3_6 \
+<     _mulsidi3 _umulsidi3 \
+< 	_divdi3 _udivdi3 \
+< 	_udivmod64 \
+< 	_negdi2 \
+< 	_prologue \
+< 	_epilogue \
+< 	_tablejump_elpm \
+< 	_load_3 _load_4 \
+< 	_xload_1 _xload_2 _xload_3 _xload_4 \
+< 	_movmemx \
+< 	_clzdi2 \
+< 	_paritydi2 \
+< 	_popcountdi2 \
+73,74c57,58
+< 	_cmpdi2 _cmpdi2_s8
+< endif
+---
+> 	_cmpdi2 _cmpdi2_s8 \
+> 	_fmul _fmuls _fmulsu
+77d60
+< ifneq ($(MULTIFLAGS),-mmcu=avrtiny)
+108,109c91,92
+< 	_roundta3 _rounduta3
+< endif
+---
+> 	_roundta3 _rounduta3 \
+> 

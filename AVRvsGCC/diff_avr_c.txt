@@ -1,0 +1,14 @@
+Interesting findings:
+diff -ry avr/gcc/config/avr/avr.c gcc/gcc/config/avr/avr.c:
+	Most of the changes regard features missing in Tiny.
+	There are quiet a few logic changes (more if ORs) regarding nmi
+	/* Return nonzero if FUNC is an nmi function as specified by the "nmi" attribute.  */  
+	assembly removing '*' - decl
+	
+	for (reg = 0; reg <= LAST_CALLEE_SAVED_REG; ++reg)          |   for (reg = 0; reg < 18; ++reg) <- #define LAST_CALLEE_SAVED_REG (AVR_TINY ? 19 : 17) 
+	
+	static void avr_out_plus_1  <- uses diff args!!
+    const char* avr_out_plus <- uses diff args!!
+	
+	 const char* avr_out_fract <-- CLOBBER rounding fract, lots of steps & new code :)
+	avr_out_round?
