@@ -1,0 +1,61 @@
+download simulavr:
+http://www.nongnu.org/simulavr/download.html#release-1-0-0
+
+usage examples:
+
+simulavr -d atmega328 - simulate ATmega328
+
+simulavr -f exe.elf - running exe.elf
+
+simulavr -m <runtime> - for <runtime> nanoseconds
+
+simulavr -t trace.txt - write the trice to trace.txt
+
+simulavr -W <offset>,<file> - creates a virtual register and pipes it to file
+
+simulavr -a <offset> - creates a virtual register, writing to this register terminates the program
+
+simulavr -e <offset> - creates a virtual register, writing to this register terminates the simulation
+
+
+for more info on simulavr:
+http://www.nongnu.org/simulavr/usage.html
+
+
+
+GDB:
+
+
+simulavr -g - to start gdb socket on port 1212
+
+simulavr -p<portnum> - to change the port
+
+avr-gdb - to start gdb
+
+
+debug commands:
+
+
+break [file:]function - set breakpoint at file.function
+
+run [arglist] - start program
+
+print expr - prints expression
+
+c - continue (after stoping)
+
+next - execute next program line (step over function)
+
+step - execute next program line (step into function)
+
+quit - exit gdb
+
+
+for more info on avr-gdb:
+http://linux.die.net/man/1/avr-gdb
+
+
+
+
+
+
