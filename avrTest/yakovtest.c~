@@ -1,0 +1,10 @@
+#include "csmith.h"
+int main (void)
+{
+	int i, j, k;
+	i=1;j=2;k=3;
+	int print_hash_value = 0;
+	platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);
+	debug_puts("all done global");
+	return 0;
+}

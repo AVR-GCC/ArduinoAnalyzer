@@ -1,0 +1,2 @@
+SystemClock::Endless stopped
+number of cpu cycles simulated: 227573

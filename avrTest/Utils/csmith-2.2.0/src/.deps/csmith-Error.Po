@@ -1,0 +1,8 @@
+csmith-Error.o: Error.cpp /usr/include/stdc-predef.h Error.h \
+ CommonMacros.h
+
+/usr/include/stdc-predef.h:
+
+Error.h:
+
+CommonMacros.h:

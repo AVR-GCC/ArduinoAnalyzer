@@ -1,0 +1,9 @@
+alias h "history"
+alias l "less"
+alias ll "ls -ltr"
+alias sa "source /specific/a/home/cc/students/cs/alonelmaliah/Desktop/avrTest/.aliases"
+
+alias avr-gcc "/specific/a/home/cc/students/cs/alonelmaliah/Desktop/avrTest/Utils/avr8-gnu-toolchain-linux_x86/bin/avr-gcc";
+alias simulavr "/specific/a/home/cc/students/cs/alonelmaliah/Desktop/avrTest/Utils/Simulator/usr/bin/simulavr";
+alias csmith "/specific/a/home/cc/students/cs/alonelmaliah/Desktop/avrTest/Utils/csmith-2.2.0/src/csmith";
+alias csmith_head "/specific/a/home/cc/students/cs/alonelmaliah/Desktop/avrTest/Utils/csmith-2.2.0/runtime_avr" 

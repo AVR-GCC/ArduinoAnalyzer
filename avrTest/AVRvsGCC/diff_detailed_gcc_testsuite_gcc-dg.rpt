@@ -1,0 +1,560 @@
+diff -r avr/gcc/testsuite/gcc.dg/c1x-align-3.c gcc/gcc/testsuite/gcc.dg/c1x-align-3.c
+26d25
+< _Alignas (-2) char j; /* { dg-error "positive power of 2" } */
+diff -r avr/gcc/testsuite/gcc.dg/c99-stdint-1.c gcc/gcc/testsuite/gcc.dg/c99-stdint-1.c
+217c217
+< /* { dg-bogus  "size" "ptrdiff is 16bits" { xfail avr-*-* } 56 } */
+---
+> /* { dg-bogus  "size" "ptrdiff is 16bits" { xfail avr-*-* } 218 } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/aranges-fnsec-1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/aranges-fnsec-1.c
+6c6
+< /* { dg-options "-gdwarf -ffunction-sections -w -dA" } */
+---
+> /* { dg-options "-gdwarf-2 -ffunction-sections -w -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/asm-line1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/asm-line1.c
+3c3
+< /* { dg-options "-O0 -gdwarf" } */
+---
+> /* { dg-options "-O0 -gdwarf-2" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/c99-typedef1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/c99-typedef1.c
+1c1
+< // { dg-options "-std=iso9899:1999 -gdwarf" }
+---
+> // { dg-options "-std=iso9899:1999 -gdwarf-2" }
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/const-2.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/const-2.c
+2c2
+< /* { dg-options "-O -gdwarf -dA -maltivec" } */
+---
+> /* { dg-options "-O -gdwarf-2 -dA -maltivec" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/const-2b.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/const-2b.c
+2c2
+< /* { dg-options "-O -gdwarf -dA -msse" } */
+---
+> /* { dg-options "-O -gdwarf-2 -dA -msse" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf2.exp gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf2.exp
+25c25
+<     set DEFAULT_CFLAGS " -ansi -pedantic-errors -gdwarf"
+---
+>     set DEFAULT_CFLAGS " -ansi -pedantic-errors -gdwarf-2"
+34c34
+<     "additional_flags=-gdwarf"]
+---
+>     "additional_flags=-gdwarf-2"]
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf2-macro.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf2-macro.c
+3c3
+< /* { dg-options "-g3 -gdwarf -dA -fverbose-asm" } */
+---
+> /* { dg-options "-g3 -gdwarf-2 -dA -fverbose-asm" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char1.c
+3c3
+< /* { dg-options "-O2 -gdwarf -dA" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char2.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char2.c
+3c3
+< /* { dg-options "-O2 -gdwarf -dA" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char3.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-char3.c
+3c3
+< /* { dg-options "-O2 -gdwarf -dA" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-dfp.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-dfp.c
+5c5
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die1.c
+3c3
+< /* { dg-options "-O2 -gdwarf -dA" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die2.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die2.c
+3c3
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die3.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die3.c
+3c3
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die5.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die5.c
+3c3
+< /* { dg-options "-O2 -gdwarf -dA -fpreprocessed" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA -fpreprocessed" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die6.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die6.c
+3c3
+< /* { dg-options "-O2 -fno-inline -gdwarf -dA -fpreprocessed" } */
+---
+> /* { dg-options "-O2 -fno-inline -gdwarf-2 -dA -fpreprocessed" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die7.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-die7.c
+3c3
+< /* { dg-options "-O2 -gdwarf -dA -fpreprocessed" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA -fpreprocessed" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-file1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-file1.c
+2c2
+< /* { dg-options "-O2 -gdwarf -dA" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-float.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-float.c
+4c4
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-merge.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-merge.c
+4c4
+< /* { dg-options "-O2 -gdwarf -dA" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-uninit.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/dwarf-uninit.c
+2c2
+< /* { dg-options "-O2 -gdwarf -dA" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-any.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-any.c
+2c2
+< // { dg-options "-gdwarf -dA -femit-struct-debug-detailed=any" }
+---
+> // { dg-options "-gdwarf-2 -dA -femit-struct-debug-detailed=any" }
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-baseonly.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-baseonly.c
+2c2
+< // { dg-options "-gdwarf -dA -femit-struct-debug-baseonly" }
+---
+> // { dg-options "-gdwarf-2 -dA -femit-struct-debug-baseonly" }
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-none.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-none.c
+2c2
+< // { dg-options "-gdwarf -dA -femit-struct-debug-detailed=none" }
+---
+> // { dg-options "-gdwarf-2 -dA -femit-struct-debug-detailed=none" }
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-reduced.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-reduced.c
+2c2
+< // { dg-options "-gdwarf -dA -femit-struct-debug-reduced" }
+---
+> // { dg-options "-gdwarf-2 -dA -femit-struct-debug-reduced" }
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-sys.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/fesd-sys.c
+2c2
+< // { dg-options "-gdwarf -dA -femit-struct-debug-detailed=sys" }
+---
+> // { dg-options "-gdwarf-2 -dA -femit-struct-debug-detailed=sys" }
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/global-used-types.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/global-used-types.c
+3c3
+<  { dg-options "-gdwarf -dA -fno-merge-debug-strings" }
+---
+>  { dg-options "-g -dA -fno-merge-debug-strings" }
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/inline1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/inline1.c
+2c2
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/inline2.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/inline2.c
+17c17
+< /* { dg-options "-O -g3 -gdwarf -dA" } */
+---
+> /* { dg-options "-O -g3 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/inline3.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/inline3.c
+4c4
+< /* { dg-options "-O2 -gdwarf -dA -fmerge-all-constants" } */
+---
+> /* { dg-options "-O2 -g -dA -fmerge-all-constants" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/ipa-cp1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/ipa-cp1.c
+2c2
+< /* { dg-options "-O2 -gdwarf -dA" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr29609-1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr29609-1.c
+4c4
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr29609-2.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr29609-2.c
+4c4
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr31230.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr31230.c
+2c2
+< /* { dg-options "-gdwarf -dA --param ggc-min-expand=0 --param ggc-min-heapsize=0" } */
+---
+> /* { dg-options "-gdwarf-2 -dA --param ggc-min-expand=0 --param ggc-min-heapsize=0" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-1.c
+4c4
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-2.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-2.c
+6c6
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-3.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr36690-3.c
+3c3
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr37616.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr37616.c
+5c5
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr37726.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr37726.c
+3c3
+< /* { dg-options "-gdwarf -O0 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-g -O0 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-1.c
+5c5
+< /* { dg-options "-save-temps -gdwarf -O0 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-save-temps -g -O0 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-2.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-2.c
+3c3
+< /* { dg-options "-gdwarf -O0 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-g -O0 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-3.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-3.c
+5c5
+< /* { dg-options "-save-temps -gdwarf -O0 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-save-temps -g -O0 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-4.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-4.c
+3c3
+< /* { dg-options "-gdwarf -O0 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-g -O0 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-5.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-5.c
+5c5
+< /* { dg-options "-save-temps -gdwarf -O0 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-save-temps -g -O0 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-6.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41445-6.c
+3c3
+< /* { dg-options "-gdwarf -O0 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-g -O0 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41543.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41543.c
+3c3
+< /* { dg-options "-save-temps -gdwarf -O0 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-save-temps -g -O0 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr41695.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr41695.c
+3c3
+< /* { dg-options "-gdwarf -O2 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-g -O2 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr43237.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr43237.c
+3c3
+< /* { dg-options "-gdwarf -O2 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-g -O2 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-1.c
+2c2
+< /* { dg-options "-save-temps -gdwarf -dA" } */
+---
+> /* { dg-options "-save-temps -g -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-2.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-2.c
+2c2
+< /* { dg-options "-save-temps -gdwarf -dA" } */
+---
+> /* { dg-options "-save-temps -g -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-3.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-3.c
+2c2
+< /* { dg-options "-save-temps -gdwarf -dA" } */
+---
+> /* { dg-options "-save-temps -g -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-4.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr47939-4.c
+2c2
+< /* { dg-options "-save-temps -gdwarf -dA" } */
+---
+> /* { dg-options "-save-temps -g -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr51410.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr51410.c
+3c3
+< /* { dg-options "-O0 -gdwarf -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/pr53948.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/pr53948.c
+3c3
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -g -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/short-circuit.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/short-circuit.c
+2c2
+< /* { dg-options "-O0 -gdwarf -dA" } */
+---
+> /* { dg-options "-O0 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/static1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/static1.c
+2c2
+< /* { dg-options "-O2 -gdwarf" } */
+---
+> /* { dg-options "-O2 -gdwarf-2" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/struct-loc1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/struct-loc1.c
+2c2
+< /* { dg-options "-gdwarf -O0 -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-g -O0 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/var1.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/var1.c
+3c3
+< /* { dg-options "-gdwarf -dA -fno-merge-debug-strings" } */
+---
+> /* { dg-options "-gdwarf-2 -dA -fno-merge-debug-strings" } */
+diff -r avr/gcc/testsuite/gcc.dg/debug/dwarf2/var2.c gcc/gcc/testsuite/gcc.dg/debug/dwarf2/var2.c
+3c3
+< /* { dg-options "-O2 -gdwarf -dA" } */
+---
+> /* { dg-options "-O2 -gdwarf-2 -dA" } */
+diff -r avr/gcc/testsuite/gcc.dg/ipa/ipa-pta-14.c gcc/gcc/testsuite/gcc.dg/ipa/ipa-pta-14.c
+25c25
+<   /* { dg-final { scan-ipa-dump "foo.result = { NULL a\[^ \]* a\[^ \]* c\[^ \]* }" "pta" { target { ! keeps_null_pointer_checks } } } } */
+---
+>   /* { dg-final { scan-ipa-dump "foo.result = { NULL a\[^ \]* a\[^ \]* c\[^ \]* }" "pta" } } */
+Only in avr/gcc/testsuite/gcc.dg/: large-size-array-6.c
+diff -r avr/gcc/testsuite/gcc.dg/pr44214-1.c gcc/gcc/testsuite/gcc.dg/pr44214-1.c
+4c4
+< typedef double v2df __attribute__ ((vector_size (2 * sizeof (double))));
+---
+> typedef double v2df __attribute__ ((vector_size (16)));
+diff -r avr/gcc/testsuite/gcc.dg/pr44214-3.c gcc/gcc/testsuite/gcc.dg/pr44214-3.c
+4c4
+< typedef double v2df __attribute__ ((vector_size (2 * sizeof (double))));
+---
+> typedef double v2df __attribute__ ((vector_size (16)));
+diff -r avr/gcc/testsuite/gcc.dg/pr46647.c gcc/gcc/testsuite/gcc.dg/pr46647.c
+28,29c28,29
+< /* The xfail for avr, cris-* and crisv32-* is due to PR53535.  */
+< /* { dg-final { scan-tree-dump-not "memset" "optimized" { xfail avr-*-* cris-*-* crisv32-*-* } } } */
+---
+> /* The xfail for cris-* and crisv32-* is due to PR53535.  */
+> /* { dg-final { scan-tree-dump-not "memset" "optimized" { xfail cris-*-* crisv32-*-* } } } */
+diff -r avr/gcc/testsuite/gcc.dg/pr53265.c gcc/gcc/testsuite/gcc.dg/pr53265.c
+4d3
+< /* { dg-require-effective-target size32plus } */
+diff -r avr/gcc/testsuite/gcc.dg/strlenopt-10.c gcc/gcc/testsuite/gcc.dg/strlenopt-10.c
+73,76c73
+< /* avr has BIGGEST_ALIGNMENT 8, allowing fold_builtin_memory_op
+<    to expand the memcpy call at the end of fn2.  */
+< /* { dg-final { scan-tree-dump-times "memcpy \\(" 8 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "memcpy \\(" 7 "strlen" { target { avr-*-* } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "memcpy \\(" 8 "strlen" } } */
+diff -r avr/gcc/testsuite/gcc.dg/strlenopt-11.c gcc/gcc/testsuite/gcc.dg/strlenopt-11.c
+62,65c62
+< /* avr has BIGGEST_ALIGNMENT 8, allowing fold_builtin_memory_op
+<    to expand the memcpy call at the end of fn1.  */
+< /* { dg-final { scan-tree-dump-times "memcpy \\(" 7 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "memcpy \\(" 6 "strlen" { target { avr-*-* } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "memcpy \\(" 7 "strlen" } } */
+70,75c67,69
+< /* Where the memcpy is expanded, the assignemts to elements of l are
+<    propagated.  */
+< /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.0. = " 1 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.6. = " 1 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.9. = " 1 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;" 3 "strlen" { target { avr-*-* } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.0. = " 1 "strlen" } } */
+> /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.6. = " 1 "strlen" } } */
+> /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.9. = " 1 "strlen" } } */
+diff -r avr/gcc/testsuite/gcc.dg/strlenopt-13.c gcc/gcc/testsuite/gcc.dg/strlenopt-13.c
+59,62c59
+< /* avr has BIGGEST_ALIGNMENT 8, allowing fold_builtin_memory_op
+<    to expand the memcpy call at the end of fn1.  */
+< /* { dg-final { scan-tree-dump-times "memcpy \\(" 7 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "memcpy \\(" 6 "strlen" { target { avr-*-* } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "memcpy \\(" 7 "strlen" } } */
+67,73c64,67
+< /* Where the memcpy is expanded, the assignemts to elements of l are
+<    propagated.  */
+< /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.0. = " 1 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.1. = " 1 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.5. = " 1 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.6. = " 1 "strlen" { target { ! avr-*-* } } } } */
+< /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;" 4 "strlen" { target { avr-*-* } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.0. = " 1 "strlen" } } */
+> /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.1. = " 1 "strlen" } } */
+> /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.5. = " 1 "strlen" } } */
+> /* { dg-final { scan-tree-dump-times "  _\[0-9\]* = strlen \\(\[^\n\r\]*;\[\n\r\]*  l.6. = " 1 "strlen" } } */
+diff -r avr/gcc/testsuite/gcc.dg/torture/alias-1.c gcc/gcc/testsuite/gcc.dg/torture/alias-1.c
+3d2
+< /* { dg-require-effective-target scheduling } */
+diff -r avr/gcc/testsuite/gcc.dg/torture/pr53366-1.c gcc/gcc/testsuite/gcc.dg/torture/pr53366-1.c
+2,3c2
+< /* { dg-do run { target { size32plus } } } */
+< /* { dg-require-effective-target size32plus } */
+---
+> /* { dg-do run } */
+diff -r avr/gcc/testsuite/gcc.dg/torture/pr56488.c gcc/gcc/testsuite/gcc.dg/torture/pr56488.c
+1,2c1
+< /* { dg-do run { target { size32plus } } } */
+< /* { dg-require-effective-target int32plus } */
+---
+> /* { dg-do run } */
+Only in avr/gcc/testsuite/gcc.dg/torture: pr57425-1.c
+Only in avr/gcc/testsuite/gcc.dg/torture: pr57425-2.c
+Only in avr/gcc/testsuite/gcc.dg/torture: pr57425-3.c
+Only in avr/gcc/testsuite/gcc.dg/torture: pr57569.c
+diff -r avr/gcc/testsuite/gcc.dg/torture/stackalign/builtin-apply-2.c gcc/gcc/testsuite/gcc.dg/torture/stackalign/builtin-apply-2.c
+9,12c9
+< /* arm_hf_eabi: Variadic funcs use Base AAPCS.  Normal funcs use VFP variant.
+<    avr: Variadic funcs don't pass arguments in registers, while normal funcs
+<         do.  */
+< /* { dg-skip-if "Variadic funcs use different argument passing from normal funcs" { arm_hf_eabi || { avr-*-* } } "*" "" } */
+---
+> /* { dg-skip-if "Variadic funcs use Base AAPCS.  Normal funcs use VFP variant." { arm_hf_eabi } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/pr21090.c gcc/gcc/testsuite/gcc.dg/tree-ssa/pr21090.c
+22c22
+< /* { dg-final { scan-tree-dump-times "Folding predicate.*to 1" 1 "vrp1" { target { ! keeps_null_pointer_checks } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "Folding predicate.*to 1" 1 "vrp1" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/pr31261.c gcc/gcc/testsuite/gcc.dg/tree-ssa/pr31261.c
+38,39c38
+< /* { dg-final { scan-tree-dump-times "return \\(int\\) \\(12 - \\(unsigned int\\) d\\) \& 7;" 1 "original" { target { ! int16 } } } } */
+< /* { dg-final { scan-tree-dump-times "return \\(int\\) \\(12 - \\(unsigned short\\) d\\) \& 7;" 1 "original" { target { int16 } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "return \\(int\\) \\(12 - \\(unsigned int\\) d\\) \& 7;" 1 "original" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/pr42585.c gcc/gcc/testsuite/gcc.dg/tree-ssa/pr42585.c
+38,39c38,39
+< /* { dg-final { scan-tree-dump-times "struct _fat_ptr _ans" 0 "optimized" { target { ! "arm-*-* avr-*-* powerpc*-*-* s390*-*-* sh*-*-*" } } } } */
+< /* { dg-final { scan-tree-dump-times "struct _fat_ptr _T2" 0 "optimized" { target { ! "arm-*-* avr-*-* powerpc*-*-* s390*-*-* sh*-*-*" } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "struct _fat_ptr _ans" 0 "optimized" { target { ! "arm-*-* powerpc*-*-* s390*-*-* sh*-*-*" } } } } */
+> /* { dg-final { scan-tree-dump-times "struct _fat_ptr _T2" 0 "optimized" { target { ! "arm-*-* powerpc*-*-* s390*-*-* sh*-*-*" } } } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/pr54245.c gcc/gcc/testsuite/gcc.dg/tree-ssa/pr54245.c
+48c48
+< /* { dg-final { scan-tree-dump-times "Inserting initializer" 0 "slsr" { target { ! int16 } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "Inserting initializer" 0 "slsr" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/pr57385.c gcc/gcc/testsuite/gcc.dg/tree-ssa/pr57385.c
+3d2
+< /* { dg-require-effective-target int32plus } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-1.c gcc/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-1.c
+36c36
+< /* { dg-final { scan-tree-dump "ESCAPED = { NULL ESCAPED NONLOCAL x }" "alias" { target { ! keeps_null_pointer_checks } } } } */
+---
+> /* { dg-final { scan-tree-dump "ESCAPED = { NULL ESCAPED NONLOCAL x }" "alias" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-2.c gcc/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-2.c
+37c37
+< /* { dg-final { scan-tree-dump "ESCAPED = { NULL ESCAPED NONLOCAL x }" "alias" { target { ! keeps_null_pointer_checks } } } } */
+---
+> /* { dg-final { scan-tree-dump "ESCAPED = { NULL ESCAPED NONLOCAL x }" "alias" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-3.c gcc/gcc/testsuite/gcc.dg/tree-ssa/pta-escape-3.c
+41c41
+< /* { dg-final { scan-tree-dump "ESCAPED = { NULL ESCAPED NONLOCAL x }" "alias" { target { ! keeps_null_pointer_checks } } } } */
+---
+> /* { dg-final { scan-tree-dump "ESCAPED = { NULL ESCAPED NONLOCAL x }" "alias" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-1.c gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-1.c
+17c17
+< /* { dg-final { scan-tree-dump-times "\\+ 128|\\, 128>" 1 "optimized" { target { int32plus } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "\\+ 128|\\, 128>" 1 "optimized" } } */
+19,21c19
+< /* { dg-final { scan-tree-dump-times "\\+ 32|\\, 32>" 1 "optimized" { target { int16 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\+ 192|\\, 192>" 1 "optimized" { target { int32 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\+ 96|\\, 96>" 1 "optimized" { target { int16 } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "\\+ 192|\\, 192>" 1 "optimized" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-2.c gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-2.c
+14,17c14,15
+< /* { dg-final { scan-tree-dump-times "\\+ 144|\\, 144>" 1 "optimized" { target { int32 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\+ 72|\\, 72>" 1 "optimized" { target { int16 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\+ 96|\\, 96>" 1 "optimized" { target { int32 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\+ 48|\\, 48>" 1 "optimized" { target { int16 } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "\\+ 144|\\, 144>" 1 "optimized" } } */
+> /* { dg-final { scan-tree-dump-times "\\+ 96|\\, 96>" 1 "optimized" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-27.c gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-27.c
+19,20c19
+< /* { dg-final { scan-tree-dump-times "\\* 4;" 1 "dom2" { target { int32 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\* 2;" 1 "dom2" { target { int16 } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "\\* 4;" 1 "dom2" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-28.c gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-28.c
+23,24c23
+< /* { dg-final { scan-tree-dump-times "\\* 4;" 1 "dom2" { target { int32 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\* 2;" 1 "dom2" { target { int16 } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "\\* 4;" 1 "dom2" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-29.c gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-29.c
+25,26c25
+< /* { dg-final { scan-tree-dump-times "\\* 4;" 1 "dom2" { target { int32 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\* 2;" 1 "dom2" { target { int16 } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "\\* 4;" 1 "dom2" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/slsr-3.c gcc/gcc/testsuite/gcc.dg/tree-ssa/slsr-3.c
+18,20c18
+< /* { dg-final { scan-tree-dump-times "\\* 4" 1 "optimized" { target { int32 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\* 2" 1 "optimized" { target { int16 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\+ 2|\\, 2>" 5 "optimized" { target { int16 } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "\\* 4" 1 "optimized" } } */
+22,24c20,21
+< /* { dg-final { scan-tree-dump-times "\\+ 8|\\, 8>" 1 "optimized" { target { int32plus } } } } */
+< /* { dg-final { scan-tree-dump-times "\\+ 6|\\, 6>" 1 "optimized" { target { int16 } } } } */
+< /* { dg-final { scan-tree-dump-times "\\+ 12|\\, 12>" 1 "optimized" { target { int32 } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "\\+ 8|\\, 8>" 1 "optimized" } } */
+> /* { dg-final { scan-tree-dump-times "\\+ 12|\\, 12>" 1 "optimized" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/sra-13.c gcc/gcc/testsuite/gcc.dg/tree-ssa/sra-13.c
+98c98
+<   if (s != (int)20000000)
+---
+>   if (s != 20000000)
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/ssa-ccp-23.c gcc/gcc/testsuite/gcc.dg/tree-ssa/ssa-ccp-23.c
+18,19c18
+< /* { dg-final { scan-tree-dump "MEM\\\[\\\(int \\\*\\\)&a \\\+ 2B\\\]" "ccp1" { target { int16 } } } } */
+< /* { dg-final { scan-tree-dump "MEM\\\[\\\(int \\\*\\\)&a \\\+ 4B\\\]" "ccp1" { target { int32 } } } } */
+---
+> /* { dg-final { scan-tree-dump "MEM\\\[\\\(int \\\*\\\)&a \\\+ 4B\\\]" "ccp1" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/ssa-dom-thread-4.c gcc/gcc/testsuite/gcc.dg/tree-ssa/ssa-dom-thread-4.c
+64c64
+< /* { dg-final { scan-tree-dump-times "Threaded" 3 "dom1" { target { ! { { mips*-*-* avr-*-* } || { arm_cortex_m && arm_thumb1 } } } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "Threaded" 3 "dom1" { target { ! { mips*-*-* || { arm_cortex_m && arm_thumb1 } } } } } } */
+84,86c84
+< /* For avr, BRANCH_COST is by default 0, so the default
+<    LOGICAL_OP_NON_SHORT_CIRCUIT definition also computes as 0.  */
+< /* { dg-final { scan-tree-dump-times "Threaded" 6 "dom1" { target mips*-*-* avr-*-* } } } */
+---
+> /* { dg-final { scan-tree-dump-times "Threaded" 6 "dom1" { target mips*-*-* } } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/ssa-pre-21.c gcc/gcc/testsuite/gcc.dg/tree-ssa/ssa-pre-21.c
+14c14
+< /* { dg-final { scan-tree-dump-times "= \\\*\[^\n;\]*;" 2 "pre" { xfail { ! size32plus } } } } */ /* xfail: PR tree-optimization/58169 */
+---
+> /* { dg-final { scan-tree-dump-times "= \\\*\[^\n;\]*;" 2 "pre" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/ssa-pre-30.c gcc/gcc/testsuite/gcc.dg/tree-ssa/ssa-pre-30.c
+2d1
+< /* { dg-require-effective-target int32 } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/unreachable.c gcc/gcc/testsuite/gcc.dg/tree-ssa/unreachable.c
+14c14
+< /* { dg-final { scan-tree-dump-not "bad_boy" "optimized" { target { ! keeps_null_pointer_checks } } } } */
+---
+> /* { dg-final { scan-tree-dump-not "bad_boy" "optimized"} } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/vector-4.c gcc/gcc/testsuite/gcc.dg/tree-ssa/vector-4.c
+4,5c4
+< typedef int SItype __attribute__ ((mode (SI)));
+< typedef SItype v4si __attribute__ ((vector_size (16)));
+---
+> typedef int v4si __attribute__ ((vector_size (16)));
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/vrp55.c gcc/gcc/testsuite/gcc.dg/tree-ssa/vrp55.c
+12,13c12
+< /* { dg-final { scan-tree-dump-times "Threaded jump" 1 "vrp1" { target { ! keeps_null_pointer_checks } } } } */
+< /* { dg-final { scan-tree-dump-times "Threaded jump" 0 "vrp1" { target {   keeps_null_pointer_checks } } } } */
+---
+> /* { dg-final { scan-tree-dump-times "Threaded jump" 1 "vrp1" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/vrp58.c gcc/gcc/testsuite/gcc.dg/tree-ssa/vrp58.c
+11,12c11
+< /* { dg-final { scan-tree-dump "Folded into" "vrp1" { target int32plus } } } */
+< /* { dg-final { scan-tree-dump "Folding statement: _\[0-9\]\* = \\(long long int\\) bc_\[0-9\]\*;" "vrp1" { target int16 } } } */
+---
+> /* { dg-final { scan-tree-dump "Folded into" "vrp1" } } */
+diff -r avr/gcc/testsuite/gcc.dg/tree-ssa/vrp66.c gcc/gcc/testsuite/gcc.dg/tree-ssa/vrp66.c
+2c2
+< /* { dg-do run { target { ! int16 } } } */
+---
+> /* { dg-do run } */
+Only in avr/gcc/testsuite/gcc.dg/tree-ssa: vrp66-int16-sw.c

@@ -1,0 +1,36 @@
+AVR-GCC Flags & opt:
+	Architecture
+	-mmcu=<architecture> = the specific AVR device used - in our case (pending bar finds the simulator supports ATmega328 - Arduino Uno's Chip)
+	-mmcu=atmega328 
+
+	Debug - used for simulAVR:
+	-g - enable info for GDB, the simulator uses this data.
+
+	.elf file
+	the output of avr-gcc, the executable for simulAVR
+	
+	Optimization Flags:
+	-O eq. -O1
+	-O2 
+	-O3 barely used on AVR - because it resaults in large code files 
+	-Os (O2 minus space inc. opts plus extra space dec. opts.) widely used on AVR
+	
+Example of compilation:
+avr-gcc -g -O2 -mmcu=atmega328 -o example.elf example.c
+
+
+More exotic flags:  
+	Register order:
+	-morder(1|2) - Changes the order of register assignment, could resolve in bugs :)
+		-morder1 - r18, r19, r20, r21, r22, r23, r24, r25, r30, r31, r26, r27, r28, r29, r17, r16, r15, r14, r13, r12, r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r0, r1
+		-morder2 - r25, r24, r23, r22, r21, r20, r19, r18, r30, r31, r26, r27, r28, r29, r17, r16, r15, r14, r13,r12, r11, r10, r9, r8, r7, r6, r5, r4, r3, r2, r1, r0
+	
+	-mint8 - set int to 8bit (default is 16 bit!) - not fully supported.
+
+	-mcall-prologues - Use subroutines for function prologue/epilogue. For complex functions that use many
+	registers (that needs to be saved/restored on function entry/exit), this saves some space
+	at the cost of a slightly increased execution time.
+	
+	-mshort-calls - uses a smaller opcode for calls & jumps - rjmp/rcall (limited range) , saves space - has known issues.. see AVRFreaks
+	
+	

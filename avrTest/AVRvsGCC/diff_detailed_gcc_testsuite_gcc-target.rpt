@@ -1,0 +1,40 @@
+Only in avr/gcc/testsuite/gcc.target/avr: dev-specific-rmw.c
+Only in avr/gcc/testsuite/gcc.target/avr: misspelled-handler-warning.c
+Only in avr/gcc/testsuite/gcc.target/avr: pr52472.c
+Only in avr/gcc/testsuite/gcc.target/avr: pr60991.c
+diff -r avr/gcc/testsuite/gcc.target/avr/progmem-error-1.cpp gcc/gcc/testsuite/gcc.target/avr/progmem-error-1.cpp
+5c5
+< char str[] PROGMEM = "Hallo"; /* { dg-error "must be const" "" { target avr-*-* } 1 } */
+---
+> char str[] PROGMEM = "Hallo"; /* { dg-error "must be const" } */
+diff -r avr/gcc/testsuite/gcc.target/avr/torture/builtins-4-roundfx.c gcc/gcc/testsuite/gcc.target/avr/torture/builtins-4-roundfx.c
+75,79c75,79
+<   TEST2 (hr, 1, 0x7f, 0x7f);
+<   TEST2 (hr, 2, 0x70, 0x7f);
+<   TEST2 (hr, 3, 0x78, 0x7f);
+<   TEST2 (hr, 4, 0x7f, 0x7f);
+<  
+---
+>   TEST2 (hr, 1, 0x7f, 0x40);
+>   TEST2 (hr, 2, 0x7f, 0b1100000);
+>   TEST2 (hr, 3, 0x7f, 0b1110000);
+>   TEST2 (hr, 4, 0x7f, 0b1111000);
+> 
+88,94c88,91
+<   TEST2 (k, 1, 0x7fffff00, 0x7fffffff);
+<   TEST2 (k, 2, 0x7ffffff0, 0x7fffffff);
+<   TEST2 (k, 2, 0x7ffff000, 0x7fffffff);
+<   TEST2 (k, 3, 0x7ffff000, 0x7ffff000);
+<   TEST2 (k, 3, 0x7ffff800, 0x7fffffff);
+<   TEST2 (k, 3, 0x7ffff7ff, 0x7ffff000);
+<   TEST2 (k, 4, 0x7ffff7ff, 0x7ffff800);
+---
+>   TEST2 (k, 1, 0x7fffffff, 0x7fff8000 | 0b100000000000000);
+>   TEST2 (k, 2, 0x7fffffff, 0x7fff8000 | 0b110000000000000);
+>   TEST2 (k, 3, 0x7fffffff, 0x7fff8000 | 0b111000000000000);
+>   TEST2 (k, 4, 0x7fffffff, 0x7fff8000 | 0b111100000000000);
+Only in avr/gcc/testsuite/gcc.target/avr/torture: pr57631.c
+Only in avr/gcc/testsuite/gcc.target/avr: xmega_const_hi_io_address.c
+Only in avr/gcc/testsuite/gcc.target/avr: xmega_const_qi_io_address.c
+Only in avr/gcc/testsuite/gcc.target/avr: xmega_interrupt_no_cli.c
+Only in avr/gcc/testsuite/gcc.target/avr: xmega_sfr_offsets.c

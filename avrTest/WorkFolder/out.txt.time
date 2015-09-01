@@ -1,0 +1,3 @@
+sh: line 1: 27271 Killed                  /specific/a/home/cc/students/cs/alonelmaliah/Desktop/avrTest/Utils/Simulator/usr/bin/simulavr -d atmega328 -f /specific/a/home/cc/students/cs/alonelmaliah//Desktop/avrTest/WorkFolder/O0avrtest.elf -W0x20,/specific/a/home/cc/students/cs/alonelmaliah//Desktop/avrTest/WorkFolder/O0avrout.txt -t /specific/a/home/cc/students/cs/alonelmaliah//Desktop/avrTest/WorkFolder/trace_dump.txt -T __stop_program > /specific/a/home/cc/students/cs/alonelmaliah//Desktop/avrTest/WorkFolder/out.txt 2>&1 < /dev/null
+exit 137
+cpu time= 0.000000

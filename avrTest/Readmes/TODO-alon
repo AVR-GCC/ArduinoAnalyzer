@@ -1,0 +1,14 @@
+Diff AVR GCC , GCC
+	get 4.8.1. source code (AVR & GCC) -Check
+	diff the directories
+	document AVR flags
+		Basic Run
+		Ecsotic ones
+
+White Papers & other AVR tools
+	Read on AVR architeture -Check
+	HLL programming optimization
+	Optimization examples from white papers
+	
+	
+

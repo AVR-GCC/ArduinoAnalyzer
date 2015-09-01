@@ -1,0 +1,13 @@
+
+use Config;
+#$SIG{FPE} = \&meHandleINT;
+
+sub meHandleINT {
+   my $signame =  shift;   #Grab signal name from passed input
+   die "Caught Signal: SIG$signame";
+}
+
+
+	system "WorkFolder/gccavrtest.elf";
+	system "echo done";
+	

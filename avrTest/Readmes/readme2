@@ -1,0 +1,27 @@
+get repository:
+git clone https://github.com/AVR-GCC/ArduinoAnalyzer.git <target directory>
+
+to see which files you changed:
+git status
+
+to add a file to next commit:
+git add <target file>
+
+to commit:
+git commit -m "update message"
+
+after commit, merge:
+git pull --rebase
+
+then save changes:
+git push
+
+update current repository:
+git pull
+
+for single file:
+git checkout <file path>
+
+user name: AVR-GCC
+password: 1alon2bar3yakov
+

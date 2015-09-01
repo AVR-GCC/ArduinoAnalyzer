@@ -1,0 +1,1918 @@
+cmpavr1.o 0x0000: ,.comment,.debug_aranges,.debug_info,.debug_abbrev,.debug_line,.debug_frame,.debug_str,.debug_loc,cmp.c,__tmp_reg__,__zero_reg__,_exit.o,,__vectors,__vector_default,__heap_end JMP 68 __trampolines_start,__trampolines_end,__dtors_end,__init,__ctors_start,__dtors_start,__ctors_end 
+cmpavr1.o 0x0000: ,.comment,.debug_aranges,.debug_info,.debug_abbrev,.debug_line,.debug_frame,.debug_str,.debug_loc,cmp.c,__tmp_reg__,__zero_reg__,_exit.o,,__vectors,__vector_default,__heap_end CPU-waitstate
+cmpavr1.o 0x0000: ,.comment,.debug_aranges,.debug_info,.debug_abbrev,.debug_line,.debug_frame,.debug_str,.debug_loc,cmp.c,__tmp_reg__,__zero_reg__,_exit.o,,__vectors,__vector_default,__heap_end CPU-waitstate
+cmpavr1.o 0x0068: __trampolines_start,__trampolines_end,__dtors_end,__init,__ctors_start,__dtors_start,__ctors_end EOR R1, R1 SREG=[------Z-] 
+cmpavr1.o 0x006a: __trampolines_start,__trampolines_end,__dtors_end,__init,__ctors_start,__dtors_start,__ctors_end+0x1 OUT 0x3f, R1 
+cmpavr1.o 0x006c: __trampolines_start,__trampolines_end,__dtors_end,__init,__ctors_start,__dtors_start,__ctors_end+0x2 LDI R28, 0xff 
+cmpavr1.o 0x006e: __trampolines_start,__trampolines_end,__dtors_end,__init,__ctors_start,__dtors_start,__ctors_end+0x3 LDI R29, 0x08 
+cmpavr1.o 0x0070: __trampolines_start,__trampolines_end,__dtors_end,__init,__ctors_start,__dtors_start,__ctors_end+0x4 OUT 0x3e, R29 SP=0x800 
+cmpavr1.o 0x0072: __trampolines_start,__trampolines_end,__dtors_end,__init,__ctors_start,__dtors_start,__ctors_end+0x5 OUT 0x3d, R28 SP=0x8ff 
+cmpavr1.o 0x0074: __do_copy_data                 LDI R17, 0x01 
+cmpavr1.o 0x0076: __do_copy_data+0x1             LDI R26, 0x00 
+cmpavr1.o 0x0078: __do_copy_data+0x2             LDI R27, 0x01 
+cmpavr1.o 0x007a: __do_copy_data+0x3             LDI R30, 0xde 
+cmpavr1.o 0x007c: __do_copy_data+0x4             LDI R31, 0x01 
+cmpavr1.o 0x007e: __do_copy_data+0x5             RJMP 84 
+cmpavr1.o 0x007e: __do_copy_data+0x5             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[--HS-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1de,.data,g_15.2055,__data_start] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[--HS-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1df,.data,g_15.2055,__data_start+0x1] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e0,.data,g_15.2055,__data_start+0x2] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e1,.data,g_15.2055,__data_start+0x3] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e2,.data,g_15.2055,__data_start+0x4] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e3,.data,g_15.2055,__data_start+0x5] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e4,.data,g_15.2055,__data_start+0x6] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e5,.data,g_15.2055,__data_start+0x7] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e6,.data,g_15.2055,__data_start+0x8] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e7,.data,g_15.2055,__data_start+0x9] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e8,.data,g_15.2055,__data_start+0xa] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1e9,.data,g_15.2055,__data_start+0xb] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1ea,.data,g_15.2055,__data_start+0xc] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1eb,.data,g_15.2055,__data_start+0xd] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1ec,.data,g_15.2055,__data_start+0xe] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[---S-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1ed,.data,g_15.2055,__data_start+0xf] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[--HS-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1ee,.data,g_15.2055,__data_start+0x10] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[--HS-N-C] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[--HS-N-C] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 platform_main_end+0x29         
+cmpavr1.o 0x0088: __do_copy_data+0xa             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             LPM R0, Z+ FLASH[1ef,.data,g_15.2055,__data_start+0x11] 
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0080: __do_copy_data+0x6             CPU-waitstate
+cmpavr1.o 0x0082: __do_copy_data+0x7             ST X+, R0 
+cmpavr1.o 0x0082: __do_copy_data+0x7             CPU-waitstate
+cmpavr1.o 0x0084: __do_copy_data+0x8             CPI R26, 0x12 SREG=[------Z-] 
+cmpavr1.o 0x0086: __do_copy_data+0x9             CPC R27, R17 SREG=[------Z-] 
+cmpavr1.o 0x0088: __do_copy_data+0xa             BRNE ->0xfff6 main+0x4                       
+cmpavr1.o 0x008a: __do_copy_data+0xb             CALL 0x108 SP=0x8fe 0x47 SP=0x8fd 0x0 
+cmpavr1.o 0x008a: __do_copy_data+0xb             CPU-waitstate
+cmpavr1.o 0x008a: __do_copy_data+0xb             CPU-waitstate
+cmpavr1.o 0x008a: __do_copy_data+0xb             CPU-waitstate
+cmpavr1.o 0x0108: main                           LDI R20, 0x00 
+cmpavr1.o 0x010a: main+0x1                       LDI R21, 0x00 
+cmpavr1.o 0x010c: main+0x2                       LDI R22, 0x81 
+cmpavr1.o 0x010e: main+0x3                       LDI R23, 0xff 
+cmpavr1.o 0x0110: main+0x4                       LDI R24, 0xff 
+cmpavr1.o 0x0112: main+0x5                       LDI R25, 0xff 
+cmpavr1.o 0x0114: main+0x6                       CALL 0xaa SP=0x8fc 0x8c SP=0x8fb 0x0 
+cmpavr1.o 0x0114: main+0x6                       CPU-waitstate
+cmpavr1.o 0x0114: main+0x6                       CPU-waitstate
+cmpavr1.o 0x0114: main+0x6                       CPU-waitstate
+cmpavr1.o 0x00aa: platform_main_end              PUSH R16 SP=0x8fa 0x0 
+cmpavr1.o 0x00aa: platform_main_end              CPU-waitstate
+cmpavr1.o 0x00ac: platform_main_end+0x1          PUSH R17 SP=0x8f9 0x1 
+cmpavr1.o 0x00ac: platform_main_end+0x1          CPU-waitstate
+cmpavr1.o 0x00ae: platform_main_end+0x2          PUSH R28 SP=0x8f8 0xff 
+cmpavr1.o 0x00ae: platform_main_end+0x2          CPU-waitstate
+cmpavr1.o 0x00b0: platform_main_end+0x3          PUSH R29 SP=0x8f7 0x8 
+cmpavr1.o 0x00b0: platform_main_end+0x3          CPU-waitstate
+cmpavr1.o 0x00b2: platform_main_end+0x4          IN R28, 0x3d 
+cmpavr1.o 0x00b4: platform_main_end+0x5          IN R29, 0x3e 
+cmpavr1.o 0x00b6: platform_main_end+0x6          SBIW R28, 0x11 SREG=[--------] 
+cmpavr1.o 0x00b6: platform_main_end+0x6          CPU-waitstate
+cmpavr1.o 0x00b8: platform_main_end+0x7          IN R0, 0x3f 
+cmpavr1.o 0x00ba: platform_main_end+0x8          CLI SREG=[--------] 
+cmpavr1.o 0x00bc: platform_main_end+0x9          OUT 0x3e, R29 SP=0x8f7 
+cmpavr1.o 0x00be: platform_main_end+0xa          OUT 0x3f, R0 
+cmpavr1.o 0x00c0: platform_main_end+0xb          OUT 0x3d, R28 SP=0x8e6 
+cmpavr1.o 0x00c2: platform_main_end+0xc          MOVW R16, R24 
+cmpavr1.o 0x00c4: platform_main_end+0xd          EOR R18, R18 SREG=[------Z-] 
+cmpavr1.o 0x00c6: platform_main_end+0xe          EOR R19, R19 SREG=[------Z-] 
+cmpavr1.o 0x00c8: platform_main_end+0xf          MOVW R24, R16 
+cmpavr1.o 0x00ca: platform_main_end+0x10         EOR R24, R22 SREG=[--------] 
+cmpavr1.o 0x00cc: platform_main_end+0x11         EOR R25, R23 SREG=[------Z-] 
+cmpavr1.o 0x00ce: platform_main_end+0x12         LDI R20, 0x10 
+cmpavr1.o 0x00d0: platform_main_end+0x13         MOVW R22, R28 
+cmpavr1.o 0x00d2: platform_main_end+0x14         SUBI R22, 0xff SREG=[--HS-N-C] 
+cmpavr1.o 0x00d4: platform_main_end+0x15         SBCI R23, 0xff SREG=[--H----C] 
+cmpavr1.o 0x00d6: platform_main_end+0x16         CALL 0x170 SP=0x8e5 0x6d SP=0x8e4 0x0 
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x0170: __itoa_ncheck                  EOR R27, R27 SREG=[--H---ZC] 
+cmpavr1.o 0x0172: __itoa_ncheck+0x1              CPI R20, 0x0a SREG=[--H-----] 
+cmpavr1.o 0x0174: __itoa_ncheck+0x2              BRNE ->0x000c __data_load_end+0x88           
+cmpavr1.o 0x0174: __itoa_ncheck+0x2              CPU-waitstate
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              JMP 188 __utoa_common                  
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              CPU-waitstate
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              CPU-waitstate
+cmpavr1.o 0x0188: __utoa_common                  MOVW R30, R22 
+cmpavr1.o 0x018a: __utoa_common+0x1              EOR R21, R21 SREG=[--H---Z-] 
+cmpavr1.o 0x018c: __utoa_common+0x2              EOR R26, R26 SREG=[--H---Z-] 
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--H-VN--] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N-C] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--HS-N-C] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--HS-N-C] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---S-N-C] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---S-N-C] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---S-N-C] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-----] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---SV-ZC] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-----] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-----] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-VN--] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---SV---] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--HS-N-C] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--HS-N-C] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---S-N-C] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---S-N-C] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---S-N-C] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--H-----] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[--------] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0x9e           
+cmpavr1.o 0x0198: __utoa_common+0x8              SUB R26, R20 SREG=[--------] 
+cmpavr1.o 0x019a: __utoa_common+0x9              INC R24 SREG=[--------] 
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--------] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---SV-ZC] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--H-----] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[--------] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0x9e           
+cmpavr1.o 0x0198: __utoa_common+0x8              SUB R26, R20 SREG=[--------] 
+cmpavr1.o 0x019a: __utoa_common+0x9              INC R24 SREG=[--------] 
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--------] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--H-----] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[--------] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0x9e           
+cmpavr1.o 0x0198: __utoa_common+0x8              SUB R26, R20 SREG=[--------] 
+cmpavr1.o 0x019a: __utoa_common+0x9              INC R24 SREG=[--------] 
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[------Z-] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0xa6           
+cmpavr1.o 0x01a0: __utoa_common+0xc              SUBI R26, 0xd0 SREG=[-------C] 
+cmpavr1.o 0x01a2: __utoa_common+0xd              CPI R26, 0x3a SREG=[--------] 
+cmpavr1.o 0x01a4: __utoa_common+0xe              BRCS ->0x0002 __data_load_end+0xac           
+cmpavr1.o 0x01a6: __utoa_common+0xf              SUBI R26, 0xd9 SREG=[-------C] 
+cmpavr1.o 0x01a8: __utoa_common+0x10             ST Z+, R26 
+cmpavr1.o 0x01a8: __utoa_common+0x10             CPU-waitstate
+cmpavr1.o 0x01aa: __utoa_common+0x11             SBIW R24, 0x00 SREG=[--------] 
+cmpavr1.o 0x01aa: __utoa_common+0x11             CPU-waitstate
+cmpavr1.o 0x01ac: __utoa_common+0x12             BRNE ->0xffde __data_load_end+0x92           
+cmpavr1.o 0x01ac: __utoa_common+0x12             CPU-waitstate
+cmpavr1.o 0x018c: __utoa_common+0x2              EOR R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--------] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N-C] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--H-----] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--H-----] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--H-----] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[----VN--] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---S-N-C] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---S-N-C] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---SV-ZC] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---SV---] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-----] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-----] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-----] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[----VN--] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---S-N-C] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---S-N-C] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---SV-ZC] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[------Z-] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0xa6           
+cmpavr1.o 0x01a0: __utoa_common+0xc              SUBI R26, 0xd0 SREG=[-------C] 
+cmpavr1.o 0x01a2: __utoa_common+0xd              CPI R26, 0x3a SREG=[--HS-N-C] 
+cmpavr1.o 0x01a4: __utoa_common+0xe              BRCS ->0x0002 
+cmpavr1.o 0x01a4: __utoa_common+0xe              CPU-waitstate
+cmpavr1.o 0x01a8: __utoa_common+0x10             ST Z+, R26 
+cmpavr1.o 0x01a8: __utoa_common+0x10             CPU-waitstate
+cmpavr1.o 0x01aa: __utoa_common+0x11             SBIW R24, 0x00 SREG=[--H---Z-] 
+cmpavr1.o 0x01aa: __utoa_common+0x11             CPU-waitstate
+cmpavr1.o 0x01ac: __utoa_common+0x12             BRNE ->0xffde __data_load_end+0xb4           
+cmpavr1.o 0x01ae: __utoa_common+0x13             CPSE R27, R1 
+cmpavr1.o 0x01ae: __utoa_common+0x13             CPU-waitstate
+cmpavr1.o 0x01b2: __utoa_common+0x15             ST Z+, R1 
+cmpavr1.o 0x01b2: __utoa_common+0x15             CPU-waitstate
+cmpavr1.o 0x01b4: __utoa_common+0x16             MOVW R24, R22 
+cmpavr1.o 0x01b6: __utoa_common+0x17             JMP 1ba strrev                         
+cmpavr1.o 0x01b6: __utoa_common+0x17             CPU-waitstate
+cmpavr1.o 0x01b6: __utoa_common+0x17             CPU-waitstate
+cmpavr1.o 0x01ba: strrev                         MOVW R26, R24 
+cmpavr1.o 0x01bc: strrev+0x1                     MOVW R30, R24 
+cmpavr1.o 0x01be: strrev+0x2                     MOV R22, R23 
+cmpavr1.o 0x01c0: strrev+0x3                     LD R23, Z+ 
+cmpavr1.o 0x01c0: strrev+0x3                     CPU-waitstate
+cmpavr1.o 0x01c2: strrev+0x4                     AND R23, R23 SREG=[--H-----] 
+cmpavr1.o 0x01c4: strrev+0x5                     BRNE ->0xfff8 __data_load_end+0xc4           
+cmpavr1.o 0x01c4: strrev+0x5                     CPU-waitstate
+cmpavr1.o 0x01be: strrev+0x2                     MOV R22, R23 
+cmpavr1.o 0x01c0: strrev+0x3                     LD R23, Z+ 
+cmpavr1.o 0x01c0: strrev+0x3                     CPU-waitstate
+cmpavr1.o 0x01c2: strrev+0x4                     AND R23, R23 SREG=[--H-----] 
+cmpavr1.o 0x01c4: strrev+0x5                     BRNE ->0xfff8 __data_load_end+0xc4           
+cmpavr1.o 0x01c4: strrev+0x5                     CPU-waitstate
+cmpavr1.o 0x01be: strrev+0x2                     MOV R22, R23 
+cmpavr1.o 0x01c0: strrev+0x3                     LD R23, Z+ 
+cmpavr1.o 0x01c0: strrev+0x3                     CPU-waitstate
+cmpavr1.o 0x01c2: strrev+0x4                     AND R23, R23 SREG=[--H---Z-] 
+cmpavr1.o 0x01c4: strrev+0x5                     BRNE ->0xfff8 __data_load_end+0xcc           
+cmpavr1.o 0x01c6: strrev+0x6                     SBIW R30, 0x02 SREG=[--H-----] 
+cmpavr1.o 0x01c6: strrev+0x6                     CPU-waitstate
+cmpavr1.o 0x01c8: strrev+0x7                     RJMP 1d2 
+cmpavr1.o 0x01c8: strrev+0x7                     CPU-waitstate
+cmpavr1.o 0x01d2: strrev+0xc                     CP R26, R30 SREG=[--HS-N-C] 
+cmpavr1.o 0x01d4: strrev+0xd                     CPC R27, R31 SREG=[--HS-N-C] 
+cmpavr1.o 0x01d6: strrev+0xe                     BRCS ->0xfff2 __data_load_end+0xd0           
+cmpavr1.o 0x01d6: strrev+0xe                     CPU-waitstate
+cmpavr1.o 0x01ca: strrev+0x8                     LD R23, X 
+cmpavr1.o 0x01ca: strrev+0x8                     CPU-waitstate
+cmpavr1.o 0x01cc: strrev+0x9                     ST X+, R22 
+cmpavr1.o 0x01cc: strrev+0x9                     CPU-waitstate
+cmpavr1.o 0x01ce: strrev+0xa                     STD Z+0, R23 
+cmpavr1.o 0x01ce: strrev+0xa                     CPU-waitstate
+cmpavr1.o 0x01d0: strrev+0xb                     LD R22, -Z
+cmpavr1.o 0x01d0: strrev+0xb                     CPU-waitstate
+cmpavr1.o 0x01d2: strrev+0xc                     CP R26, R30 SREG=[--------] 
+cmpavr1.o 0x01d4: strrev+0xd                     CPC R27, R31 SREG=[--------] 
+cmpavr1.o 0x01d6: strrev+0xe                     BRCS ->0xfff2 __data_load_end+0xde           
+cmpavr1.o 0x01d8: strrev+0xf                     RET SP=0x8e5 0x0 SP=0x8e6 0x6d 
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x00da: platform_main_end+0x18         LDI R24, 0x04 
+cmpavr1.o 0x00dc: platform_main_end+0x19         LDI R25, 0x01 
+cmpavr1.o 0x00de: platform_main_end+0x1a         CALL 0x96 SP=0x8e5 0x71 SP=0x8e4 0x0 
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x71 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00e2: platform_main_end+0x1c         MOVW R24, R28 
+cmpavr1.o 0x00e4: platform_main_end+0x1d         ADIW R24, 1 SREG=[--------] 
+cmpavr1.o 0x00e4: platform_main_end+0x1d         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CALL 0x96 SP=0x8e5 0x75 SP=0x8e4 0x0 
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x75 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00ea: platform_main_end+0x20         LDI R24, 0x10 
+cmpavr1.o 0x00ec: platform_main_end+0x21         LDI R25, 0x01 
+cmpavr1.o 0x00ee: platform_main_end+0x22         CALL 0x96 SP=0x8e5 0x79 SP=0x8e4 0x0 
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x79 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00f2: platform_main_end+0x24         ADIW R28, 17 SREG=[--------] 
+cmpavr1.o 0x00f2: platform_main_end+0x24         CPU-waitstate
+cmpavr1.o 0x00f4: platform_main_end+0x25         IN R0, 0x3f 
+cmpavr1.o 0x00f6: platform_main_end+0x26         CLI SREG=[--------] 
+cmpavr1.o 0x00f8: platform_main_end+0x27         OUT 0x3e, R29 SP=0x8e6 
+cmpavr1.o 0x00fa: platform_main_end+0x28         OUT 0x3f, R0 
+cmpavr1.o 0x00fc: platform_main_end+0x29         OUT 0x3d, R28 SP=0x8f7 
+cmpavr1.o 0x00fe: platform_main_end+0x2a         POP R29 SP=0x8f8 0x8 
+cmpavr1.o 0x00fe: platform_main_end+0x2a         CPU-waitstate
+cmpavr1.o 0x0100: platform_main_end+0x2b         POP R28 SP=0x8f9 0xff 
+cmpavr1.o 0x0100: platform_main_end+0x2b         CPU-waitstate
+cmpavr1.o 0x0102: platform_main_end+0x2c         POP R17 SP=0x8fa 0x1 
+cmpavr1.o 0x0102: platform_main_end+0x2c         CPU-waitstate
+cmpavr1.o 0x0104: platform_main_end+0x2d         POP R16 SP=0x8fb 0x0 
+cmpavr1.o 0x0104: platform_main_end+0x2d         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         RET SP=0x8fc 0x0 SP=0x8fd 0x8c 
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0118: main+0x8                       LDI R20, 0x00 
+cmpavr1.o 0x011a: main+0x9                       LDI R21, 0x00 
+cmpavr1.o 0x011c: main+0xa                       LDI R22, 0x00 
+cmpavr1.o 0x011e: main+0xb                       LDI R23, 0x00 
+cmpavr1.o 0x0120: main+0xc                       MOVW R24, R22 
+cmpavr1.o 0x0122: main+0xd                       CALL 0xaa SP=0x8fc 0x93 SP=0x8fb 0x0 
+cmpavr1.o 0x0122: main+0xd                       CPU-waitstate
+cmpavr1.o 0x0122: main+0xd                       CPU-waitstate
+cmpavr1.o 0x0122: main+0xd                       CPU-waitstate
+cmpavr1.o 0x00aa: platform_main_end              PUSH R16 SP=0x8fa 0x0 
+cmpavr1.o 0x00aa: platform_main_end              CPU-waitstate
+cmpavr1.o 0x00ac: platform_main_end+0x1          PUSH R17 SP=0x8f9 0x1 
+cmpavr1.o 0x00ac: platform_main_end+0x1          CPU-waitstate
+cmpavr1.o 0x00ae: platform_main_end+0x2          PUSH R28 SP=0x8f8 0xff 
+cmpavr1.o 0x00ae: platform_main_end+0x2          CPU-waitstate
+cmpavr1.o 0x00b0: platform_main_end+0x3          PUSH R29 SP=0x8f7 0x8 
+cmpavr1.o 0x00b0: platform_main_end+0x3          CPU-waitstate
+cmpavr1.o 0x00b2: platform_main_end+0x4          IN R28, 0x3d 
+cmpavr1.o 0x00b4: platform_main_end+0x5          IN R29, 0x3e 
+cmpavr1.o 0x00b6: platform_main_end+0x6          SBIW R28, 0x11 SREG=[--------] 
+cmpavr1.o 0x00b6: platform_main_end+0x6          CPU-waitstate
+cmpavr1.o 0x00b8: platform_main_end+0x7          IN R0, 0x3f 
+cmpavr1.o 0x00ba: platform_main_end+0x8          CLI SREG=[--------] 
+cmpavr1.o 0x00bc: platform_main_end+0x9          OUT 0x3e, R29 SP=0x8f7 
+cmpavr1.o 0x00be: platform_main_end+0xa          OUT 0x3f, R0 
+cmpavr1.o 0x00c0: platform_main_end+0xb          OUT 0x3d, R28 SP=0x8e6 
+cmpavr1.o 0x00c2: platform_main_end+0xc          MOVW R16, R24 
+cmpavr1.o 0x00c4: platform_main_end+0xd          EOR R18, R18 SREG=[------Z-] 
+cmpavr1.o 0x00c6: platform_main_end+0xe          EOR R19, R19 SREG=[------Z-] 
+cmpavr1.o 0x00c8: platform_main_end+0xf          MOVW R24, R16 
+cmpavr1.o 0x00ca: platform_main_end+0x10         EOR R24, R22 SREG=[------Z-] 
+cmpavr1.o 0x00cc: platform_main_end+0x11         EOR R25, R23 SREG=[------Z-] 
+cmpavr1.o 0x00ce: platform_main_end+0x12         LDI R20, 0x10 
+cmpavr1.o 0x00d0: platform_main_end+0x13         MOVW R22, R28 
+cmpavr1.o 0x00d2: platform_main_end+0x14         SUBI R22, 0xff SREG=[--HS-N-C] 
+cmpavr1.o 0x00d4: platform_main_end+0x15         SBCI R23, 0xff SREG=[--H----C] 
+cmpavr1.o 0x00d6: platform_main_end+0x16         CALL 0x170 SP=0x8e5 0x6d SP=0x8e4 0x0 
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x0170: __itoa_ncheck                  EOR R27, R27 SREG=[--H---ZC] 
+cmpavr1.o 0x0172: __itoa_ncheck+0x1              CPI R20, 0x0a SREG=[--H-----] 
+cmpavr1.o 0x0174: __itoa_ncheck+0x2              BRNE ->0x000c __data_load_end+0x88           
+cmpavr1.o 0x0174: __itoa_ncheck+0x2              CPU-waitstate
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              JMP 188 __utoa_common                  
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              CPU-waitstate
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              CPU-waitstate
+cmpavr1.o 0x0188: __utoa_common                  MOVW R30, R22 
+cmpavr1.o 0x018a: __utoa_common+0x1              EOR R21, R21 SREG=[--H---Z-] 
+cmpavr1.o 0x018c: __utoa_common+0x2              EOR R26, R26 SREG=[--H---Z-] 
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N-C] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---SV---] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[------Z-] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0xa6           
+cmpavr1.o 0x01a0: __utoa_common+0xc              SUBI R26, 0xd0 SREG=[-------C] 
+cmpavr1.o 0x01a2: __utoa_common+0xd              CPI R26, 0x3a SREG=[--HS-N-C] 
+cmpavr1.o 0x01a4: __utoa_common+0xe              BRCS ->0x0002 
+cmpavr1.o 0x01a4: __utoa_common+0xe              CPU-waitstate
+cmpavr1.o 0x01a8: __utoa_common+0x10             ST Z+, R26 
+cmpavr1.o 0x01a8: __utoa_common+0x10             CPU-waitstate
+cmpavr1.o 0x01aa: __utoa_common+0x11             SBIW R24, 0x00 SREG=[--H---Z-] 
+cmpavr1.o 0x01aa: __utoa_common+0x11             CPU-waitstate
+cmpavr1.o 0x01ac: __utoa_common+0x12             BRNE ->0xffde __data_load_end+0xb4           
+cmpavr1.o 0x01ae: __utoa_common+0x13             CPSE R27, R1 
+cmpavr1.o 0x01ae: __utoa_common+0x13             CPU-waitstate
+cmpavr1.o 0x01b2: __utoa_common+0x15             ST Z+, R1 
+cmpavr1.o 0x01b2: __utoa_common+0x15             CPU-waitstate
+cmpavr1.o 0x01b4: __utoa_common+0x16             MOVW R24, R22 
+cmpavr1.o 0x01b6: __utoa_common+0x17             JMP 1ba strrev                         
+cmpavr1.o 0x01b6: __utoa_common+0x17             CPU-waitstate
+cmpavr1.o 0x01b6: __utoa_common+0x17             CPU-waitstate
+cmpavr1.o 0x01ba: strrev                         MOVW R26, R24 
+cmpavr1.o 0x01bc: strrev+0x1                     MOVW R30, R24 
+cmpavr1.o 0x01be: strrev+0x2                     MOV R22, R23 
+cmpavr1.o 0x01c0: strrev+0x3                     LD R23, Z+ 
+cmpavr1.o 0x01c0: strrev+0x3                     CPU-waitstate
+cmpavr1.o 0x01c2: strrev+0x4                     AND R23, R23 SREG=[--H-----] 
+cmpavr1.o 0x01c4: strrev+0x5                     BRNE ->0xfff8 __data_load_end+0xc4           
+cmpavr1.o 0x01c4: strrev+0x5                     CPU-waitstate
+cmpavr1.o 0x01be: strrev+0x2                     MOV R22, R23 
+cmpavr1.o 0x01c0: strrev+0x3                     LD R23, Z+ 
+cmpavr1.o 0x01c0: strrev+0x3                     CPU-waitstate
+cmpavr1.o 0x01c2: strrev+0x4                     AND R23, R23 SREG=[--H---Z-] 
+cmpavr1.o 0x01c4: strrev+0x5                     BRNE ->0xfff8 __data_load_end+0xcc           
+cmpavr1.o 0x01c6: strrev+0x6                     SBIW R30, 0x02 SREG=[--H-----] 
+cmpavr1.o 0x01c6: strrev+0x6                     CPU-waitstate
+cmpavr1.o 0x01c8: strrev+0x7                     RJMP 1d2 
+cmpavr1.o 0x01c8: strrev+0x7                     CPU-waitstate
+cmpavr1.o 0x01d2: strrev+0xc                     CP R26, R30 SREG=[------Z-] 
+cmpavr1.o 0x01d4: strrev+0xd                     CPC R27, R31 SREG=[------Z-] 
+cmpavr1.o 0x01d6: strrev+0xe                     BRCS ->0xfff2 __data_load_end+0xde           
+cmpavr1.o 0x01d8: strrev+0xf                     RET SP=0x8e5 0x0 SP=0x8e6 0x6d 
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x00da: platform_main_end+0x18         LDI R24, 0x04 
+cmpavr1.o 0x00dc: platform_main_end+0x19         LDI R25, 0x01 
+cmpavr1.o 0x00de: platform_main_end+0x1a         CALL 0x96 SP=0x8e5 0x71 SP=0x8e4 0x0 
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x71 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00e2: platform_main_end+0x1c         MOVW R24, R28 
+cmpavr1.o 0x00e4: platform_main_end+0x1d         ADIW R24, 1 SREG=[--------] 
+cmpavr1.o 0x00e4: platform_main_end+0x1d         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CALL 0x96 SP=0x8e5 0x75 SP=0x8e4 0x0 
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x75 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00ea: platform_main_end+0x20         LDI R24, 0x10 
+cmpavr1.o 0x00ec: platform_main_end+0x21         LDI R25, 0x01 
+cmpavr1.o 0x00ee: platform_main_end+0x22         CALL 0x96 SP=0x8e5 0x79 SP=0x8e4 0x0 
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x79 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00f2: platform_main_end+0x24         ADIW R28, 17 SREG=[--------] 
+cmpavr1.o 0x00f2: platform_main_end+0x24         CPU-waitstate
+cmpavr1.o 0x00f4: platform_main_end+0x25         IN R0, 0x3f 
+cmpavr1.o 0x00f6: platform_main_end+0x26         CLI SREG=[--------] 
+cmpavr1.o 0x00f8: platform_main_end+0x27         OUT 0x3e, R29 SP=0x8e6 
+cmpavr1.o 0x00fa: platform_main_end+0x28         OUT 0x3f, R0 
+cmpavr1.o 0x00fc: platform_main_end+0x29         OUT 0x3d, R28 SP=0x8f7 
+cmpavr1.o 0x00fe: platform_main_end+0x2a         POP R29 SP=0x8f8 0x8 
+cmpavr1.o 0x00fe: platform_main_end+0x2a         CPU-waitstate
+cmpavr1.o 0x0100: platform_main_end+0x2b         POP R28 SP=0x8f9 0xff 
+cmpavr1.o 0x0100: platform_main_end+0x2b         CPU-waitstate
+cmpavr1.o 0x0102: platform_main_end+0x2c         POP R17 SP=0x8fa 0x1 
+cmpavr1.o 0x0102: platform_main_end+0x2c         CPU-waitstate
+cmpavr1.o 0x0104: platform_main_end+0x2d         POP R16 SP=0x8fb 0x0 
+cmpavr1.o 0x0104: platform_main_end+0x2d         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         RET SP=0x8fc 0x0 SP=0x8fd 0x93 
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0126: main+0xf                       LDS R24, 0x100 
+cmpavr1.o 0x0126: main+0xf                       CPU-waitstate
+cmpavr1.o 0x012a: main+0x11                      LDS R25, 0x101 
+cmpavr1.o 0x012a: main+0x11                      CPU-waitstate
+cmpavr1.o 0x012e: main+0x13                      LDS R26, 0x102 
+cmpavr1.o 0x012e: main+0x13                      CPU-waitstate
+cmpavr1.o 0x0132: main+0x15                      LDS R27, 0x103 
+cmpavr1.o 0x0132: main+0x15                      CPU-waitstate
+cmpavr1.o 0x0136: main+0x17                      MOVW R22, R24 
+cmpavr1.o 0x0138: main+0x18                      MOVW R24, R26 
+cmpavr1.o 0x013a: main+0x19                      LDI R20, 0x00 
+cmpavr1.o 0x013c: main+0x1a                      LDI R21, 0x00 
+cmpavr1.o 0x013e: main+0x1b                      CALL 0xaa SP=0x8fc 0xa1 SP=0x8fb 0x0 
+cmpavr1.o 0x013e: main+0x1b                      CPU-waitstate
+cmpavr1.o 0x013e: main+0x1b                      CPU-waitstate
+cmpavr1.o 0x013e: main+0x1b                      CPU-waitstate
+cmpavr1.o 0x00aa: platform_main_end              PUSH R16 SP=0x8fa 0x0 
+cmpavr1.o 0x00aa: platform_main_end              CPU-waitstate
+cmpavr1.o 0x00ac: platform_main_end+0x1          PUSH R17 SP=0x8f9 0x1 
+cmpavr1.o 0x00ac: platform_main_end+0x1          CPU-waitstate
+cmpavr1.o 0x00ae: platform_main_end+0x2          PUSH R28 SP=0x8f8 0xff 
+cmpavr1.o 0x00ae: platform_main_end+0x2          CPU-waitstate
+cmpavr1.o 0x00b0: platform_main_end+0x3          PUSH R29 SP=0x8f7 0x8 
+cmpavr1.o 0x00b0: platform_main_end+0x3          CPU-waitstate
+cmpavr1.o 0x00b2: platform_main_end+0x4          IN R28, 0x3d 
+cmpavr1.o 0x00b4: platform_main_end+0x5          IN R29, 0x3e 
+cmpavr1.o 0x00b6: platform_main_end+0x6          SBIW R28, 0x11 SREG=[--------] 
+cmpavr1.o 0x00b6: platform_main_end+0x6          CPU-waitstate
+cmpavr1.o 0x00b8: platform_main_end+0x7          IN R0, 0x3f 
+cmpavr1.o 0x00ba: platform_main_end+0x8          CLI SREG=[--------] 
+cmpavr1.o 0x00bc: platform_main_end+0x9          OUT 0x3e, R29 SP=0x8f7 
+cmpavr1.o 0x00be: platform_main_end+0xa          OUT 0x3f, R0 
+cmpavr1.o 0x00c0: platform_main_end+0xb          OUT 0x3d, R28 SP=0x8e6 
+cmpavr1.o 0x00c2: platform_main_end+0xc          MOVW R16, R24 
+cmpavr1.o 0x00c4: platform_main_end+0xd          EOR R18, R18 SREG=[------Z-] 
+cmpavr1.o 0x00c6: platform_main_end+0xe          EOR R19, R19 SREG=[------Z-] 
+cmpavr1.o 0x00c8: platform_main_end+0xf          MOVW R24, R16 
+cmpavr1.o 0x00ca: platform_main_end+0x10         EOR R24, R22 SREG=[--------] 
+cmpavr1.o 0x00cc: platform_main_end+0x11         EOR R25, R23 SREG=[------Z-] 
+cmpavr1.o 0x00ce: platform_main_end+0x12         LDI R20, 0x10 
+cmpavr1.o 0x00d0: platform_main_end+0x13         MOVW R22, R28 
+cmpavr1.o 0x00d2: platform_main_end+0x14         SUBI R22, 0xff SREG=[--HS-N-C] 
+cmpavr1.o 0x00d4: platform_main_end+0x15         SBCI R23, 0xff SREG=[--H----C] 
+cmpavr1.o 0x00d6: platform_main_end+0x16         CALL 0x170 SP=0x8e5 0x6d SP=0x8e4 0x0 
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x0170: __itoa_ncheck                  EOR R27, R27 SREG=[--H---ZC] 
+cmpavr1.o 0x0172: __itoa_ncheck+0x1              CPI R20, 0x0a SREG=[--H-----] 
+cmpavr1.o 0x0174: __itoa_ncheck+0x2              BRNE ->0x000c __data_load_end+0x88           
+cmpavr1.o 0x0174: __itoa_ncheck+0x2              CPU-waitstate
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              JMP 188 __utoa_common                  
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              CPU-waitstate
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              CPU-waitstate
+cmpavr1.o 0x0188: __utoa_common                  MOVW R30, R22 
+cmpavr1.o 0x018a: __utoa_common+0x1              EOR R21, R21 SREG=[--H---Z-] 
+cmpavr1.o 0x018c: __utoa_common+0x2              EOR R26, R26 SREG=[--H---Z-] 
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--------] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N-C] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--------] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--H-----] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--H-----] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--------] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[----VN--] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---S-N-C] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---SV-ZC] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---SV---] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-----] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-----] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[----VN--] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---S-N-C] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---SV-ZC] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[------Z-] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0xa6           
+cmpavr1.o 0x01a0: __utoa_common+0xc              SUBI R26, 0xd0 SREG=[-------C] 
+cmpavr1.o 0x01a2: __utoa_common+0xd              CPI R26, 0x3a SREG=[--HS-N-C] 
+cmpavr1.o 0x01a4: __utoa_common+0xe              BRCS ->0x0002 
+cmpavr1.o 0x01a4: __utoa_common+0xe              CPU-waitstate
+cmpavr1.o 0x01a8: __utoa_common+0x10             ST Z+, R26 
+cmpavr1.o 0x01a8: __utoa_common+0x10             CPU-waitstate
+cmpavr1.o 0x01aa: __utoa_common+0x11             SBIW R24, 0x00 SREG=[--H---Z-] 
+cmpavr1.o 0x01aa: __utoa_common+0x11             CPU-waitstate
+cmpavr1.o 0x01ac: __utoa_common+0x12             BRNE ->0xffde __data_load_end+0xb4           
+cmpavr1.o 0x01ae: __utoa_common+0x13             CPSE R27, R1 
+cmpavr1.o 0x01ae: __utoa_common+0x13             CPU-waitstate
+cmpavr1.o 0x01b2: __utoa_common+0x15             ST Z+, R1 
+cmpavr1.o 0x01b2: __utoa_common+0x15             CPU-waitstate
+cmpavr1.o 0x01b4: __utoa_common+0x16             MOVW R24, R22 
+cmpavr1.o 0x01b6: __utoa_common+0x17             JMP 1ba strrev                         
+cmpavr1.o 0x01b6: __utoa_common+0x17             CPU-waitstate
+cmpavr1.o 0x01b6: __utoa_common+0x17             CPU-waitstate
+cmpavr1.o 0x01ba: strrev                         MOVW R26, R24 
+cmpavr1.o 0x01bc: strrev+0x1                     MOVW R30, R24 
+cmpavr1.o 0x01be: strrev+0x2                     MOV R22, R23 
+cmpavr1.o 0x01c0: strrev+0x3                     LD R23, Z+ 
+cmpavr1.o 0x01c0: strrev+0x3                     CPU-waitstate
+cmpavr1.o 0x01c2: strrev+0x4                     AND R23, R23 SREG=[--H-----] 
+cmpavr1.o 0x01c4: strrev+0x5                     BRNE ->0xfff8 __data_load_end+0xc4           
+cmpavr1.o 0x01c4: strrev+0x5                     CPU-waitstate
+cmpavr1.o 0x01be: strrev+0x2                     MOV R22, R23 
+cmpavr1.o 0x01c0: strrev+0x3                     LD R23, Z+ 
+cmpavr1.o 0x01c0: strrev+0x3                     CPU-waitstate
+cmpavr1.o 0x01c2: strrev+0x4                     AND R23, R23 SREG=[--H---Z-] 
+cmpavr1.o 0x01c4: strrev+0x5                     BRNE ->0xfff8 __data_load_end+0xcc           
+cmpavr1.o 0x01c6: strrev+0x6                     SBIW R30, 0x02 SREG=[--H-----] 
+cmpavr1.o 0x01c6: strrev+0x6                     CPU-waitstate
+cmpavr1.o 0x01c8: strrev+0x7                     RJMP 1d2 
+cmpavr1.o 0x01c8: strrev+0x7                     CPU-waitstate
+cmpavr1.o 0x01d2: strrev+0xc                     CP R26, R30 SREG=[------Z-] 
+cmpavr1.o 0x01d4: strrev+0xd                     CPC R27, R31 SREG=[------Z-] 
+cmpavr1.o 0x01d6: strrev+0xe                     BRCS ->0xfff2 __data_load_end+0xde           
+cmpavr1.o 0x01d8: strrev+0xf                     RET SP=0x8e5 0x0 SP=0x8e6 0x6d 
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x00da: platform_main_end+0x18         LDI R24, 0x04 
+cmpavr1.o 0x00dc: platform_main_end+0x19         LDI R25, 0x01 
+cmpavr1.o 0x00de: platform_main_end+0x1a         CALL 0x96 SP=0x8e5 0x71 SP=0x8e4 0x0 
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x71 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00e2: platform_main_end+0x1c         MOVW R24, R28 
+cmpavr1.o 0x00e4: platform_main_end+0x1d         ADIW R24, 1 SREG=[--------] 
+cmpavr1.o 0x00e4: platform_main_end+0x1d         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CALL 0x96 SP=0x8e5 0x75 SP=0x8e4 0x0 
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x75 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00ea: platform_main_end+0x20         LDI R24, 0x10 
+cmpavr1.o 0x00ec: platform_main_end+0x21         LDI R25, 0x01 
+cmpavr1.o 0x00ee: platform_main_end+0x22         CALL 0x96 SP=0x8e5 0x79 SP=0x8e4 0x0 
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x79 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00f2: platform_main_end+0x24         ADIW R28, 17 SREG=[--------] 
+cmpavr1.o 0x00f2: platform_main_end+0x24         CPU-waitstate
+cmpavr1.o 0x00f4: platform_main_end+0x25         IN R0, 0x3f 
+cmpavr1.o 0x00f6: platform_main_end+0x26         CLI SREG=[--------] 
+cmpavr1.o 0x00f8: platform_main_end+0x27         OUT 0x3e, R29 SP=0x8e6 
+cmpavr1.o 0x00fa: platform_main_end+0x28         OUT 0x3f, R0 
+cmpavr1.o 0x00fc: platform_main_end+0x29         OUT 0x3d, R28 SP=0x8f7 
+cmpavr1.o 0x00fe: platform_main_end+0x2a         POP R29 SP=0x8f8 0x8 
+cmpavr1.o 0x00fe: platform_main_end+0x2a         CPU-waitstate
+cmpavr1.o 0x0100: platform_main_end+0x2b         POP R28 SP=0x8f9 0xff 
+cmpavr1.o 0x0100: platform_main_end+0x2b         CPU-waitstate
+cmpavr1.o 0x0102: platform_main_end+0x2c         POP R17 SP=0x8fa 0x1 
+cmpavr1.o 0x0102: platform_main_end+0x2c         CPU-waitstate
+cmpavr1.o 0x0104: platform_main_end+0x2d         POP R16 SP=0x8fb 0x0 
+cmpavr1.o 0x0104: platform_main_end+0x2d         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         RET SP=0x8fc 0x0 SP=0x8fd 0xa1 
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0142: main+0x1d                      LDI R24, 0x04 
+cmpavr1.o 0x0144: main+0x1e                      LDI R25, 0x00 
+cmpavr1.o 0x0146: main+0x1f                      LDI R26, 0x00 
+cmpavr1.o 0x0148: main+0x20                      LDI R27, 0x00 
+cmpavr1.o 0x014a: main+0x21                      STS 0x100, R24 
+cmpavr1.o 0x014a: main+0x21                      CPU-waitstate
+cmpavr1.o 0x014e: main+0x23                      STS 0x101, R25 
+cmpavr1.o 0x014e: main+0x23                      CPU-waitstate
+cmpavr1.o 0x0152: main+0x25                      STS 0x102, R26 
+cmpavr1.o 0x0152: main+0x25                      CPU-waitstate
+cmpavr1.o 0x0156: main+0x27                      STS 0x103, R27 
+cmpavr1.o 0x0156: main+0x27                      CPU-waitstate
+cmpavr1.o 0x015a: main+0x29                      LDI R20, 0x00 
+cmpavr1.o 0x015c: main+0x2a                      LDI R21, 0x00 
+cmpavr1.o 0x015e: main+0x2b                      LDI R22, 0x08 
+cmpavr1.o 0x0160: main+0x2c                      LDI R23, 0x00 
+cmpavr1.o 0x0162: main+0x2d                      LDI R24, 0x00 
+cmpavr1.o 0x0164: main+0x2e                      LDI R25, 0x00 
+cmpavr1.o 0x0166: main+0x2f                      CALL 0xaa SP=0x8fc 0xb5 SP=0x8fb 0x0 
+cmpavr1.o 0x0166: main+0x2f                      CPU-waitstate
+cmpavr1.o 0x0166: main+0x2f                      CPU-waitstate
+cmpavr1.o 0x0166: main+0x2f                      CPU-waitstate
+cmpavr1.o 0x00aa: platform_main_end              PUSH R16 SP=0x8fa 0x0 
+cmpavr1.o 0x00aa: platform_main_end              CPU-waitstate
+cmpavr1.o 0x00ac: platform_main_end+0x1          PUSH R17 SP=0x8f9 0x1 
+cmpavr1.o 0x00ac: platform_main_end+0x1          CPU-waitstate
+cmpavr1.o 0x00ae: platform_main_end+0x2          PUSH R28 SP=0x8f8 0xff 
+cmpavr1.o 0x00ae: platform_main_end+0x2          CPU-waitstate
+cmpavr1.o 0x00b0: platform_main_end+0x3          PUSH R29 SP=0x8f7 0x8 
+cmpavr1.o 0x00b0: platform_main_end+0x3          CPU-waitstate
+cmpavr1.o 0x00b2: platform_main_end+0x4          IN R28, 0x3d 
+cmpavr1.o 0x00b4: platform_main_end+0x5          IN R29, 0x3e 
+cmpavr1.o 0x00b6: platform_main_end+0x6          SBIW R28, 0x11 SREG=[--------] 
+cmpavr1.o 0x00b6: platform_main_end+0x6          CPU-waitstate
+cmpavr1.o 0x00b8: platform_main_end+0x7          IN R0, 0x3f 
+cmpavr1.o 0x00ba: platform_main_end+0x8          CLI SREG=[--------] 
+cmpavr1.o 0x00bc: platform_main_end+0x9          OUT 0x3e, R29 SP=0x8f7 
+cmpavr1.o 0x00be: platform_main_end+0xa          OUT 0x3f, R0 
+cmpavr1.o 0x00c0: platform_main_end+0xb          OUT 0x3d, R28 SP=0x8e6 
+cmpavr1.o 0x00c2: platform_main_end+0xc          MOVW R16, R24 
+cmpavr1.o 0x00c4: platform_main_end+0xd          EOR R18, R18 SREG=[------Z-] 
+cmpavr1.o 0x00c6: platform_main_end+0xe          EOR R19, R19 SREG=[------Z-] 
+cmpavr1.o 0x00c8: platform_main_end+0xf          MOVW R24, R16 
+cmpavr1.o 0x00ca: platform_main_end+0x10         EOR R24, R22 SREG=[--------] 
+cmpavr1.o 0x00cc: platform_main_end+0x11         EOR R25, R23 SREG=[------Z-] 
+cmpavr1.o 0x00ce: platform_main_end+0x12         LDI R20, 0x10 
+cmpavr1.o 0x00d0: platform_main_end+0x13         MOVW R22, R28 
+cmpavr1.o 0x00d2: platform_main_end+0x14         SUBI R22, 0xff SREG=[--HS-N-C] 
+cmpavr1.o 0x00d4: platform_main_end+0x15         SBCI R23, 0xff SREG=[--H----C] 
+cmpavr1.o 0x00d6: platform_main_end+0x16         CALL 0x170 SP=0x8e5 0x6d SP=0x8e4 0x0 
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x00d6: platform_main_end+0x16         CPU-waitstate
+cmpavr1.o 0x0170: __itoa_ncheck                  EOR R27, R27 SREG=[--H---ZC] 
+cmpavr1.o 0x0172: __itoa_ncheck+0x1              CPI R20, 0x0a SREG=[--H-----] 
+cmpavr1.o 0x0174: __itoa_ncheck+0x2              BRNE ->0x000c __data_load_end+0x88           
+cmpavr1.o 0x0174: __itoa_ncheck+0x2              CPU-waitstate
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              JMP 188 __utoa_common                  
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              CPU-waitstate
+cmpavr1.o 0x0182: __itoa_ncheck+0x9              CPU-waitstate
+cmpavr1.o 0x0188: __utoa_common                  MOVW R30, R22 
+cmpavr1.o 0x018a: __utoa_common+0x1              EOR R21, R21 SREG=[--H---Z-] 
+cmpavr1.o 0x018c: __utoa_common+0x2              EOR R26, R26 SREG=[--H---Z-] 
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--H-----] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N-C] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--------] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[--------] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[----VN--] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[---SV-ZC] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---S-N--] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--H-----] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[---SV---] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[--------] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[----VN--] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[------Z-] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[---SV-ZC] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[--------] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0x94           
+cmpavr1.o 0x019e: __utoa_common+0xb              CPU-waitstate
+cmpavr1.o 0x018e: __utoa_common+0x3              ADD R24, R24 SREG=[------Z-] 
+cmpavr1.o 0x0190: __utoa_common+0x4              ADC R25, R25 SREG=[------Z-] 
+cmpavr1.o 0x0192: __utoa_common+0x5              ADC R26, R26 SREG=[--------] 
+cmpavr1.o 0x0194: __utoa_common+0x6              CP R26, R20 SREG=[---S-N-C] 
+cmpavr1.o 0x0196: __utoa_common+0x7              BRCS ->0x0004 __data_load_end+0xa2           
+cmpavr1.o 0x0196: __utoa_common+0x7              CPU-waitstate
+cmpavr1.o 0x019c: __utoa_common+0xa              SUBI R21, 0x10 SREG=[------Z-] 
+cmpavr1.o 0x019e: __utoa_common+0xb              BRNE ->0xffee __data_load_end+0xa6           
+cmpavr1.o 0x01a0: __utoa_common+0xc              SUBI R26, 0xd0 SREG=[-------C] 
+cmpavr1.o 0x01a2: __utoa_common+0xd              CPI R26, 0x3a SREG=[--HS-N-C] 
+cmpavr1.o 0x01a4: __utoa_common+0xe              BRCS ->0x0002 
+cmpavr1.o 0x01a4: __utoa_common+0xe              CPU-waitstate
+cmpavr1.o 0x01a8: __utoa_common+0x10             ST Z+, R26 
+cmpavr1.o 0x01a8: __utoa_common+0x10             CPU-waitstate
+cmpavr1.o 0x01aa: __utoa_common+0x11             SBIW R24, 0x00 SREG=[--H---Z-] 
+cmpavr1.o 0x01aa: __utoa_common+0x11             CPU-waitstate
+cmpavr1.o 0x01ac: __utoa_common+0x12             BRNE ->0xffde __data_load_end+0xb4           
+cmpavr1.o 0x01ae: __utoa_common+0x13             CPSE R27, R1 
+cmpavr1.o 0x01ae: __utoa_common+0x13             CPU-waitstate
+cmpavr1.o 0x01b2: __utoa_common+0x15             ST Z+, R1 
+cmpavr1.o 0x01b2: __utoa_common+0x15             CPU-waitstate
+cmpavr1.o 0x01b4: __utoa_common+0x16             MOVW R24, R22 
+cmpavr1.o 0x01b6: __utoa_common+0x17             JMP 1ba strrev                         
+cmpavr1.o 0x01b6: __utoa_common+0x17             CPU-waitstate
+cmpavr1.o 0x01b6: __utoa_common+0x17             CPU-waitstate
+cmpavr1.o 0x01ba: strrev                         MOVW R26, R24 
+cmpavr1.o 0x01bc: strrev+0x1                     MOVW R30, R24 
+cmpavr1.o 0x01be: strrev+0x2                     MOV R22, R23 
+cmpavr1.o 0x01c0: strrev+0x3                     LD R23, Z+ 
+cmpavr1.o 0x01c0: strrev+0x3                     CPU-waitstate
+cmpavr1.o 0x01c2: strrev+0x4                     AND R23, R23 SREG=[--H-----] 
+cmpavr1.o 0x01c4: strrev+0x5                     BRNE ->0xfff8 __data_load_end+0xc4           
+cmpavr1.o 0x01c4: strrev+0x5                     CPU-waitstate
+cmpavr1.o 0x01be: strrev+0x2                     MOV R22, R23 
+cmpavr1.o 0x01c0: strrev+0x3                     LD R23, Z+ 
+cmpavr1.o 0x01c0: strrev+0x3                     CPU-waitstate
+cmpavr1.o 0x01c2: strrev+0x4                     AND R23, R23 SREG=[--H---Z-] 
+cmpavr1.o 0x01c4: strrev+0x5                     BRNE ->0xfff8 __data_load_end+0xcc           
+cmpavr1.o 0x01c6: strrev+0x6                     SBIW R30, 0x02 SREG=[--H-----] 
+cmpavr1.o 0x01c6: strrev+0x6                     CPU-waitstate
+cmpavr1.o 0x01c8: strrev+0x7                     RJMP 1d2 
+cmpavr1.o 0x01c8: strrev+0x7                     CPU-waitstate
+cmpavr1.o 0x01d2: strrev+0xc                     CP R26, R30 SREG=[------Z-] 
+cmpavr1.o 0x01d4: strrev+0xd                     CPC R27, R31 SREG=[------Z-] 
+cmpavr1.o 0x01d6: strrev+0xe                     BRCS ->0xfff2 __data_load_end+0xde           
+cmpavr1.o 0x01d8: strrev+0xf                     RET SP=0x8e5 0x0 SP=0x8e6 0x6d 
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x01d8: strrev+0xf                     CPU-waitstate
+cmpavr1.o 0x00da: platform_main_end+0x18         LDI R24, 0x04 
+cmpavr1.o 0x00dc: platform_main_end+0x19         LDI R25, 0x01 
+cmpavr1.o 0x00de: platform_main_end+0x1a         CALL 0x96 SP=0x8e5 0x71 SP=0x8e4 0x0 
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x00de: platform_main_end+0x1a         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a6: debug_puts+0x8                 RJMP a0 
+cmpavr1.o 0x00a6: debug_puts+0x8                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x71 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00e2: platform_main_end+0x1c         MOVW R24, R28 
+cmpavr1.o 0x00e4: platform_main_end+0x1d         ADIW R24, 1 SREG=[--------] 
+cmpavr1.o 0x00e4: platform_main_end+0x1d         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CALL 0x96 SP=0x8e5 0x75 SP=0x8e4 0x0 
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x00e6: platform_main_end+0x1e         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x75 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00ea: platform_main_end+0x20         LDI R24, 0x10 
+cmpavr1.o 0x00ec: platform_main_end+0x21         LDI R25, 0x01 
+cmpavr1.o 0x00ee: platform_main_end+0x22         CALL 0x96 SP=0x8e5 0x79 SP=0x8e4 0x0 
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x00ee: platform_main_end+0x22         CPU-waitstate
+cmpavr1.o 0x0096: debug_puts                     MOVW R30, R24 
+cmpavr1.o 0x0098: debug_puts+0x1                 LDD R18, Z+0 
+cmpavr1.o 0x0098: debug_puts+0x1                 CPU-waitstate
+cmpavr1.o 0x009a: debug_puts+0x2                 AND R18, R18 SREG=[--------] 
+cmpavr1.o 0x009c: debug_puts+0x3                 BREQ ->0x000a main+0x18                      
+cmpavr1.o 0x009e: debug_puts+0x4                 ADIW R30, 1 SREG=[--------] 
+cmpavr1.o 0x009e: debug_puts+0x4                 CPU-waitstate
+cmpavr1.o 0x00a0: debug_puts+0x5                 OUT 0x00, R18 
+cmpavr1.o 0x00a2: debug_puts+0x6                 LD R18, Z+ 
+cmpavr1.o 0x00a2: debug_puts+0x6                 CPU-waitstate
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPSE R18, R1 
+cmpavr1.o 0x00a4: debug_puts+0x7                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 RET SP=0x8e5 0x0 SP=0x8e6 0x79 
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00a8: debug_puts+0x9                 CPU-waitstate
+cmpavr1.o 0x00f2: platform_main_end+0x24         ADIW R28, 17 SREG=[--------] 
+cmpavr1.o 0x00f2: platform_main_end+0x24         CPU-waitstate
+cmpavr1.o 0x00f4: platform_main_end+0x25         IN R0, 0x3f 
+cmpavr1.o 0x00f6: platform_main_end+0x26         CLI SREG=[--------] 
+cmpavr1.o 0x00f8: platform_main_end+0x27         OUT 0x3e, R29 SP=0x8e6 
+cmpavr1.o 0x00fa: platform_main_end+0x28         OUT 0x3f, R0 
+cmpavr1.o 0x00fc: platform_main_end+0x29         OUT 0x3d, R28 SP=0x8f7 
+cmpavr1.o 0x00fe: platform_main_end+0x2a         POP R29 SP=0x8f8 0x8 
+cmpavr1.o 0x00fe: platform_main_end+0x2a         CPU-waitstate
+cmpavr1.o 0x0100: platform_main_end+0x2b         POP R28 SP=0x8f9 0xff 
+cmpavr1.o 0x0100: platform_main_end+0x2b         CPU-waitstate
+cmpavr1.o 0x0102: platform_main_end+0x2c         POP R17 SP=0x8fa 0x1 
+cmpavr1.o 0x0102: platform_main_end+0x2c         CPU-waitstate
+cmpavr1.o 0x0104: platform_main_end+0x2d         POP R16 SP=0x8fb 0x0 
+cmpavr1.o 0x0104: platform_main_end+0x2d         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         RET SP=0x8fc 0x0 SP=0x8fd 0xb5 
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x0106: platform_main_end+0x2e         CPU-waitstate
+cmpavr1.o 0x016a: main+0x31                      LDI R24, 0x00 
+cmpavr1.o 0x016c: main+0x32                      LDI R25, 0x00 
+cmpavr1.o 0x016e: main+0x33                      RET SP=0x8fe 0x0 SP=0x8ff 0x47 
+cmpavr1.o 0x016e: main+0x33                      CPU-waitstate
+cmpavr1.o 0x016e: main+0x33                      CPU-waitstate
+cmpavr1.o 0x016e: main+0x33                      CPU-waitstate
+cmpavr1.o 0x008e: __do_copy_data+0xd             JMP 1da exit,_exit                     
+cmpavr1.o 0x008e: __do_copy_data+0xd             CPU-waitstate
+cmpavr1.o 0x008e: __do_copy_data+0xd             CPU-waitstate
+cmpavr1.o 0x01da: exit,_exit                     CLI SREG=[--------] 
+cmpavr1.o 0x01dc: __stop_program                 
