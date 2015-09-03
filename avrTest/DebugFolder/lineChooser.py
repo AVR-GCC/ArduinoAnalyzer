@@ -64,7 +64,7 @@ def runFile:
 		runAvr(1, opt, optbin)
 
 
-def compareResults(timestamp):
+def compareResults:
 	foundmismatch = 0
 	avroutnames = opt + "out.txt" for opt in [opts]
 	avrouts = open(workFolder + path, 'r') for path in [avroutnames]
@@ -72,11 +72,31 @@ def compareResults(timestamp):
 	while foundmismatch == 0:
 		avrlines = fd.readLine for fd in avrouts
 		gccline = gccoutfile.readLine
-		avrlines =
+		(avrchecksums, avrids) = line.split('I') for line in avrlines
+		(gccchecksum, id) = gccline.split('I')
+		foundmismatch = nae(avrchecksums, gccchecksum)
+	return id
 		
+def id2num(id):
+	return id
+
+def marklineAndSave(lindex, timestamp):
+	srcFd = open(srcFolder + timestamp, 'r')
+	outFd = open(outFolder + timestamp, 'w+')
+	i = 0
+	line = srcFd.readline
+	while line:
+		if(i == lindex):
+			outFd.write(preErrorFunc)
+		outFd.write(line)
+		if(line != '/n'):
+			i++
+
 
 
 for file in os.listdir(srcFolder):
 	compileFile(srcFolder + file, file)
 	runFile
-	compareResults(file)
+	lineId = compareResults(file)
+	lineNum = id2num(lineId)
+	marklineAndSave(lineNum - 1, file)
