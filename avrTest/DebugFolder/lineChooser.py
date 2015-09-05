@@ -21,15 +21,44 @@ avrbinsuff = "Wprints.elf"
 tracestring = "trace.txt"
 traceDump = 0
 RunSafely = csmith + "/scripts/RunSafely.sh 2 1 /dev/null "
-opts = ["o0", "o1", "o2", "o3", "os"]
+opts = ["O0", "O1", "O2", "O3", "Os"]
+
+
+def nae(optouts):
+	found = 0
+	i = 0
+	res = 0
+	for out in optouts:
+		i++
+		if (out != optouts[0]):
+			if(!found):
+				res = i
+				found = 1
+		else:
+			notGcc = 1
+	if(!notGcc):
+		return 1
+	return res
+
+
+def run(cmd, exitOnFail):
+	print("running " + cmd + "\n")
+	out = os.system(cmd)
+	if(!out):
+		print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n" + cmd + "\nFAILED\n" + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"      
+		if(exitOnFail):
+			print "exiting...\n"
+			sys.exit()
+
+
 
 def compileGcc(srcFilePath):
-	os.system("rm " + workFolder + gccbin)
-	os.system("gcc " + srcFilePath + " -o " + workFolder + gccbin + " " + runtimeGcc)
+	run("rm " + workFolder + gccbin)
+	run("gcc " + srcFilePath + " -o " + workFolder + gccbin + " " + runtimeGcc)
 
 def compileAvr(srcFilePath, opt, bin):
-	os.system("rm " + workFolder + bin)
-	os.system(avrgcc + " -" + opt + " -mmcu=" + dev + " " + srcFilePath + " " + runtimeAvr " -o " + workFolder + bin)
+	run("rm " + workFolder + bin)
+	run(avrgcc + " -" + opt + " -mmcu=" + dev + " " + srcFilePath + " " + runtimeAvr " -o " + workFolder + bin)
 
 def compileFile(srcFilePath, timestamp):
 	compileGcc(srcFilePath)
@@ -43,7 +72,7 @@ def simulator(opt, bin):
 	simstring = simulavr + " -d " + dev + " -f " + workFolder + bin + " -W0x20," + workFolder + opt + avroutsuff
 	if traceDump == 1:
 		simstring = simstring + " -t " workFolder + opt + tracestring + " -T  __stop_program"
-	os.system(simstring)
+	run(simstring)
 
 def avrDude(opt, bin):
 	TODO
@@ -55,7 +84,7 @@ def runAvr(simulate, opt, bin):
 		avrDude(opt, bin)
 
 def runGcc:
-	os.system(csmith + RunSafely + workFolder + gccout + " " + workFolder + gccbin)
+	run(csmith + RunSafely + workFolder + gccout + " " + workFolder + gccbin)
 
 def runFile:
 	runGcc
