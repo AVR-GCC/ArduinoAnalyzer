@@ -21,8 +21,10 @@ def catagorizeFailedCFiles(dirname):
 			if not (BINS.has_key(curr)):
 				BINS[curr]=0
 			BINS[curr] += 1
+
 	print "minority report written to each folder: compareCheckSum.rpt \
 (first line - most different file, secondline verbose report)"
+	
 	print "minority histogram:"
 	for f in BINS.iterkeys():
 		print f+": "+str(BINS[f])
@@ -48,6 +50,7 @@ def compareCheckSum (dirname):
 				A[f] = line
 	#go over result & find the minorites
 	verbose = ""
+	
 	for f in A.iterkeys():
 		diff = 0
 		for f_other in A.iterkeys():
