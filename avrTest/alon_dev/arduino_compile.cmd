@@ -4,6 +4,8 @@
 #   
 #   *writes checksum to file
 ############################################
+
+
 ##################
 # Config
 #arguments: 1-srcFile,  2-opt flag,3-device, 4-com, 5-checksum_out_file 
@@ -17,14 +19,20 @@ ard_home=/home/student/avr/arduino-1.6.5/
 #temp compilation files
 tmp_folder=/tmp/arduino_compile_temp
 c_file=avrtest_arduino.cpp
+
+
 ##################
 #pre-compile work - cleaning directories & preparing c-file for arduino format, no main allowed
 rm -Rf $tmp_folder 
 mkdir $tmp_folder
 sed 's/int main (int argc, char/int main1 (int argc, char/g' $orig_c_file > $tmp_folder/$c_file
+
+
 ##################
 # compile actual c file
 $ard_home/hardware/tools/avr/bin/avr-gcc -c -g -$opti_flag -w -MMD -fpermissive -mmcu=$device -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_DUEMILANOVE -DARDUINO_ARCH_AVR -I$ard_home/hardware/arduino/avr/cores/arduino -I$ard_home/hardware/arduino/avr/variants/standard $tmp_folder/$c_file -o $tmp_folder/$c_file.o 
+
+
 ##################
 # arduino specific libraries
 $ard_home/hardware/tools/avr/bin/avr-gcc -c -g -x assembler-with-cpp -mmcu=$device -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_DUEMILANOVE -DARDUINO_ARCH_AVR -I$ard_home/hardware/arduino/avr/cores/arduino -I$ard_home/hardware/arduino/avr/variants/standard $ard_home/hardware/arduino/avr/cores/arduino/wiring_pulse.S -o $tmp_folder/wiring_pulse.S.o 
@@ -89,8 +97,11 @@ $ard_home/hardware/tools/avr/bin/avr-ar rcs $tmp_folder/core.a $tmp_folder/HID.c
 $ard_home/hardware/tools/avr/bin/avr-ar rcs $tmp_folder/core.a $tmp_folder/Print.cpp.o 
 $ard_home/hardware/tools/avr/bin/avr-ar rcs $tmp_folder/core.a $tmp_folder/abi.cpp.o 
 $ard_home/hardware/tools/avr/bin/avr-ar rcs $tmp_folder/core.a $tmp_folder/Tone.cpp.o 
+
+
 ##################
 # final linking of all components & c file
 $ard_home/hardware/tools/avr/bin/avr-gcc -w -$opti_flag -Wl,--gc-sections -mmcu=$device -o $tmp_folder/$c_file.elf $tmp_folder/$c_file.o $tmp_folder/core.a -L$tmp_folder -lm 
 cp $tmp_folder/$c_file.elf $output_file
+
 echo "Compilation done."
