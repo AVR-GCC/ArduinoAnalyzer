@@ -28,5 +28,6 @@ $ard_home/hardware/tools/avr/bin/avrdude -C$ard_home/hardware/tools/avr/etc/avrd
 ##################
 # AVRDude - wait, then read checksum to output_file
 sleep 1
+#TODO: this allows only 1 line to be written, in order to close connection. in debug we want to write multiple lines.
 sudo head -n1 $COM > $output_file
 echo "Upload & run done."
