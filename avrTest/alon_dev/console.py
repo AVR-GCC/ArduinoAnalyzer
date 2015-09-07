@@ -74,7 +74,7 @@ class Console(cmd.Cmd):
 		#TODO call flow line times
 
 ## Debug
-	#catagorize
+	#catagorize all
 	def do_catagorize_failedCFiles(self, line):
 		"analyzes FailedCfiles results & reports histogram of minorities, [usage] catagorize_failedCFiles <path_to_failedCFiles>"
 		if not line:
