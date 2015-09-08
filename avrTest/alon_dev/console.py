@@ -87,7 +87,7 @@ class Console(cmd.Cmd):
 		"analyzes specific .c file results & reports the most different run, [usage] catagorize_specific <path_to_failedCFile_specific_directory>"
 		if line:
 			#example of how to call functions!
-			catagorize.compareCheckSum(line)
+			print catagorize.compareCheckSum(line)
 	
 	#lineChooser specific run
 	def do_lineChooser_specific(self, line):
