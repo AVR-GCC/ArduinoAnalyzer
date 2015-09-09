@@ -22,6 +22,17 @@ tracestring = "trace.txt"
 traceDump = 0
 RunSafely = csmith + "/scripts/RunSafely.sh 2 1 /dev/null "
 opts = ["O0", "O1", "O2", "O3", "Os"]
+dude =0
+
+devArd = "atmega328p"
+com = "/dev/ttyUSB0"
+ardgcc = "sudo bash /home/student/avr/avrTest/alon_dev/arduino_compile.cmd"
+arddude = "sudo bash /home/student/avr/avrTest/alon_dev/arduino_dude.cmd"
+
+#Example of run:
+#srcF = "/home/student/avr/avrTest/FailedCFiles/20150825-16:53:56/avrtest.c"
+#compileArd(srcF,"O1","alonArd.elf")
+#avrDude("O1","alonArd.elf")
 
 
 def nae(optouts):
@@ -60,11 +71,19 @@ def compileAvr(srcFilePath, opt, bin):
 	run("rm " + workFolder + bin)
 	run(avrgcc + " -" + opt + " -mmcu=" + dev + " " + srcFilePath + " " + runtimeAvr " -o " + workFolder + bin)
 
+def compileArd(srcFilePath, opt, bin):
+	#needs root permissions!
+	os.system("rm " + workFolder + bin)
+	#arguments: 1-srcFile,  2-opt flag,3-device, 4-com, 5-out_file 
+	os.system(ardgcc + " " + srcFilePath + " " + opt + " " + devArd + " " + com + " " + workFolder + bin)
+
 def compileFile(srcFilePath, timestamp):
 	compileGcc(srcFilePath)
 	for opt in [opts]:
 		optbin = opt + avrbinsuff
 		compileAvr(srcFilePath, opt, optbin)
+		if dude:
+			compileArd(srcFilePath, opt, optbin)
 
 
 
@@ -75,7 +94,8 @@ def simulator(opt, bin):
 	run(simstring)
 
 def avrDude(opt, bin):
-	TODO
+	#arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
+	os.system(arddude + " " + workFolder + bin + " " + devArd + " " + com + " " + workFolder + opt + avroutsuff)
 
 def runAvr(simulate, opt, bin):
 	if simulate == 1:
@@ -83,17 +103,19 @@ def runAvr(simulate, opt, bin):
 	if simulate == 0:
 		avrDude(opt, bin)
 
-def runGcc:
+def runGcc():
 	run(csmith + RunSafely + workFolder + gccout + " " + workFolder + gccbin)
 
-def runFile:
+def runFile():
 	runGcc
 	for opt in [opts]:
 		optbin = opt + avrbinsuff
 		runAvr(1, opt, optbin)
+		if dude:
+			runAvr(0, opt, optbin)
 
 
-def compareResults:
+def compareResults():
 	foundmismatch = 0
 	avroutnames = opt + "out.txt" for opt in [opts]
 	avrouts = open(workFolder + path, 'r') for path in [avroutnames]
@@ -101,31 +123,39 @@ def compareResults:
 	while foundmismatch == 0:
 		avrlines = fd.readLine for fd in avrouts
 		gccline = gccoutfile.readLine
-		(avrchecksums, avrids) = line.split('I') for line in avrlines
-		(gccchecksum, id) = gccline.split('I')
+		(avrchecksums, avrids) = line.split('$') for line in avrlines
+		(gccchecksum, id) = gccline.split('$')
 		foundmismatch = nae(avrchecksums, gccchecksum)
 	return id
 		
-def id2num(id):
-	return id
+def id2lineNum(id):
+	i = 0
+	idstr = "print" + id + "("
+	srcFd = open(srcFilePath, 'r')
+	line = srcFd.readline()
+	while line:
+		if idstr in line:
+			return i
+		i = i + 1
+		pass
+	return -1
 
 def marklineAndSave(lindex, timestamp):
 	srcFd = open(srcFolder + timestamp, 'r')
 	outFd = open(outFolder + timestamp, 'w+')
 	i = 0
-	line = srcFd.readline
+	line = srcFd.readline()
 	while line:
 		if(i == lindex):
 			outFd.write(preErrorFunc)
 		outFd.write(line)
-		if(line != '/n'):
-			i++
-
+		i = i + 1
+	srcFd.close()
+	outFd.close()
 
 
 for file in os.listdir(srcFolder):
 	compileFile(srcFolder + file, file)
-	runFile
-	lineId = compareResults(file)
-	lineNum = id2num(lineId)
-	marklineAndSave(lineNum - 1, file)
+	runFile()
+	lineId = compareResults()
+	marklineAndSave(id2lineNum(lineId), file)
