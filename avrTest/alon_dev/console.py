@@ -6,9 +6,10 @@ class Console(cmd.Cmd):
 	
 ## Aesthetics
 	prompt = '$: '
+	#TODO: write an opening statment
 	intro = "AVR-GCC bug seeker - an interactive tool for testing avr C tools \
 	\ncompile_run_* - testing a given .c file. \nflow_run_* - generates, compiles & runs on the varios platforms\
-	\ncatagorize_* - minority report reports\nlineChooser_* - builds a new leaner version of the code that represents the same bug\
+	\ncatagorize_* - minority report reports\nlineChooser_* - builds a new destilted version of the code that represents the same bug\
 	\ntype \'help\' for more information,\ntype \'exit\' to exit"
 
 	doc_header = 'Commands with help'
@@ -68,15 +69,15 @@ class Console(cmd.Cmd):
 				print "b"
 				return
 		print "a"
-	#run indefinitely
+	#run indefenatly
 	def do_flow_run_inf(self, line):
-		"runs flow indefinitely, [usage] flow_run_inf"
+		"runs flow indefenatly, [usage] flow_run_inf"
 		#TODO call flow line times
 
 ## Debug
-	#catagorize all
+	#catagorize
 	def do_catagorize_failedCFiles(self, line):
-		"analyzes FailedCfiles results & reports histogram of minorities, [usage] catagorize_failedCFiles <path_to_failedCFiles>"
+		"analizes FailedCfiles results & reports histogram of minorities, [usage] catagorize_failedCFiles <path_to_failedCFiles>"
 		if not line:
 			#TODO - get from config file
 			line = "/home/student/avr/avrTest/FailedCFiles"
@@ -84,21 +85,20 @@ class Console(cmd.Cmd):
 	
 	#catagorize_specific
 	def do_catagorize_specific(self, line):
-		"analyzes specific .c file results & reports the most different run, [usage] catagorize_specific <path_to_failedCFile_specific_directory>"
+		"analizes specific .c file results & reports the most different run, [usage] catagorize_specific <path_to_failedCFile_specific_directory>"
 		if line:
-			#example of how to call functions!
-			print catagorize.compareCheckSum(line)
+			catagorize.compareCheckSum(line)
 	
 	#lineChooser specific run
 	def do_lineChooser_specific(self, line):
-		"analyzes specific .c file results & builds a new leaner version of the code that represents the same bug, [usage] lineChooser_specific <path_to_failedCFile_specific_directory>"
+		"analizes specific .c file results & builds a new destilted version of the code that represents the same bug, [usage] lineChooser_specific <path_to_failedCFile_specific_directory>"
 		if line:
 			#TODO call lineChooser that runs on a specific directory
 			return
 	
 	#lineChooser all failed	
 	def do_lineChooser_failedCFiles(self, line):
-		"analyzes FailedCfiles results & build a new leaner version of the codes that represents the same bugs, [usage] lineChooser_failedCFiles <path_to_failedCFiles>"
+		"analizes FailedCfiles results & build a new destilted version of the codes that represents the same bugs, [usage] lineChooser_failedCFiles <path_to_failedCFiles>"
 		if not line:
 			#TODO - get from config file
 			line = "/home/student/avr/avrTest/FailedCFiles"

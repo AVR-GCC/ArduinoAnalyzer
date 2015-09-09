@@ -14,8 +14,11 @@ opti_flag=$2
 device=$3
 COM=$4
 output_file=$5
+
 #TODO move to config.py
 ard_home=/home/student/avr/arduino-1.6.5/
+runtime_ard=/home/student/avr/avrTest/alon_dev/runtime_arduino/
+
 #temp compilation files
 tmp_folder=/tmp/arduino_compile_temp
 c_file=avrtest_arduino.cpp
@@ -30,8 +33,7 @@ sed 's/int main (int argc, char/int main1 (int argc, char/g' $orig_c_file > $tmp
 
 ##################
 # compile actual c file
-$ard_home/hardware/tools/avr/bin/avr-gcc -c -g -$opti_flag -w -MMD -fpermissive -mmcu=$device -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_DUEMILANOVE -DARDUINO_ARCH_AVR -I$ard_home/hardware/arduino/avr/cores/arduino -I$ard_home/hardware/arduino/avr/variants/standard $tmp_folder/$c_file -o $tmp_folder/$c_file.o 
-
+$ard_home/hardware/tools/avr/bin/avr-gcc -c -g -$opti_flag -w -MMD -fpermissive -mmcu=$device -DF_CPU=16000000L -DARDUINO=10605 -DARDUINO_AVR_DUEMILANOVE -DARDUINO_ARCH_AVR -I$ard_home/hardware/arduino/avr/cores/arduino -I$ard_home/hardware/arduino/avr/variants/standard -I$runtime_ard $tmp_folder/$c_file -o $tmp_folder/$c_file.o 
 
 ##################
 # arduino specific libraries
@@ -98,10 +100,9 @@ $ard_home/hardware/tools/avr/bin/avr-ar rcs $tmp_folder/core.a $tmp_folder/Print
 $ard_home/hardware/tools/avr/bin/avr-ar rcs $tmp_folder/core.a $tmp_folder/abi.cpp.o 
 $ard_home/hardware/tools/avr/bin/avr-ar rcs $tmp_folder/core.a $tmp_folder/Tone.cpp.o 
 
-
 ##################
 # final linking of all components & c file
 $ard_home/hardware/tools/avr/bin/avr-gcc -w -$opti_flag -Wl,--gc-sections -mmcu=$device -o $tmp_folder/$c_file.elf $tmp_folder/$c_file.o $tmp_folder/core.a -L$tmp_folder -lm 
-cp $tmp_folder/$c_file.elf $output_file
 
+cp $tmp_folder/$c_file.elf $output_file
 echo "Compilation done."

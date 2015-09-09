@@ -5,6 +5,7 @@
 #   *writes checksum to file
 ############################################
 
+
 ##################
 # Config
 #arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
@@ -12,8 +13,10 @@ srcFile=$1
 device=$2
 COM=$3
 output_file=$4
+
 #TODO move to config.py
 ard_home=/home/student/avr/arduino-1.6.5/
+
 #temp compilation files
 tmp_folder=/tmp/arduino_compile_temp
 c_file=avrtest_arduino.cpp
@@ -28,6 +31,5 @@ $ard_home/hardware/tools/avr/bin/avrdude -C$ard_home/hardware/tools/avr/etc/avrd
 ##################
 # AVRDude - wait, then read checksum to output_file
 sleep 1
-#TODO: this allows only 1 line to be written, in order to close connection. in debug we want to write multiple lines.
 sudo head -n1 $COM > $output_file
 echo "Upload & run done."
