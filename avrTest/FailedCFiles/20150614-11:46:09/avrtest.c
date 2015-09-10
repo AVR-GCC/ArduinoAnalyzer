@@ -9,6 +9,7 @@
 
 #include "csmith.h"
 
+/* this is one */
 
 static long __undefined;
 
