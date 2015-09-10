@@ -9,7 +9,7 @@ dev = "atmega328"
 
 runtimeAvr = "-I" + csmith + "runtime_avr";
 
-home = "/home/student/avr/avrTest"
+home = "/home/student/publicWork/avrTest"
 runtimeGcc = "-I" + csmith + "runtime_gcc/"
 srcFolder = home + "/DebugFolder/srcWprints/"
 workFolder = home + "/DebugFolder/"
@@ -35,95 +35,110 @@ arddude = "sudo bash /home/student/avr/avrTest/alon_dev/arduino_dude.cmd"
 #avrDude("O1","alonArd.elf")
 
 
+#copyed
 def nae(optouts):
+	print "************nae************/n"
 	found = 0
 	i = 0
 	res = 0
 	for out in optouts:
-		i++
+		i = i + 1
 		if (out != optouts[0]):
-			if(!found):
+			if(found == 0):
 				res = i
 				found = 1
 		else:
 			notGcc = 1
-	if(!notGcc):
+	if(notGcc == 0):
 		return 1
 	return res
 
-
+#copyed
 def run(cmd, exitOnFail):
 	print("running " + cmd + "\n")
 	out = os.system(cmd)
-	if(!out):
+	if(out != 0):
 		print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n" + cmd + "\nFAILED\n" + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"      
 		if(exitOnFail):
 			print "exiting...\n"
 			sys.exit()
 
 
-
+#copyed
 def compileGcc(srcFilePath):
-	run("rm " + workFolder + gccbin)
-	run("gcc " + srcFilePath + " -o " + workFolder + gccbin + " " + runtimeGcc)
+	print "************compileGcc************/n"
+	run("rm " + workFolder + gccbin, 0)
+	run("gcc " + srcFilePath + " -o " + workFolder + gccbin + " " + runtimeGcc, 1)
 
-def compileAvr(srcFilePath, opt, bin):
-	run("rm " + workFolder + bin)
-	run(avrgcc + " -" + opt + " -mmcu=" + dev + " " + srcFilePath + " " + runtimeAvr " -o " + workFolder + bin)
+#copyed
+def compileAvr(srcFilePath):
+	print "************compileAvr************/n"
+	for opt in opts:
+		bin = opt + avrbinsuff
+		compileOpt(opt, bin, srcFilePath)
 
-def compileArd(srcFilePath, opt, bin):
-	#needs root permissions!
-	os.system("rm " + workFolder + bin)
-	#arguments: 1-srcFile,  2-opt flag,3-device, 4-com, 5-out_file 
-	os.system(ardgcc + " " + srcFilePath + " " + opt + " " + devArd + " " + com + " " + workFolder + bin)
 
-def compileFile(srcFilePath, timestamp):
+def compileOpt(opt, bin, srcFilePath):
+	print "************compileOpt************/n"
+	run("rm " + workFolder + bin, 0)
+	run(avrgcc + " -" + opt + " -mmcu=" + dev + " " + srcFilePath + " " + runtimeAvr + " -o " + workFolder + bin, 1)
+
+
+#copyed
+def compileFile(srcFilePath):
+	print "************compileFile************/n"
 	compileGcc(srcFilePath)
-	for opt in [opts]:
-		optbin = opt + avrbinsuff
-		compileAvr(srcFilePath, opt, optbin)
-		if dude:
-			compileArd(srcFilePath, opt, optbin)
+	compileAvr(srcFilePath)
 
-
-
+#copyed
 def simulator(opt, bin):
+	print "************simulator************/n"
 	simstring = simulavr + " -d " + dev + " -f " + workFolder + bin + " -W0x20," + workFolder + opt + avroutsuff
 	if traceDump == 1:
-		simstring = simstring + " -t " workFolder + opt + tracestring + " -T  __stop_program"
-	run(simstring)
+		simstring = simstring + " -t " + workFolder + opt + tracestring + " -T  __stop_program"
+	run(simstring, 1)
 
-def avrDude(opt, bin):
-	#arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
-	os.system(arddude + " " + workFolder + bin + " " + devArd + " " + com + " " + workFolder + opt + avroutsuff)
-
+#copyed
 def runAvr(simulate, opt, bin):
+	print "************runAvr************/n"
 	if simulate == 1:
 		simulator(opt, bin)
 	if simulate == 0:
 		avrDude(opt, bin)
 
+#copyed
 def runGcc():
-	run(csmith + RunSafely + workFolder + gccout + " " + workFolder + gccbin)
+	print "************runGcc************/n"
+	run(workFolder + gccbin + " " + workFolder + gccout, 1)
 
+#copyed
 def runFile():
-	runGcc
-	for opt in [opts]:
+	print "************runFile************/n"
+	runGcc()
+	for opt in opts:
 		optbin = opt + avrbinsuff
 		runAvr(1, opt, optbin)
-		if dude:
-			runAvr(0, opt, optbin)
 
+def compileArd(srcFilePath, opt, bin):
+	#needs root permissions!
+	run("rm " + workFolder + bin, 0)
+	#arguments: 1-srcFile,  2-opt flag,3-device, 4-com, 5-out_file 
+	run(ardgcc + " " + srcFilePath + " " + opt + " " + devArd + " " + com + " " + workFolder + bin, 1)
+
+
+def avrDude(opt, bin):
+	#arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
+	run(arddude + " " + workFolder + bin + " " + devArd + " " + com + " " + workFolder + opt + avroutsuff, 1)
 
 def compareResults():
 	foundmismatch = 0
-	avroutnames = opt + "out.txt" for opt in [opts]
-	avrouts = open(workFolder + path, 'r') for path in [avroutnames]
+	avroutnames = [opt + "out.txt" for opt in opts]
+	avrouts = [open(workFolder + path, 'r') for path in avroutnames]
 	gccoutfile = open(workFolder + gccout, 'r')
 	while foundmismatch == 0:
-		avrlines = fd.readLine for fd in avrouts
-		gccline = gccoutfile.readLine
-		(avrchecksums, avrids) = line.split('$') for line in avrlines
+		avrlines = [fd.readline() for fd in avrouts]
+		gccline = gccoutfile.readline()
+		(avrchecksums, avrids) = [line.split('$') for line in avrlines]
 		(gccchecksum, id) = gccline.split('$')
 		foundmismatch = nae(avrchecksums, gccchecksum)
 	return id
@@ -155,7 +170,7 @@ def marklineAndSave(lindex, timestamp):
 
 
 for file in os.listdir(srcFolder):
-	compileFile(srcFolder + file, file)
+	compileFile(srcFolder + file)
 	runFile()
 	lineId = compareResults()
 	marklineAndSave(id2lineNum(lineId), file)
