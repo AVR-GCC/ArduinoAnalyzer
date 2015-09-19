@@ -4,16 +4,16 @@ import sys
 import datetime
 
 from pycparser import parse_file, c_parser, c_generator
-home = "/home/student/publicWork/avrTest"
-runtimeGcc = "/home/student/publicWork/avrTest/Utils/csmith-2.2.0/runtime_gcc/"
-srcFolder = home + "/WorkFolder/"
-workFolder = home + "/WorkFolder/"
-FailedCFiles = home + "/FailedCFiles/"
-outFolder = home + "/DebugFolder/"
+home = "/home/student/publicWorkTest/avrTest/"
+runtimeGcc = "Utils/csmith-2.2.0/runtime_gcc/"
+srcFolder = home + "WorkFolder/"
+workFolder = home + "WorkFolder/"
+FailedCFiles = home + "FailedCFiles/"
+outFolder = home + "DebugFolder/"
 srcFileName = "avrtest.c"
-avrgcc = "/home/student/publicWork/avrTest/Utils/avr8-gnu-toolchain-linux_x86/bin/avr-gcc";
-simulavr = "/home/student/publicWork/avrTest/Utils/Simulator/usr/bin/simulavr";
-csmith = "/home/student/publicWork/avrTest/Utils/csmith-2.2.0/"
+avrgcc = home + "Utils/avr8-gnu-toolchain-linux_x86/bin/avr-gcc";
+simulavr = home + "Utils/Simulator/usr/bin/simulavr";
+csmith = home + "Utils/csmith-2.2.0/"
 compileOut = "compileOut.txt"
 dev = "atmega328"
 

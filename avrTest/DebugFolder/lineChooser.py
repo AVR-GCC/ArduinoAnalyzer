@@ -1,19 +1,27 @@
 import os
 import sys
 
-avrgcc = "/home/student/avrTest/Utils/avr8-gnu-toolchain-linux_x86/bin/avr-gcc";
-simulavr = "/home/student/avrTest/Utils/Simulator/usr/bin/simulavr";
-csmith = "/home/student/avrTest/Utils/csmith-2.2.0/"
+
+
+
+
+
+home = "/home/student/publicWorkTest/avrTest/"
+
+avrgcc = home + "Utils/avr8-gnu-toolchain-linux_x86/bin/avr-gcc";
+simulavr = home + "Utils/Simulator/usr/bin/simulavr";
+csmith = home + "Utils/csmith-2.2.0/"
 
 dev = "atmega328"
 
-runtimeAvr = "-I" + csmith + "runtime_avr";
+runtimeAvr = "-I" + csmith + "runtime_avr/";
 
-home = "/home/student/publicWork/avrTest"
+insertPrints = home + "pycparser/addprints.py"
 runtimeGcc = "-I" + csmith + "runtime_gcc/"
-srcFolder = home + "/DebugFolder/srcWprints/"
-workFolder = home + "/DebugFolder/"
-outFolder = home + "/DebugFolder/lineMarked/"
+srcFolder = home + "FailedCFiles/cfiles2Debug/"
+workFolder = home + "DebugFolder/"
+srcFilePath = workFolder + "wp.c"
+outFolder = home + "DebugFolder/lineMarked/"
 gccout = "gccPrintsOut.txt"
 gccbin = "gccWprints.o"
 avroutsuff = "avrPrintsOut.txt"
@@ -22,7 +30,7 @@ tracestring = "trace.txt"
 traceDump = 0
 RunSafely = csmith + "/scripts/RunSafely.sh 2 1 /dev/null "
 opts = ["O0", "O1", "O2", "O3", "Os"]
-dude =0
+dude = 0
 
 devArd = "atmega328p"
 com = "/dev/ttyUSB0"
@@ -65,30 +73,30 @@ def run(cmd, exitOnFail):
 
 
 #copyed
-def compileGcc(srcFilePath):
+def compileGcc():
 	print "************compileGcc************/n"
 	run("rm " + workFolder + gccbin, 0)
 	run("gcc " + srcFilePath + " -o " + workFolder + gccbin + " " + runtimeGcc, 1)
 
 #copyed
-def compileAvr(srcFilePath):
+def compileAvr():
 	print "************compileAvr************/n"
 	for opt in opts:
 		bin = opt + avrbinsuff
-		compileOpt(opt, bin, srcFilePath)
+		compileOpt(opt, bin)
 
 
-def compileOpt(opt, bin, srcFilePath):
+def compileOpt(opt, bin):
 	print "************compileOpt************/n"
 	run("rm " + workFolder + bin, 0)
 	run(avrgcc + " -" + opt + " -mmcu=" + dev + " " + srcFilePath + " " + runtimeAvr + " -o " + workFolder + bin, 1)
 
 
 #copyed
-def compileFile(srcFilePath):
+def compileFile():
 	print "************compileFile************/n"
-	compileGcc(srcFilePath)
-	compileAvr(srcFilePath)
+	compileGcc()
+	compileAvr()
 
 #copyed
 def simulator(opt, bin):
@@ -119,7 +127,7 @@ def runFile():
 		optbin = opt + avrbinsuff
 		runAvr(1, opt, optbin)
 
-def compileArd(srcFilePath, opt, bin):
+def compileArd(opt, bin):
 	#needs root permissions!
 	run("rm " + workFolder + bin, 0)
 	#arguments: 1-srcFile,  2-opt flag,3-device, 4-com, 5-out_file 
@@ -138,9 +146,10 @@ def compareResults():
 	while foundmismatch == 0:
 		avrlines = [fd.readline() for fd in avrouts]
 		gccline = gccoutfile.readline()
-		(avrchecksums, avrids) = [line.split('$') for line in avrlines]
-		(gccchecksum, id) = gccline.split('$')
-		foundmismatch = nae(avrchecksums, gccchecksum)
+		if (line == *$*):
+			(avrchecksums, avrids) = [line.split('$') for line in avrlines]
+			(gccchecksum, id) = gccline.split('$')
+			foundmismatch = nae(avrchecksums, gccchecksum)
 	return id
 		
 def id2lineNum(id):
@@ -168,9 +177,13 @@ def marklineAndSave(lindex, timestamp):
 	srcFd.close()
 	outFd.close()
 
+def addprints(srcPath):
+	run("rm " + srcFilePath, 0)
+	run("python " + insertPrints + " " + srcPath + " " + srcFilePath, 1)
 
 for file in os.listdir(srcFolder):
-	compileFile(srcFolder + file)
+	addprints(srcFolder + file)
+	compileFile()
 	runFile()
 	lineId = compareResults()
 	marklineAndSave(id2lineNum(lineId), file)
