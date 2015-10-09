@@ -5,6 +5,13 @@ import datetime
 
 from pycparser import parse_file, c_parser, c_generator
 
+
+
+
+import command
+
+
+
 from settings import *
 srcFolder = flow_srcFolder 
 workFolder = flow_workFolder 
@@ -36,7 +43,9 @@ def nae(optouts):
 #copyed
 def run(cmd, exitOnFail):
 	print("running " + cmd + "\n")
-	out = os.system(cmd)
+	#out = os.system(cmd)
+	command1 = command.Command(cmd)
+	out = command1.run(timeout=5)
 	if(out != 0):
 		print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n" + cmd + "\n\t\t\tFAILED\n" + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"      
 		if(exitOnFail):
@@ -110,7 +119,7 @@ def runFile():
 
 def compareResults():
 	print "************compareResults************"
-	avroutnames = [(opt + "OptOut.txt") for opt in opts]
+	avroutnames = [(opt + avroutsuff) for opt in opts]
 	avrouts = [open(workFolder + path, 'r') for path in avroutnames]
 	gccoutfile = open(workFolder + gccout, 'r')
 	avrlines = [fd.readline() for fd in avrouts]
@@ -138,16 +147,23 @@ def saveBug(timestamp):
 	    run("cp " + workFolder + opt + avrbinsuff + " " + FailedCFiles + timestamp + "/" + opt + avrbinsuff, 1)
 
 
-testsDone = 0
-while 1:
-	testsDone = testsDone + 1
-	print "------------ running test no {} ---------------\n".format(testsDone)
-	if(csgen):
-		csmithGenerate()
-	compileFile()
-	runFile()
-	foundbug = compareResults()
-	if(foundbug):
-		timestamp = reportBug(opts[foundbug - 2])
-		saveBug(timestamp)
-	pass
+def main(numRuns):
+	testsDone = 0
+	while testsDone < numRuns or numRuns < 0:
+		testsDone = testsDone + 1
+		print "------------ running test no {} ---------------\n".format(testsDone)
+		if(csgen):
+			csmithGenerate()
+		compileFile()
+		runFile()
+		foundbug = compareResults()
+		if(foundbug):
+			timestamp = reportBug(opts[foundbug - 2])
+			saveBug(timestamp)
+		print "------------ finished running test no {} ---------------\n".format(testsDone)
+		
+
+if __name__ == '__main__':
+	main(-1)
+
+

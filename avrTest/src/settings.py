@@ -33,17 +33,17 @@ ard_home = "/home/student/avr/arduino-1.6.5/"
 #File names:
 tracestring = "trace.txt"
 srcFileName = "avrtest.c"
-compileOut = "compileOut.txt"
+compileOut = "compileout.txt"
 
 lineChooser_srcFilePath = lineChooser_workFolder + "wp.c"
-lineChooser_gccout = "gccPrintsOut.txt"
+lineChooser_gccout = "gccPrintsout.txt"
 lineChooser_gccbin = "gccWprints.o"
-lineChooser_avroutsuff = "avrPrintsOut.txt"
+lineChooser_avroutsuff = "avrPrintsout.txt"
 lineChooser_avrbinsuff = "Wprints.elf"
 
 flow_gccout = "gccout.txt"
 flow_gccbin = "gccbin.o"
-flow_avroutsuff = "optOut.txt"
+flow_avroutsuff = "optout.txt"
 flow_avrbinsuff = "optBin.elf"
 flow_srcFilePath = flow_srcFolder + srcFileName
 
@@ -68,7 +68,7 @@ csmithOptions = " --no-safe-math --no-math64 --no-bitfields --no-consts --no-flo
 csmithOptions = csmithOptions + " --max-array-dim 2 --max-array-len-per-dim 8 "
 csmithOptions = csmithOptions + " --max-block-depth 2 --max-block-size 2 --max-expr-complexity 2 "
 csmithOptions = csmithOptions + " --max-funcs 4 --max-struct-fields 2 --max-union-fields 2 "
-csmithOptions = csmithOptions + "  --no-volatiles --no-volatile-pointers --no-const-pointers --no-unions --no-safe-math";
+csmithOptions = csmithOptions + "  --no-volatiles --no-volatile-pointers --no-pointers --no-unions --no-safe-math";
 
 #misc.
 traceDump = 0

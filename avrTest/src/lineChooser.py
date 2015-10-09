@@ -162,9 +162,9 @@ def marklineAndSave(lindex, timestamp):
 		i = 0
 		for line in srcFd:
 			if(i == lindex):
-				outFd.write(preErrorFunc)
-				print preErrorFunc
-			outFd.write(line)
+				outFd.write(line + "//this line is the problem!!!")
+			else:
+				outFd.write(line)
 			print line
 			if('/*' in line):
 				notInComment = 0
@@ -184,10 +184,14 @@ def addprints(srcPath):
 	run("rm " + srcFilePath, 0)
 	run("python " + insertPrints + " " + srcPath + " " + srcFilePath, 1)
 
-for file in os.listdir(srcFolder):
-	addprints(srcFolder + file)
-	compileFile()
-	runFile()
-	lineId = compareResults()
-	marklineAndSave(id2lineNum(lineId), file)
-	print "************** " + file + " finished and the line is marked in " + outFolder
+def main():
+	for file in os.listdir(srcFolder):
+		addprints(srcFolder + file)
+		compileFile()
+		runFile()
+		lineId = compareResults()
+		marklineAndSave(id2lineNum(lineId), file)
+		print "************** " + file + " finished and the line is marked in " + outFolder
+
+if __name__ == '__main__':
+	main()

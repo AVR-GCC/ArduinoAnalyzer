@@ -1,6 +1,10 @@
 import cmd
 import os
 import catagorize
+import settings
+import flow
+#import lineChooser
+
 class Console(cmd.Cmd):
 	
 	
@@ -65,13 +69,14 @@ class Console(cmd.Cmd):
 		if line:
 			if line.isdigit():
 				#TODO call flow line times
-				print "b"
+				flow.main(int(line))
 				return
-		print "a"
+		print "input not digit"
 	#run indefenatly
 	def do_flow_run_inf(self, line):
 		"runs flow indefenatly, [usage] flow_run_inf"
 		#TODO call flow line times
+		flow.main(-1)
 
 ## Debug
 	#catagorize
