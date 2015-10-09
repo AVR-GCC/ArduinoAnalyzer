@@ -4,8 +4,9 @@
 #
 
 #Folders:
-#home = "/home/student/publicWorkTest/avrTest/"
-home = "/home/student/avr/public/avrTest/"
+home = "/home/student/AVRfinal/avrTest/"
+
+#home = "/home/student/avr/public/avrTest/"
 csmith = home + "Utils/csmith-2.2.0/"
 
 lineChooser_srcFolder = home + "FailedCFiles/cfiles2Debug/"
