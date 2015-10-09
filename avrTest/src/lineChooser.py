@@ -107,12 +107,12 @@ def compileArd(opt, bin):
 	#needs root permissions!
 	run("rm " + workFolder + bin, 0)
 	#arguments: 1-srcFile,  2-opt flag,3-device, 4-com, 5-out_file 
-	run(ardgcc + " " + srcFilePath + " " + opt + " " + devArd + " " + com + " " + workFolder + bin, 1)
+	run(ardgcc + " " + srcFilePath + " " + opt + " " + devArd + " " + com + " " + workFolder + bin + " " + ard_home + " " + runtime_ard, 1)
 
 
 def avrDude(opt, bin):
 	#arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
-	run(arddude + " " + workFolder + bin + " " + devArd + " " + com + " " + workFolder + opt + avroutsuff, 1)
+	run(arddude + " " + workFolder + bin + " " + devArd + " " + com + " " + workFolder + opt + avroutsuff + " " + ard_home, 1)
 
 def compareResults():
 	foundmismatch = 0

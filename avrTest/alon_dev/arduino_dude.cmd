@@ -13,9 +13,7 @@ srcFile=$1
 device=$2
 COM=$3
 output_file=$4
-
-#TODO move to config.py
-ard_home=/home/student/avr/arduino-1.6.5/
+ard_home=$5
 
 #temp compilation files
 tmp_folder=/tmp/arduino_compile_temp

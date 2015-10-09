@@ -25,6 +25,8 @@ simulavr = home + "Utils/Simulator/usr/bin/simulavr";
 ardgcc = "sudo bash /home/student/avr/avrTest/alon_dev/arduino_compile.cmd"
 arddude = "sudo bash /home/student/avr/avrTest/alon_dev/arduino_dude.cmd"
 RunSafely = csmith + "/scripts/RunSafely.sh 2 1 /dev/null "
+# TODO: standertize
+ard_home = "/home/student/avr/arduino-1.6.5/"
 
 #File names:
 tracestring = "trace.txt"
@@ -54,6 +56,9 @@ com = "/dev/ttyUSB0"
 opts = ["O0", "O1", "O2", "O3", "Os"]
 runtimeAvr = "-I" + csmith + "runtime_avr/";
 runtimeGcc = "-I" + csmith + "runtime_gcc/"
+
+# TODO: standertize
+runtime_ard = "/home/student/avr/avrTest/alon_dev/runtime_arduino/"
 
 #C-smith parameters:
 csmithOptions = " --no-safe-math --no-math64 --no-bitfields --no-consts --no-float --no-divs "

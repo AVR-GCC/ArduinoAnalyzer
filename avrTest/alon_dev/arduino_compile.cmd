@@ -16,8 +16,8 @@ COM=$4
 output_file=$5
 
 #TODO move to config.py
-ard_home=/home/student/avr/arduino-1.6.5/
-runtime_ard=/home/student/avr/avrTest/alon_dev/runtime_arduino/
+ard_home=$6
+runtime_ard=$7
 
 #temp compilation files
 tmp_folder=/tmp/arduino_compile_temp
