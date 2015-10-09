@@ -1,0 +1,39 @@
+############################################
+#   Arduino compile & upload Flow
+#   Requires root permissions & physical COM
+#   
+#   *writes checksum to file
+############################################
+
+
+##################
+# install
+#arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
+srcFile=$1
+device=$2
+COM=$3
+output_file=$4
+
+###################
+
+#create folders
+#update config file
+
+#download csmith
+#download avr gcc
+#download simulavr
+#download pycparser
+
+#install csmith
+#install avr gcc
+#install simulavr
+#run pycparser script
+
+#test csmith
+#test avr gcc
+#test simulavr
+#test pycparser
+
+#print finished
+#start console
+
