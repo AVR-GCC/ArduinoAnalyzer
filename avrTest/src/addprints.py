@@ -54,6 +54,7 @@ class AssignmentVisitor(NodeVisitor):
                 return comp_obj
 
             def find_structfield_dec(self,node):
+
                 struct_nameid = node.name
                 struct_field_nameid = node.field
                 result = self.find_decl(struct_nameid)
@@ -85,6 +86,11 @@ class AssignmentVisitor(NodeVisitor):
                                  c.name is None and \
                                  c.type.name == var_name:
                                     return c
+                        elif isinstance(node, Union) and \
+                                 isinstance(c, Decl) and \
+                                 c.name is None and \
+                                 c.type.name == var_name:
+                                    return c
                     p=self.parents[p]
                 return None
 
@@ -104,7 +110,7 @@ class AssignmentVisitor(NodeVisitor):
                 return value
 
             def visit_Assignment(self, node):
-
+                node.show(showcoord=True)
                 deref_count=0;
                 l_val = node.lvalue
                 if isinstance(l_val,UnaryOp):
@@ -150,10 +156,11 @@ class AssignmentVisitor(NodeVisitor):
                 line_number  = int(node.coord.line)-9
                 exp_lst_node = ExprList([id_node2,Constant("int",str(line_number))])
                 func_call_node = FuncCall(id_node1,exp_lst_node)
-                node.rvalue=func_call_node
-                self.count+=1
                 for c_name,c in node.children():
                     self.visit(c)
+
+                node.rvalue=func_call_node
+                self.count+=1
 
 
 
