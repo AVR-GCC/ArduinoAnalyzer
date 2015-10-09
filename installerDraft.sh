@@ -6,14 +6,6 @@
 ############################################
 
 
-##################
-# install
-#arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
-# srcFile=$1
-# device=$2
-# COM=$3
-# output_file=$4
-
 ###################
 base=$PWD
 echo "Installing in - $base"
@@ -90,7 +82,7 @@ echo "Installing Utilities..."
 		tar -C $appDir -xvf $package
 		
 		#install
-		#NOTHING TO DO...
+			#NOTHING TO DO...
 		#test
 		#TODO
 	cd $dir
@@ -107,7 +99,7 @@ echo "Installing Utilities..."
 		tar -C $appDir -xvf $package
 		
 		#install
-		#NOTHING TO DO...
+			#NOTHING TO DO...
 		#test
 		#TODO
 	cd $dir
@@ -140,10 +132,9 @@ cd $base
 	cp $settings_path.temp $settings_path
 	rm $settings_path.temp
 
-#test console
-#test flow
-#test debug
+echo "Finished instalation."
 
-#print finished
+echo "Opening console.."
 #start console
+$base/src/console.py
 
