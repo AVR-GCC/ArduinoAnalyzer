@@ -7,7 +7,9 @@ import sys
 
 class AssignmentVisitor(NodeVisitor):
 
-            def __init__(self,parents):
+            def __init__(self,parents,src_code,src_code_no_mods):
+                self.src_code=src_code.splitlines()
+                self.src_code_no_mods = src_code_no_mods.splitlines()
                 self.parents=parents
                 self.count=0
                 self.new_funcs = list()
@@ -111,6 +113,10 @@ class AssignmentVisitor(NodeVisitor):
 
             def visit_Assignment(self, node):
 
+                line_number = int(node.coord.line)
+                line_of_code = self.src_code[line_number-1]
+                line_number = self.src_code_no_mods.index(line_of_code)
+
                 deref_count=0;
                 l_val = node.lvalue
                 if isinstance(l_val,UnaryOp):
@@ -153,8 +159,8 @@ class AssignmentVisitor(NodeVisitor):
                 id_node1 = ID('print'+str(self.count))
                 id_node2 = node.rvalue
 
-                line_number  = int(node.coord.line)-9
-                exp_lst_node = ExprList([id_node2,Constant("int",str(line_number))])
+
+                exp_lst_node = ExprList([id_node2,Constant("int",str(line_number+1))])
                 func_call_node = FuncCall(id_node1,exp_lst_node)
                 self.count+=1
                 for c_name,c in node.children():
@@ -217,61 +223,77 @@ def remove_comments(text):
 
 
 
-src_file = open(sys.argv[1],"r")
-src = ""
-pack_structs = False
-for line in src_file:
-    if not line[0] == "#":
-        src+=line
-    elif "#pragma pack" in line[0]:
-        pack_structs=True
+def addprints():
 
-src_file.close()
-src = typedef_str + src
-src = remove_comments(src)
+    # open the source file and read it line by line
+    # into two variables: one contains the source verbatim, the other
+    # skips all preprocessor directives
 
+    src_file = open(sys.argv[1],"r")
+    src = ""
+    src_no_modifications = ""
+    pack_structs = False
+    for line in src_file:
+        src_no_modifications+=line
+        if not line[0] == "#":
+            src+=line
+        elif "#pragma pack" in line[0]:
+            pack_structs=True
 
+    src_file.close()
+    src = typedef_str + src
+    src = remove_comments(src)
 
-parser = c_parser.CParser()
-ast = parser.parse(src)
-
-ppv1 = ParentPointerVisitor(ast)
-ppv1.visit(ast)
-
-
-
-av1 = AssignmentVisitor(ppv1.parents)
-av1.visit(ast)
-ast.ext=ast.ext[8:]
-
-count = 0
-while isinstance(ast.ext[count],Decl):
-    count += 1
-ext1 = ast.ext[:count] + av1.new_funcs_decls+ast.ext[count:]+av1.new_funcs
-ast.ext=ext1
+    # Parse the source code
 
 
 
-generator = c_generator.CGenerator()
-str_out = generator.visit(ast.ext[0])
+    parser = c_parser.CParser()
+    ast = parser.parse(src)
 
-str_out = '''#include "csmith.h"\n#include <stdio.h>\n
-'''
-for next_entry in ast.ext:
+    ppv1 = ParentPointerVisitor(ast)
+    ppv1.visit(ast)
 
-    if isinstance(next_entry,Decl) and isinstance(next_entry.type,Struct) and pack_structs:
-        str_out += '''
-#pragma pack(push)
-#pragma pack(1)
-'''
-        str_out += generator.visit(next_entry)+";\n"
-        str_out += '''#pragma pack(pop)\n'''
 
-    elif isinstance(next_entry,Decl):
-        str_out += generator.visit(next_entry)+";\n"
-    else:
-        str_out += generator.visit(next_entry)+"\n"
 
-out_file = open(sys.argv[2],"w")
-out_file.write(str_out)
-out_file.close()
+    av1 = AssignmentVisitor(ppv1.parents,src,src_no_modifications)
+    av1.visit(ast)
+    # remove unnecessary typedefs
+    ast.ext=ast.ext[8:]
+
+    # add forward declarations of functions and the functions themselves to the AST
+    count = 0
+    while isinstance(ast.ext[count],Decl):
+        count += 1
+    ext1 = ast.ext[:count] + av1.new_funcs_decls+ast.ext[count:]+av1.new_funcs
+    ast.ext=ext1
+
+    # generate C code and consider adding pragma pack if needed
+
+    generator = c_generator.CGenerator()
+    str_out = generator.visit(ast.ext[0])
+
+    str_out = '''#include "csmith.h"\n#include <stdio.h>\n
+    '''
+    for next_entry in ast.ext:
+
+        if isinstance(next_entry,Decl) and isinstance(next_entry.type,Struct) and pack_structs:
+            str_out += '''
+    #pragma pack(push)
+    #pragma pack(1)
+    '''
+            str_out += generator.visit(next_entry)+";\n"
+            str_out += '''#pragma pack(pop)\n'''
+
+        elif isinstance(next_entry,Decl):
+            str_out += generator.visit(next_entry)+";\n"
+        else:
+            str_out += generator.visit(next_entry)+"\n"
+
+    out_file = open(sys.argv[2],"w")
+    out_file.write(str_out)
+    out_file.close()
+
+
+if __name__ == '__main__':
+	addprints()
