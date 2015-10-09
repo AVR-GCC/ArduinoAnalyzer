@@ -6,13 +6,12 @@ class Console(cmd.Cmd):
 	
 ## Aesthetics
 	prompt = '$: '
-	#TODO: write an opening statment
 	intro = "AVR-GCC bug seeker - an interactive tool for testing avr C tools \
 	\ncompile_run_* - testing a given .c file. \nflow_run_* - generates, compiles & runs on the varios platforms\
 	\ncatagorize_* - minority report reports\nlineChooser_* - builds a new destilted version of the code that represents the same bug\
 	\ntype \'help\' for more information,\ntype \'exit\' to exit"
 
-	doc_header = 'Commands with help'
+	doc_header = 'Commands'
 	undoc_header = 'Commands with out help'
 	ruler = '-'
 ## general use

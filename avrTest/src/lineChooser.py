@@ -2,42 +2,16 @@ import os
 import sys
 
 
+from settings import *
 
-
-
-
-home = "/home/student/AVRfinal/avrTest/"
-
-avrgcc = home + "Utils/avr8-gnu-toolchain-linux_x86/bin/avr-gcc";
-simulavr = home + "Utils/Simulator/usr/bin/simulavr";
-csmith = home + "Utils/csmith-2.2.0/"
-
-dev = "atmega328"
-
-runtimeAvr = "-I" + csmith + "runtime_avr/";
-
-insertPrints = home + "pycparser/addprints.py"
-runtimeGcc = "-I" + csmith + "runtime_gcc/"
-srcFolder = home + "FailedCFiles/cfiles2Debug/"
-workFolder = home + "DebugFolder/"
-srcFilePath = workFolder + "wp.c"
-outFolder = home + "DebugFolder/lineMarked/"
-gccout = "gccPrintsOut.txt"
-gccbin = "gccWprints.o"
-avroutsuff = "avrPrintsOut.txt"
-avrbinsuff = "Wprints.elf"
-tracestring = "trace.txt"
-traceDump = 1
-RunSafely = csmith + "/scripts/RunSafely.sh 2 1 /dev/null "
-opts = ["O0", "O1", "O2", "O3", "Os"]
-dude = 0
-preErrorFunc = "theNextLineIsTheProblem()"
-
-
-devArd = "atmega328p"
-com = "/dev/ttyUSB0"
-ardgcc = "sudo bash /home/student/avr/avrTest/alon_dev/arduino_compile.cmd"
-arddude = "sudo bash /home/student/avr/avrTest/alon_dev/arduino_dude.cmd"
+srcFolder = lineChooser_srcFolder 
+workFolder = lineChooser_workFolder 
+outFolder = lineChooser_outFolder 
+srcFilePath = lineChooser_srcFilePath 
+gccout = lineChooser_gccout 
+gccbin = lineChooser_gccbin 
+avroutsuff = lineChooser_avroutsuff 
+avrbinsuff = lineChooser_avrbinsuff 
 
 #Example of run:
 #srcF = "/home/student/avr/avrTest/FailedCFiles/20150825-16:53:56/avrtest.c"
@@ -210,7 +184,7 @@ def addprints(srcPath):
 	run("python " + insertPrints + " " + srcPath + " " + srcFilePath, 1)
 
 for file in os.listdir(srcFolder):
-	#addprints(srcFolder + file)
+	addprints(srcFolder + file)
 	compileFile()
 	runFile()
 	lineId = compareResults()

@@ -4,43 +4,16 @@ import sys
 import datetime
 
 from pycparser import parse_file, c_parser, c_generator
-home = "/home/student/publicWorkTest/avrTest/"
-runtimeGcc = "Utils/csmith-2.2.0/runtime_gcc/"
-srcFolder = home + "WorkFolder/"
-workFolder = home + "WorkFolder/"
-FailedCFiles = home + "FailedCFiles/"
-outFolder = home + "DebugFolder/"
-srcFileName = "avrtest.c"
-avrgcc = home + "Utils/avr8-gnu-toolchain-linux_x86/bin/avr-gcc";
-simulavr = home + "Utils/Simulator/usr/bin/simulavr";
-csmith = home + "Utils/csmith-2.2.0/"
-compileOut = "compileOut.txt"
-dev = "atmega328"
 
-runtimeAvr = "-I" + csmith + "runtime_avr";
-
-runtimeGcc = "-I" + csmith + "runtime_gcc/"
-gccout = "gccout.txt"
-gccbin = "gccbin.o"
-avroutsuff = "OptOut.txt"
-avrbinsuff = "OptBin.elf"
-tracestring = "trace.txt"
-srcFilePath = srcFolder + srcFileName
-traceDump = 1
-csgen = 1
-RunSafely = csmith + "/scripts/RunSafely.sh 2 1 /dev/null "
-
-opts = ["O0", "O1", "O2", "O3", "Os"]
-
-
-csmithOptions = " --no-safe-math --no-math64 --no-bitfields --no-consts --no-float --no-divs "
-csmithOptions = csmithOptions + " --max-array-dim 2 --max-array-len-per-dim 8 "
-csmithOptions = csmithOptions + " --max-block-depth 2 --max-block-size 2 --max-expr-complexity 2 "
-csmithOptions = csmithOptions + " --max-funcs 4 --max-struct-fields 2 --max-union-fields 2 "
-
-#Alon's aditional flags      $CSMITH_OPTIONS .= "  --no-volatiles --no-volatile-pointers --no-const-pointers --no-unions --no-safe-math";
-
-
+from settings import *
+srcFolder = flow_srcFolder 
+workFolder = flow_workFolder 
+outFolder = flow_outFolder 
+srcFilePath = flow_srcFilePath 
+gccout = flow_gccout 
+gccbin = flow_gccbin 
+avroutsuff = flow_avroutsuff 
+avrbinsuff = flow_avrbinsuff 
 
 #copyed
 def nae(optouts):
