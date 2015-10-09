@@ -21,7 +21,7 @@ avrbinsuff = lineChooser_avrbinsuff
 
 #copyed
 def nae(optouts):
-	print "************nae************/n"
+	print "************nae************"
 	found = 0
 	i = 0
 	res = 0
@@ -50,41 +50,42 @@ def run(cmd, exitOnFail):
 
 #copyed
 def compileGcc():
-	print "************compileGcc************/n"
+	print "************compileGcc************"
 	run("rm " + workFolder + gccbin, 0)
-	run("gcc " + srcFilePath + " -o " + workFolder + gccbin + " " + runtimeGcc, 1)
+	run("gcc -w " + srcFilePath + " -o " + workFolder + gccbin + " " + runtimeGcc, 1)
 
 #copyed
 def compileAvr():
-	print "************compileAvr************/n"
+	print "************compileAvr************"
 	for opt in opts:
 		bin = opt + avrbinsuff
 		compileOpt(opt, bin)
 
 
 def compileOpt(opt, bin):
-	print "************compileOpt************/n"
+	print "************compileOpt************"
 	run("rm " + workFolder + bin, 0)
-	run(avrgcc + " -" + opt + " -mmcu=" + dev + " " + srcFilePath + " " + runtimeAvr + " -o " + workFolder + bin, 1)
+	run(avrgcc + " -w -" + opt + " -mmcu=" + dev + " " + srcFilePath + " " + runtimeAvr + " -o " + workFolder + bin, 1)
 
 
 #copyed
 def compileFile():
-	print "************compileFile************/n"
+	print "************compileFile************"
 	compileGcc()
 	compileAvr()
 
 #copyed
 def simulator(opt, bin):
-	print "************simulator************/n"
+	print "************simulator************"
 	simstring = simulavr + " -d " + dev + " -f " + workFolder + bin + " -W0x20," + workFolder + opt + avroutsuff
 	if traceDump == 1:
 		simstring = simstring + " -t " + workFolder + opt + tracestring + " -T  __stop_program"
+	simstring = simstring + " -T  __stop_program"
 	run(simstring, 1)
 
 #copyed
 def runAvr(simulate, opt, bin):
-	print "************runAvr************/n"
+	print "************runAvr************"
 	if simulate == 1:
 		simulator(opt, bin)
 	if simulate == 0:
@@ -92,12 +93,12 @@ def runAvr(simulate, opt, bin):
 
 #copyed
 def runGcc():
-	print "************runGcc************/n"
+	print "************runGcc************"
 	run(workFolder + gccbin + " > " + workFolder + gccout, 1)
 
 #copyed
 def runFile():
-	print "************runFile************/n"
+	print "************runFile************"
 	runGcc()
 	for opt in opts:
 		optbin = opt + avrbinsuff
@@ -135,23 +136,23 @@ def compareResults():
 	return idgcc.rstrip()
 		
 def id2lineNum(idgcc):
-	i = 0
-	foundFirst = 0
-	print type(idgcc)
-	idstr1 = "print" + idgcc + "(";
-	idstr = idstr1
-	print idstr
-	srcFd = open(srcFilePath, 'r')
-	for line in srcFd:
-		print line
-		if (idstr in line):
-			print idstr
-			if foundFirst == 1:
-				return i
-			foundFirst = foundFirst + 1
-		i = i + 1
-		pass
-	return -1
+	# i = 0
+	# foundFirst = 0
+	# print type(idgcc)
+	# idstr1 = "print" + idgcc + "(";
+	# idstr = idstr1
+	# print idstr
+	# srcFd = open(srcFilePath, 'r')
+	# for line in srcFd:
+	# 	print line
+	# 	if (idstr in line):
+	# 		print idstr
+	# 		if foundFirst == 1:
+	# 			return i
+	# 		foundFirst = foundFirst + 1
+	# 	i = i + 1
+	# 	pass
+	return idgcc
 
 def marklineAndSave(lindex, timestamp):
 	print lindex

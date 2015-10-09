@@ -26,6 +26,7 @@ simulavr = home + "Utils/Simulator/usr/bin/simulavr";
 ardgcc = "sudo bash /home/student/avr/avrTest/alon_dev/arduino_compile.cmd"
 arddude = "sudo bash /home/student/avr/avrTest/alon_dev/arduino_dude.cmd"
 RunSafely = csmith + "/scripts/RunSafely.sh 2 1 /dev/null "
+#run safe = "/home/student/AVRfinal/avrTest/Utils/csmith-2.2.0/scripts/RunSafely.sh 2 1 /dev/null "
 # TODO: standertize
 ard_home = "/home/student/avr/arduino-1.6.5/"
 
@@ -42,8 +43,8 @@ lineChooser_avrbinsuff = "Wprints.elf"
 
 flow_gccout = "gccout.txt"
 flow_gccbin = "gccbin.o"
-flow_avroutsuff = "OptOut.txt"
-flow_avrbinsuff = "OptBin.elf"
+flow_avroutsuff = "optOut.txt"
+flow_avrbinsuff = "optBin.elf"
 flow_srcFilePath = flow_srcFolder + srcFileName
 
 
@@ -54,7 +55,8 @@ devArd = "atmega328p"
 com = "/dev/ttyUSB0"
 
 #Compiler parameters:
-opts = ["O0", "O1", "O2", "O3", "Os"]
+#opts = ["O0", "O1", "O2", "O3", "Os"]
+opts = ["Os", "O3", "O2", "O1", "O0"]
 runtimeAvr = "-I" + csmith + "runtime_avr/";
 runtimeGcc = "-I" + csmith + "runtime_gcc/"
 
@@ -66,6 +68,7 @@ csmithOptions = " --no-safe-math --no-math64 --no-bitfields --no-consts --no-flo
 csmithOptions = csmithOptions + " --max-array-dim 2 --max-array-len-per-dim 8 "
 csmithOptions = csmithOptions + " --max-block-depth 2 --max-block-size 2 --max-expr-complexity 2 "
 csmithOptions = csmithOptions + " --max-funcs 4 --max-struct-fields 2 --max-union-fields 2 "
+csmithOptions = csmithOptions + "  --no-volatiles --no-volatile-pointers --no-const-pointers --no-unions --no-safe-math";
 
 #misc.
 traceDump = 0
