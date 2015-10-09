@@ -59,11 +59,15 @@ com = "/dev/ttyUSB0"
 #Compiler parameters:
 #opts = ["O0", "O1", "O2", "O3", "Os"]
 opts = ["Os", "O3", "O2", "O1", "O0"]
-runtimeAvr = "-I" + csmith + "runtime_avr/";
-runtimeGcc = "-I" + csmith + "runtime_gcc/"
+#runtimeAvr = "-I" + csmith + "runtime_avr/";
+#runtimeGcc = "-I" + csmith + "runtime_gcc/"
+
+runtimeAvr = "-I" + home + "src/runtime/runtime_avr/";
+runtimeGcc = "-I" + home + "src/runtime/runtime_gcc/"
 
 # TODO: standertize
-runtime_ard = "/home/student/avr/avrTest/alon_dev/runtime_arduino/"
+#runtime_ard = "/home/student/avr/avrTest/alon_dev/runtime_arduino/"
+runtime_ard = "-I" + home + "src/runtime/runtime_ard/"
 
 #C-smith parameters:
 csmithOptions = " --no-safe-math --no-math64 --no-bitfields --no-consts --no-float --no-divs "
