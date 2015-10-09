@@ -44,8 +44,8 @@ def nae(optouts):
 def run(cmd, exitOnFail):
 	print("running " + cmd + "\n")
 	#out = os.system(cmd)
-	command1 = command.Command(cmd)
-	out = command1.run(timeout=5)
+	thrd = command.Command(cmd)
+	out = thrd.run(timeout=5)
 	if(out != 0):
 		print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n" + cmd + "\n\t\t\tFAILED\n" + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"      
 		if(exitOnFail):
@@ -141,6 +141,7 @@ def saveBug(timestamp):
 	run("cp " + workFolder + gccout + " " + FailedCFiles + timestamp + "/" + gccout, 1)
 	run("cp " + workFolder + gccbin + " " + FailedCFiles + timestamp + "/" + gccbin, 1)
 	run("cp " + workFolder + srcFileName + " " + FailedCFiles + timestamp + "/" + srcFileName, 1)
+	run("cp " + workFolder + srcFileName + " " + cfiles2debug + timestamp + "_" + srcFileName, 1)
 	#run("cp " + workFolder + compileOut + " " + FailedCFiles + timestamp + "/" + compileOut, 1)
 	for opt in opts:
 	    run("cp " + workFolder + opt + avroutsuff + " " + FailedCFiles + timestamp + "/" + opt + avroutsuff, 1)
@@ -151,7 +152,8 @@ def main(numRuns):
 	testsDone = 0
 	while testsDone < numRuns or numRuns < 0:
 		testsDone = testsDone + 1
-		print "------------ running test no {} ---------------\n".format(testsDone)
+		if numRuns != 1:
+			print "------------ running test no {} ---------------\n".format(testsDone)
 		if(csgen):
 			csmithGenerate()
 		compileFile()
@@ -160,10 +162,13 @@ def main(numRuns):
 		if(foundbug):
 			timestamp = reportBug(opts[foundbug - 2])
 			saveBug(timestamp)
-		print "------------ finished running test no {} ---------------\n".format(testsDone)
+		if numRuns != 1:
+			print "------------ finished running test no {} ---------------\n".format(testsDone)
 		
 
 if __name__ == '__main__':
-	main(-1)
-
+	if len(sys.argv) == 2:
+		main(int(sys.argv[1]))
+	else:
+		main(-1)
 

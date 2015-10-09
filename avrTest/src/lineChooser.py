@@ -1,8 +1,11 @@
 import os
 import sys
 
+import addprints
 
 from settings import *
+
+from util import *
 
 srcFolder = lineChooser_srcFolder 
 workFolder = lineChooser_workFolder 
@@ -18,34 +21,6 @@ avrbinsuff = lineChooser_avrbinsuff
 #compileArd(srcF,"O1","alonArd.elf")
 #avrDude("O1","alonArd.elf")
 
-
-#copyed
-def nae(optouts):
-	print "************nae************"
-	found = 0
-	i = 0
-	res = 0
-	for out in optouts:
-		i = i + 1
-		if (out != optouts[0]):
-			if(found == 0):
-				res = i
-				found = 1
-		else:
-			notGcc = 1
-	if(notGcc == 0):
-		return 1
-	return res
-
-#copyed
-def run(cmd, exitOnFail):
-	print("running " + cmd + "\n")
-	out = os.system(cmd)
-	if(out != 0):
-		print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n" + cmd + "\nFAILED\n" + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"      
-		if(exitOnFail):
-			print "exiting...\n"
-			sys.exit()
 
 
 #copyed
@@ -133,7 +108,7 @@ def compareResults():
 			(gccchecksum, idgcc) = gccline.split('$')
 			avrchecksums += [gccchecksum]
 			foundmismatch = nae(avrchecksums)
-	return idgcc.rstrip()
+	return int(idgcc.rstrip())
 		
 def id2lineNum(idgcc):
 	# i = 0
@@ -161,37 +136,48 @@ def marklineAndSave(lindex, timestamp):
 	with open(outFolder + timestamp, "w+") as outFd:
 		i = 0
 		for line in srcFd:
-			if(i == lindex):
-				outFd.write(line + "//this line is the problem!!!")
+			print str(i) + " == " + str(lindex)
+			if i == lindex:
+				outFd.write(line.rstrip() + " //this line is the problem!!!\n")
+				print line.rstrip() + " //this line is the problem!!!\n"
 			else:
 				outFd.write(line)
-			print line
+			print line + str(i)
 			if('/*' in line):
 				notInComment = 0
 			if('*/' in line):
 				notInComment = 1
 				if('/*' not in line):
 					i = i - 1
-			if(notInComment == 0):
-				print "---------- this line is in a comment ----------"
 			if(notInComment and line.strip()):
 				i = i + 1
-				print "line counted " + str(i)
+	print lindex
 	srcFd.close()
+	outFd.close()
 	
 
-def addprints(srcPath):
+def addprintsrun(srcPath):
 	run("rm " + srcFilePath, 0)
-	run("python " + insertPrints + " " + srcPath + " " + srcFilePath, 1)
+	#run("python " + insertPrints + " " + srcPath + " " + srcFilePath, 1)
+	addprints.addprints(srcPath, srcFilePath)
 
 def main():
 	for file in os.listdir(srcFolder):
-		addprints(srcFolder + file)
+		addprintsrun(srcFolder + file)
 		compileFile()
 		runFile()
 		lineId = compareResults()
 		marklineAndSave(id2lineNum(lineId), file)
 		print "************** " + file + " finished and the line is marked in " + outFolder
+
+def secondary(file):
+	addprintsrun(srcFolder + file)
+	compileFile()
+	runFile()
+	lineId = compareResults()
+	marklineAndSave(id2lineNum(lineId), file)
+	print "************** " + file + " finished and the line is marked in " + outFolder
+
 
 if __name__ == '__main__':
 	main()

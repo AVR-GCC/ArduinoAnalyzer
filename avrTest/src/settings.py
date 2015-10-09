@@ -17,6 +17,7 @@ flow_workFolder = home + "WorkFolder/"
 flow_outFolder = home + "DebugFolder/"
 
 FailedCFiles = home + "FailedCFiles/"
+cfiles2debug = FailedCFiles + "cfiles2debug/"
 
 #Applications:
 #TODO use package like in flow
@@ -29,7 +30,7 @@ RunSafely = csmith + "/scripts/RunSafely.sh 2 1 /dev/null "
 #run safe = "/home/student/AVRfinal/avrTest/Utils/csmith-2.2.0/scripts/RunSafely.sh 2 1 /dev/null "
 # TODO: standertize
 ard_home = "/home/student/avr/arduino-1.6.5/"
-
+flow_run = home + "src/flow.py"
 #File names:
 tracestring = "trace.txt"
 srcFileName = "avrtest.c"
@@ -46,6 +47,7 @@ flow_gccbin = "gccbin.o"
 flow_avroutsuff = "optout.txt"
 flow_avrbinsuff = "optBin.elf"
 flow_srcFilePath = flow_srcFolder + srcFileName
+
 
 
 

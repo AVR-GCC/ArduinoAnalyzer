@@ -1,9 +1,9 @@
 import cmd
 import os
 import catagorize
-import settings
+from settings import *
 import flow
-#import lineChooser
+import lineChooser
 
 class Console(cmd.Cmd):
 	
@@ -60,31 +60,32 @@ class Console(cmd.Cmd):
 	#run once
 	def do_flow_run_once(self, line):
 		"runs flow for 1 iteration, [usage] flow_run_once"
-		#TODO call flow once
-		Console.do_flow_run(self, "1");
+		Console.do_flow_run_n(self, "1");
 
 	#run n times
-	def do_flow_run(self, line):
-		"runs flow for # iterations, [usage] flow_run #"
+	def do_flow_run_n(self, line):
+		"runs flow for # iterations, [usage] flow_run_n #"
 		if line:
 			if line.isdigit():
-				#TODO call flow line times
-				flow.main(int(line))
+				os.system("python " + flow_run + " " + line)
 				return
 		print "input not digit"
 	#run indefenatly
 	def do_flow_run_inf(self, line):
 		"runs flow indefenatly, [usage] flow_run_inf"
-		#TODO call flow line times
-		flow.main(-1)
+		testNum = 1
+		while 1:
+			print "=================== starting test number {} ===================".format(testNum)
+			Console.do_flow_run_once(self, line)
+			print "=================== finished test number {} ===================".format(testNum)
+			testNum = testNum + 1
 
 ## Debug
 	#catagorize
 	def do_catagorize_failedCFiles(self, line):
 		"analizes FailedCfiles results & reports histogram of minorities, [usage] catagorize_failedCFiles <path_to_failedCFiles>"
 		if not line:
-			#TODO - get from config file
-			line = "/home/student/avr/avrTest/FailedCFiles"
+			line = FailedCFiles
 		catagorize.catagorizeFailedCFiles(line)
 	
 	#catagorize_specific
@@ -97,18 +98,13 @@ class Console(cmd.Cmd):
 	def do_lineChooser_specific(self, line):
 		"analizes specific .c file results & builds a new destilted version of the code that represents the same bug, [usage] lineChooser_specific <path_to_failedCFile_specific_directory>"
 		if line:
-			#TODO call lineChooser that runs on a specific directory
-			return
+			lineChooser.secondary(line)
+		return
 	
 	#lineChooser all failed	
 	def do_lineChooser_failedCFiles(self, line):
-		"analizes FailedCfiles results & build a new destilted version of the codes that represents the same bugs, [usage] lineChooser_failedCFiles <path_to_failedCFiles>"
-		if not line:
-			#TODO - get from config file
-			line = "/home/student/avr/avrTest/FailedCFiles"
-		
-		#TODO call lineChooser that runs on a specific directory
-		#like catagorize.catagorizeFailedCFiles(line)
+		"analizes FailedCfiles results & build a new destilted version of the codes that represents the same bugs, [usage] lineChooser_failedCFiles"
+		lineChooser.main()
 
 
 
