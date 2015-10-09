@@ -7,7 +7,9 @@ import sys
 
 class AssignmentVisitor(NodeVisitor):
 
-            def __init__(self,parents):
+            def __init__(self,parents,src_code,src_code_no_mods):
+                self.src_code=src_code.splitlines()
+                self.src_code_no_mods = src_code_no_mods.splitlines()
                 self.parents=parents
                 self.count=0
                 self.new_funcs = list()
@@ -111,6 +113,10 @@ class AssignmentVisitor(NodeVisitor):
 
             def visit_Assignment(self, node):
 
+                line_number = int(node.coord.line)
+                line_of_code = self.src_code[line_number-1]
+                line_number = self.src_code_no_mods.index(line_of_code)
+
                 deref_count=0;
                 l_val = node.lvalue
                 if isinstance(l_val,UnaryOp):
@@ -153,8 +159,8 @@ class AssignmentVisitor(NodeVisitor):
                 id_node1 = ID('print'+str(self.count))
                 id_node2 = node.rvalue
 
-                line_number  = int(node.coord.line)-9
-                exp_lst_node = ExprList([id_node2,Constant("int",str(line_number))])
+
+                exp_lst_node = ExprList([id_node2,Constant("int",str(line_number+1))])
                 func_call_node = FuncCall(id_node1,exp_lst_node)
                 self.count+=1
                 for c_name,c in node.children():
@@ -219,8 +225,10 @@ def remove_comments(text):
 
 src_file = open(sys.argv[1],"r")
 src = ""
+src_no_modifications = ""
 pack_structs = False
 for line in src_file:
+    src_no_modifications+=line
     if not line[0] == "#":
         src+=line
     elif "#pragma pack" in line[0]:
@@ -240,7 +248,7 @@ ppv1.visit(ast)
 
 
 
-av1 = AssignmentVisitor(ppv1.parents)
+av1 = AssignmentVisitor(ppv1.parents,src,src_no_modifications)
 av1.visit(ast)
 ast.ext=ast.ext[8:]
 
