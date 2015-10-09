@@ -58,7 +58,7 @@ checksum_print(void* crc, int flag)
 {
   uint32_t crc1 = *((uint32_t*) crc);
 	uint16_t crc16 = crc1 ^ (crc1 >> 16);
-	printf ("-%X\n", crc16); 
+	printf ("checksum = %X\n", crc16); 
 }
 
 static void
@@ -70,7 +70,7 @@ platform_main_end(uint32_t crc, int flag)
 
 #ifndef NOT_PRINT_CHECKSUM
 	uint16_t crc16 = crc ^ (crc >> 16);
-	printf ("-%X\n", crc16); 
+	printf ("checksum = %X\n", crc16); 
 #endif
 
 #if defined (LOG_WRAPPERS)
