@@ -92,6 +92,7 @@ class AssignmentVisitor(NodeVisitor):
 
                 value.name = 'k'
                 value.init = None
+                value.storage = []
                 while isinstance(value.type,ArrayDecl):
                     value.type = value.type.type
                 type_decl_ref = value.type
@@ -103,6 +104,7 @@ class AssignmentVisitor(NodeVisitor):
                 return value
 
             def visit_Assignment(self, node):
+
                 deref_count=0;
                 l_val = node.lvalue
                 if isinstance(l_val,UnaryOp):
@@ -144,10 +146,14 @@ class AssignmentVisitor(NodeVisitor):
                 self.new_funcs=self.new_funcs+[funcdef_obj]
                 id_node1 = ID('print'+str(self.count))
                 id_node2 = node.rvalue
-                exp_lst_node = ExprList([id_node2,Constant("int",str(self.count))])
+
+                line_number  = int(node.coord.line)-9
+                exp_lst_node = ExprList([id_node2,Constant("int",str(line_number))])
                 func_call_node = FuncCall(id_node1,exp_lst_node)
                 node.rvalue=func_call_node
                 self.count+=1
+                for c_name,c in node.children():
+                    self.visit(c)
 
 
 
@@ -229,6 +235,7 @@ ppv1.visit(ast)
 av1 = AssignmentVisitor(ppv1.parents)
 av1.visit(ast)
 ast.ext=ast.ext[8:]
+
 count = 0
 while isinstance(ast.ext[count],Decl):
     count += 1
