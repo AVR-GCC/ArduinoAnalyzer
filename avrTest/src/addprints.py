@@ -222,14 +222,13 @@ def remove_comments(text):
     return comment_re.sub(comment_replacer, text)
 
 
-
-def addprints():
+def addprints(arg1, arg2):
 
     # open the source file and read it line by line
     # into two variables: one contains the source verbatim, the other
     # skips all preprocessor directives
 
-    src_file = open(sys.argv[1],"r")
+    src_file = open(arg1,"r")
     src = ""
     src_no_modifications = ""
     pack_structs = False
@@ -290,10 +289,10 @@ def addprints():
         else:
             str_out += generator.visit(next_entry)+"\n"
 
-    out_file = open(sys.argv[2],"w")
+    out_file = open(arg2,"w")
     out_file.write(str_out)
     out_file.close()
 
 
 if __name__ == '__main__':
-	addprints()
+	addprints(sys.argv[1],sys.argv[2])
