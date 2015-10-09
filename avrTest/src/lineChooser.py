@@ -6,7 +6,7 @@ import sys
 
 
 
-home = "/home/student/publicWorkTest/avrTest/"
+home = "/home/student/AVRfinal/avrTest/"
 
 avrgcc = home + "Utils/avr8-gnu-toolchain-linux_x86/bin/avr-gcc";
 simulavr = home + "Utils/Simulator/usr/bin/simulavr";
@@ -27,10 +27,12 @@ gccbin = "gccWprints.o"
 avroutsuff = "avrPrintsOut.txt"
 avrbinsuff = "Wprints.elf"
 tracestring = "trace.txt"
-traceDump = 0
+traceDump = 1
 RunSafely = csmith + "/scripts/RunSafely.sh 2 1 /dev/null "
 opts = ["O0", "O1", "O2", "O3", "Os"]
 dude = 0
+preErrorFunc = "theNextLineIsTheProblem()"
+
 
 devArd = "atmega328p"
 com = "/dev/ttyUSB0"
@@ -117,7 +119,7 @@ def runAvr(simulate, opt, bin):
 #copyed
 def runGcc():
 	print "************runGcc************/n"
-	run(workFolder + gccbin + " " + workFolder + gccout, 1)
+	run(workFolder + gccbin + " > " + workFolder + gccout, 1)
 
 #copyed
 def runFile():
@@ -140,50 +142,77 @@ def avrDude(opt, bin):
 
 def compareResults():
 	foundmismatch = 0
-	avroutnames = [opt + "out.txt" for opt in opts]
+	avroutnames = [opt + avroutsuff for opt in opts]
 	avrouts = [open(workFolder + path, 'r') for path in avroutnames]
 	gccoutfile = open(workFolder + gccout, 'r')
-	while foundmismatch == 0:
+	gccline = "s"
+	while gccline != 0 and foundmismatch == 0:
 		avrlines = [fd.readline() for fd in avrouts]
 		gccline = gccoutfile.readline()
-		if (line == *$*):
-			(avrchecksums, avrids) = [line.split('$') for line in avrlines]
-			(gccchecksum, id) = gccline.split('$')
-			foundmismatch = nae(avrchecksums, gccchecksum)
-	return id
+		print "----------" + gccline
+		if ('$' in gccline):
+			avrchecksums = []
+			for line in avrlines:
+				(x, y) = line.split('$')
+				avrchecksums += [x]
+			(gccchecksum, idgcc) = gccline.split('$')
+			avrchecksums += [gccchecksum]
+			foundmismatch = nae(avrchecksums)
+	return idgcc.rstrip()
 		
-def id2lineNum(id):
+def id2lineNum(idgcc):
 	i = 0
-	idstr = "print" + id + "("
+	foundFirst = 0
+	print type(idgcc)
+	idstr1 = "print" + idgcc + "(";
+	idstr = idstr1
+	print idstr
 	srcFd = open(srcFilePath, 'r')
-	line = srcFd.readline()
-	while line:
-		if idstr in line:
-			return i
+	for line in srcFd:
+		print line
+		if (idstr in line):
+			print idstr
+			if foundFirst == 1:
+				return i
+			foundFirst = foundFirst + 1
 		i = i + 1
 		pass
 	return -1
 
 def marklineAndSave(lindex, timestamp):
+	print lindex
 	srcFd = open(srcFolder + timestamp, 'r')
-	outFd = open(outFolder + timestamp, 'w+')
-	i = 0
-	line = srcFd.readline()
-	while line:
-		if(i == lindex):
-			outFd.write(preErrorFunc)
-		outFd.write(line)
-		i = i + 1
+	notInComment = 1
+	with open(outFolder + timestamp, "w+") as outFd:
+		i = 0
+		for line in srcFd:
+			if(i == lindex):
+				outFd.write(preErrorFunc)
+				print preErrorFunc
+			outFd.write(line)
+			print line
+			if('/*' in line):
+				notInComment = 0
+			if('*/' in line):
+				notInComment = 1
+				if('/*' not in line):
+					i = i - 1
+			if(notInComment == 0):
+				print "---------- this line is in a comment ----------"
+			if(notInComment and line.strip()):
+				i = i + 1
+				print "line counted " + str(i)
 	srcFd.close()
-	outFd.close()
+	
 
 def addprints(srcPath):
 	run("rm " + srcFilePath, 0)
 	run("python " + insertPrints + " " + srcPath + " " + srcFilePath, 1)
 
 for file in os.listdir(srcFolder):
-	addprints(srcFolder + file)
+	#addprints(srcFolder + file)
 	compileFile()
 	runFile()
 	lineId = compareResults()
 	marklineAndSave(id2lineNum(lineId), file)
+	print "************** " + file + " finished and the line is marked in " + outFolder
