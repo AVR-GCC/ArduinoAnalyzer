@@ -66,7 +66,7 @@ static int8_t  func_6(int32_t  p_7, int8_t  p_8, uint8_t  p_9, int8_t  p_10)
         l_12[i] = 4294967291UL;
     for (p_7 = 0; p_7 < 2; p_7 += 1)
     {
-        l_12[p_7] = 0x57B5BF2DL;
+        l_12[p_7] = 0x57B5BF2DL; //this line is the problem!!!
     }
     l_13 = g_2;
     return l_13;

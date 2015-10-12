@@ -97,7 +97,7 @@ static int32_t  func_18(int32_t  p_19, int8_t  p_20, uint8_t  p_21)
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 5; j++)
-            l_40[i][j] = 0x0CABDBFAL;
+            l_40[i][j] = 0x0CABDBFAL; //this line is the problem!!!
     }
     if (g_4)
     { /* block id: 11 */
@@ -137,11 +137,11 @@ static uint8_t  func_22(struct S0  p_23, uint16_t  p_24, uint16_t  p_25)
     l_30 &= (l_29[0][4] |= ((((int16_t)((0xA9L || p_25) ^ l_28) + (int16_t)g_4) , p_23.f0) <= g_5));
     return l_30;
 }
- //this line is the problem!!!
- //this line is the problem!!!
- //this line is the problem!!!
- //this line is the problem!!!
-/* ---------------------------------------- */ //this line is the problem!!!
+
+
+
+
+/* ---------------------------------------- */
 int main (int argc, char* argv[])
 {
     int print_hash_value = 0;

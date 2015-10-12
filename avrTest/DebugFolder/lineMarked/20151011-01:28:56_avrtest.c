@@ -46,7 +46,7 @@ static uint32_t  func_1(void)
         uint32_t l_23 = 0xE3D1AA12L;
         if (((int8_t)func_9(g_3, g_3, g_3) << (int8_t)0))
         { /* block id: 8 */
-            g_30[2] = ((int16_t)(func_19((6L || 0UL), l_23, g_14[4][0]) && 0x5CL) << (int16_t)l_23);
+            g_30[2] = ((int16_t)(func_19((6L || 0UL), l_23, g_14[4][0]) && 0x5CL) << (int16_t)l_23); //this line is the problem!!!
         }
         else
         { /* block id: 20 */
@@ -73,7 +73,7 @@ static uint32_t  func_1(void)
 static int8_t  func_9(int16_t  p_10, uint32_t  p_11, uint16_t  p_12)
 { /* block id: 5 */
     g_14[4][0]--;
-    return p_11; //this line is the problem!!!
+    return p_11;
 }
 
 

@@ -33,7 +33,7 @@ static uint8_t  func_1(void)
     int32_t l_9 = 0xEEC54165L;
     int32_t l_10 = 0xA5166941L;
     g_2--;
-    g_11 &= (((int8_t)((((uint16_t)(l_9 = l_9) >> (uint16_t)12) > 0xA0L) , l_10) >> (int8_t)l_10) ^ g_2);
+    g_11 &= (((int8_t)((((uint16_t)(l_9 = l_9) >> (uint16_t)12) > 0xA0L) , l_10) >> (int8_t)l_10) ^ g_2); //this line is the problem!!!
     return l_10;
 }
 

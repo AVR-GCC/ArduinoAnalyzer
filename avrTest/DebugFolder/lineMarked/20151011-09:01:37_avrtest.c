@@ -30,7 +30,7 @@ static int32_t  func_1(void);
 static int32_t  func_1(void)
 { /* block id: 0 */
     uint32_t l_7 = 0xD94543BEL;
-    g_6 = ((uint8_t)((int8_t)g_6 << (int8_t)g_6) << (uint8_t)2);
+    g_6 = ((uint8_t)((int8_t)g_6 << (int8_t)g_6) << (uint8_t)2); //this line is the problem!!!
     return l_7;
 }
 

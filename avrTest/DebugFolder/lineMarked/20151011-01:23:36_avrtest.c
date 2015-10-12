@@ -148,7 +148,7 @@ int main (int argc, char* argv[])
     transparent_crc(g_52, "g_52", print_hash_value);
     for (i = 0; i < 5; i++)
     {
-        for (j = 0; j < 6; j++)
+        for (j = 0; j < 6; j++) //this line is the problem!!!
         {
             transparent_crc(g_58[i][j], "g_58[i][j]", print_hash_value);
             if (print_hash_value) printf("index = [%d][%d]\n", i, j);

@@ -132,25 +132,25 @@ def id2lineNum(idgcc):
 def marklineAndSave(lindex, timestamp):
 	print lindex
 	srcFd = open(srcFolder + timestamp, 'r')
-	notInComment = 1
+	#notInComment = 1
 	with open(outFolder + timestamp, "w+") as outFd:
-		i = 0
+		i = 1
 		for line in srcFd:
-			print str(i) + " == " + str(lindex)
+			#print str(i) + " == " + str(lindex)
 			if i == lindex:
 				outFd.write(line.rstrip() + " //this line is the problem!!!\n")
 				print line.rstrip() + " //this line is the problem!!!\n"
 			else:
 				outFd.write(line)
 			print line + str(i)
-			if('/*' in line):
-				notInComment = 0
-			if('*/' in line):
-				notInComment = 1
-				if('/*' not in line):
-					i = i - 1
-			if(notInComment and line.strip()):
-				i = i + 1
+			#if('/*' in line):
+			#	notInComment = 0
+			#if('*/' in line):
+			#	notInComment = 1
+			#	if('/*' not in line):
+			#		i = i - 1
+			#if(notInComment and line.strip()):
+			i = i + 1
 	print lindex
 	srcFd.close()
 	outFd.close()

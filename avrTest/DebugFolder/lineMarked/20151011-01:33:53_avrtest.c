@@ -118,7 +118,7 @@ static uint16_t  func_14(uint16_t  p_15, uint16_t  p_16)
         int8_t l_54 = 0x2AL;
         int i;
         ++l_34;
-        l_54 = (func_37((g_33 = (((uint8_t)(g_30 >= l_45[3]) * (uint8_t)5L) && 0L)), l_46[0][0], g_30, l_47, l_45[3]) | g_30);
+        l_54 = (func_37((g_33 = (((uint8_t)(g_30 >= l_45[3]) * (uint8_t)5L) && 0L)), l_46[0][0], g_30, l_47, l_45[3]) | g_30); //this line is the problem!!!
     }
     l_55 = ((l_29[0][3] & l_46[2][1]) > p_15);
     return p_15;
@@ -162,7 +162,7 @@ int main (int argc, char* argv[])
     platform_main_begin();
     crc32_gentab();
     func_1();
-    transparent_crc(g_11, "g_11", print_hash_value); //this line is the problem!!!
+    transparent_crc(g_11, "g_11", print_hash_value);
     transparent_crc(g_30, "g_30", print_hash_value);
     transparent_crc(g_33, "g_33", print_hash_value);
     for (i = 0; i < 1; i++)

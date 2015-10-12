@@ -45,7 +45,7 @@ static int16_t  func_1(void)
         for (j = 0; j < 3; j++)
             l_73[i][j] = 0xB3L;
     }
-    g_3[2][1] = (l_2[7] , 0xDCE9D05BL);
+    g_3[2][1] = (l_2[7] , 0xDCE9D05BL); //this line is the problem!!!
     g_3[2][1] = ((int16_t)(((uint16_t)((int16_t)(((int16_t)(func_12(((uint8_t)(func_18((((int16_t)g_3[2][3] << (int16_t)l_2[7]) <= l_2[3]), l_24, l_25) >= l_2[7]) << (uint8_t)6), l_2[7], g_58[1][0]) , g_3[4][4]) * (int16_t)l_73[0][1]) < g_58[1][0]) - (int16_t)g_63) << (uint16_t)9) | l_73[0][2]) * (int16_t)0x967BL);
     return l_73[0][1];
 }
@@ -72,7 +72,7 @@ static uint8_t  func_12(int32_t  p_13, int8_t  p_14, uint16_t  p_15)
         l_69[i] = 0x649E8EE0L;
     for (p_13 = (-9); (p_13 > 7); ++p_13)
     { /* block id: 36 */
-        l_61 = (0x30L & 0xC8L); //this line is the problem!!!
+        l_61 = (0x30L & 0xC8L);
     }
     l_70++;
     return p_14;

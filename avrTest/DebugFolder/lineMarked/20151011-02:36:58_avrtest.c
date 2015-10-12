@@ -50,7 +50,7 @@ static uint16_t  func_1(void)
     for (i = 0; i < 2; i++)
         l_2[i] = 0x342EL;
     for (i = 0; i < 6; i++)
-        l_74[i] = 0x07968679L;
+        l_74[i] = 0x07968679L; //this line is the problem!!!
     for (g_3[2] = 1; (g_3[2] >= 0); g_3[2] -= 1)
     { /* block id: 3 */
         int32_t l_73 = 0xC50754B4L;
@@ -73,11 +73,11 @@ static uint16_t  func_1(void)
 
 
 /* ------------------------------------------ */
-/* //this line is the problem!!!
- * reads : g_3 g_40 g_36 g_57 //this line is the problem!!!
- * writes: g_36 g_40 g_52 g_57 //this line is the problem!!!
- */ //this line is the problem!!!
-static int32_t  func_4(uint16_t  p_5, int32_t  p_6) //this line is the problem!!!
+/* 
+ * reads : g_3 g_40 g_36 g_57
+ * writes: g_36 g_40 g_52 g_57
+ */
+static int32_t  func_4(uint16_t  p_5, int32_t  p_6)
 { /* block id: 4 */
     uint32_t l_12 = 8UL;
     int32_t l_53 = 0x0E206F6EL;

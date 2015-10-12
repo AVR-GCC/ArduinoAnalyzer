@@ -48,7 +48,7 @@ static uint16_t  func_1(void)
         for (j = 0; j < 6; j++)
             l_84[i][j] = 8L;
     }
-    for (g_3[0][0] = 0; (g_3[0][0] <= 6); g_3[0][0] += 1)
+    for (g_3[0][0] = 0; (g_3[0][0] <= 6); g_3[0][0] += 1) //this line is the problem!!!
     { /* block id: 3 */
         int i;
         g_4 |= (-1L);
@@ -69,7 +69,7 @@ static uint16_t  func_1(void)
             l_89[4][2] = ((((int8_t)((g_3[0][0] = l_84[1][5]) >= l_83) * (int8_t)l_89[4][2]) & 0x75F2L) == l_89[4][2]);
         }
     }
-    else //this line is the problem!!!
+    else
     { /* block id: 43 */
         uint8_t l_94 = 1UL;
         for (g_4 = (-18); (g_4 <= (-8)); g_4++)

@@ -35,7 +35,7 @@ static uint32_t  func_1(void)
     { /* block id: 3 */
         int32_t l_9[4][6] = {{0L,0L,0L,0xC4F27D27L,(-5L),(-5L)},{0L,0xC4F27D27L,0L,(-5L),(-5L),(-5L)},{0xC4F27D27L,0xC4F27D27L,0xC4F27D27L,(-5L),0L,(-5L)},{0xC4F27D27L,(-5L),0xC4F27D27L,0L,0L,0L}};
         int i, j;
-        g_11[2] &= (((int16_t)((uint8_t)((g_2[0] & g_2[0]) > l_9[2][3]) + (uint8_t)0xA3L) * (int16_t)l_10) >= g_2[0]);
+        g_11[2] &= (((int16_t)((uint8_t)((g_2[0] & g_2[0]) > l_9[2][3]) + (uint8_t)0xA3L) * (int16_t)l_10) >= g_2[0]); //this line is the problem!!!
     }
     return l_10;
 }
@@ -61,7 +61,7 @@ int main (int argc, char* argv[])
     for (i = 0; i < 5; i++)
     {
         transparent_crc(g_11[i], "g_11[i]", print_hash_value);
-        if (print_hash_value) printf("index = [%d]\n", i); //this line is the problem!!!
+        if (print_hash_value) printf("index = [%d]\n", i);
 
     }
     platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);

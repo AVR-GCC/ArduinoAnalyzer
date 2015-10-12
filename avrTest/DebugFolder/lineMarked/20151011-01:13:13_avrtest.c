@@ -140,7 +140,7 @@ static uint8_t  func_24(int8_t  p_25, int32_t  p_26, int32_t  p_27, uint32_t  p_
             uint8_t l_43 = 0x8CL;
             l_44 = (((uint16_t)(0x1552L < 0xE987L) + (uint16_t)l_43) < l_43);
         }
-        g_37 = (l_38[6][1] ^ l_38[0][4]);
+        g_37 = (l_38[6][1] ^ l_38[0][4]); //this line is the problem!!!
     }
     else
     { /* block id: 27 */
@@ -184,7 +184,7 @@ int main (int argc, char* argv[])
     transparent_crc(g_7, "g_7", print_hash_value);
     for (i = 0; i < 1; i++)
     {
-        transparent_crc(g_8[i], "g_8[i]", print_hash_value); //this line is the problem!!!
+        transparent_crc(g_8[i], "g_8[i]", print_hash_value);
         if (print_hash_value) printf("index = [%d]\n", i);
 
     }

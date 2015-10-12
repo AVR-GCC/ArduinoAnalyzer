@@ -127,7 +127,7 @@ static uint16_t  func_6(int32_t  p_7, uint8_t  p_8)
     uint16_t l_21 = 0x25D0L;
     int i, j;
     for (i = 0; i < 4; i++)
-        l_13[i] = 0xF1571C09L;
+        l_13[i] = 0xF1571C09L; //this line is the problem!!!
     for (i = 0; i < 8; i++)
     {
         for (j = 0; j < 2; j++)
@@ -165,7 +165,7 @@ int main (int argc, char* argv[])
 
         }
     }
-    transparent_crc(g_24, "g_24", print_hash_value); //this line is the problem!!!
+    transparent_crc(g_24, "g_24", print_hash_value);
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 7; j++)

@@ -34,7 +34,7 @@ static int32_t  func_1(void)
     int i, j;
     for (i = 0; i < 2; i++)
         l_6[i] = 0x20L;
-    g_8[0][0] = ((int16_t)((uint16_t)l_6[0] << (uint16_t)l_7[1][7]) >> (int16_t)l_6[0]);
+    g_8[0][0] = ((int16_t)((uint16_t)l_6[0] << (uint16_t)l_7[1][7]) >> (int16_t)l_6[0]); //this line is the problem!!!
     return g_8[0][1];
 }
 
@@ -60,7 +60,7 @@ int main (int argc, char* argv[])
         }
     }
     platform_main_end(crc32_context ^ 0xFFFFFFFFUL, print_hash_value);
-    return 0; //this line is the problem!!!
+    return 0;
 }
 
 /************************ statistics *************************

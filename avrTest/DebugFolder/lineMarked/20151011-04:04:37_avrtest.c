@@ -43,7 +43,7 @@ static int8_t  func_1(void)
         for (l_10 = 5; (l_10 >= 0); l_10 -= 1)
         { /* block id: 7 */
             int i;
-            l_12 = ((int16_t)((uint32_t)func_18(((g_13[l_10] == 0x6EC7L) , l_22), l_23, l_11) % (uint32_t)g_2) >> (int16_t)l_11);
+            l_12 = ((int16_t)((uint32_t)func_18(((g_13[l_10] == 0x6EC7L) , l_22), l_23, l_11) % (uint32_t)g_2) >> (int16_t)l_11); //this line is the problem!!!
             l_12 = ((int8_t)(l_27 = (func_18((l_12 , l_11), g_13[1], g_13[5]) ^ 1UL)) - (int8_t)0x57L);
         }
     }
@@ -74,7 +74,7 @@ int main (int argc, char* argv[])
     if (argc == 2 && strcmp(argv[1], "1") == 0) print_hash_value = 1;
     platform_main_begin();
     crc32_gentab();
-    func_1(); //this line is the problem!!!
+    func_1();
     transparent_crc(g_2, "g_2", print_hash_value);
     for (i = 0; i < 6; i++)
     {
