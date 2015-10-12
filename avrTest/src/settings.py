@@ -17,7 +17,7 @@ flow_workFolder = home + "WorkFolder/"
 flow_outFolder = home + "DebugFolder/"
 
 FailedCFiles = home + "FailedCFiles/"
-cfiles2debug = FailedCFiles + "cfiles2debug/"
+cfiles2debug = FailedCFiles + "cfiles2Debug/"
 
 #Applications:
 #TODO use package like in flow
@@ -35,8 +35,9 @@ flow_run = home + "src/flow.py"
 tracestring = "trace.txt"
 srcFileName = "avrtest.c"
 compileOut = "compileout.txt"
+wp = "wp.c"
 
-lineChooser_srcFilePath = lineChooser_workFolder + "wp.c"
+lineChooser_srcFilePath = lineChooser_workFolder + wp
 lineChooser_gccout = "gccPrintsout.txt"
 lineChooser_gccbin = "gccWprints.o"
 lineChooser_avroutsuff = "avrPrintsout.txt"

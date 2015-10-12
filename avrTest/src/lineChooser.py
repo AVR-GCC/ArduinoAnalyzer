@@ -96,7 +96,7 @@ def compareResults():
 	avrouts = [open(workFolder + path, 'r') for path in avroutnames]
 	gccoutfile = open(workFolder + gccout, 'r')
 	gccline = "s"
-	while gccline != 0 and foundmismatch == 0:
+	while gccline.rstrip() != "" and foundmismatch == 0:
 		avrlines = [fd.readline() for fd in avrouts]
 		gccline = gccoutfile.readline()
 		print "----------" + gccline
@@ -154,6 +154,7 @@ def marklineAndSave(lindex, timestamp):
 	print lindex
 	srcFd.close()
 	outFd.close()
+	run("cp " + workFolder + wp + " " + outFolder + "wp" + timestamp, 0)
 	
 
 def addprintsrun(srcPath):
@@ -163,6 +164,7 @@ def addprintsrun(srcPath):
 
 def main():
 	for file in os.listdir(srcFolder):
+		print "now processing " + file
 		addprintsrun(srcFolder + file)
 		compileFile()
 		runFile()
