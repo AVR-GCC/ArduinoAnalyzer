@@ -21,64 +21,6 @@ avrbinsuff = lineChooser_avrbinsuff
 #compileArd(srcF,"O1","alonArd.elf")
 #avrDude("O1","alonArd.elf")
 
-
-
-#copyed
-def compileGcc():
-	print "************compileGcc************"
-	run("rm " + workFolder + gccbin, 0)
-	run("gcc -w " + srcFilePath + " -o " + workFolder + gccbin + " " + runtimeGcc, 1)
-
-#copyed
-def compileAvr():
-	print "************compileAvr************"
-	for opt in opts:
-		bin = opt + avrbinsuff
-		compileOpt(opt, bin)
-
-
-def compileOpt(opt, bin):
-	print "************compileOpt************"
-	run("rm " + workFolder + bin, 0)
-	run(avrgcc + " -w -" + opt + " -mmcu=" + dev + " " + srcFilePath + " " + runtimeAvr + " -o " + workFolder + bin, 1)
-
-
-#copyed
-def compileFile():
-	print "************compileFile************"
-	compileGcc()
-	compileAvr()
-
-#copyed
-def simulator(opt, bin):
-	print "************simulator************"
-	simstring = simulavr + " -d " + dev + " -f " + workFolder + bin + " -W0x20," + workFolder + opt + avroutsuff
-	if traceDump == 1:
-		simstring = simstring + " -t " + workFolder + opt + tracestring + " -T  __stop_program"
-	simstring = simstring + " -T  __stop_program"
-	run(simstring, 1)
-
-#copyed
-def runAvr(simulate, opt, bin):
-	print "************runAvr************"
-	if simulate == 1:
-		simulator(opt, bin)
-	if simulate == 0:
-		avrDude(opt, bin)
-
-#copyed
-def runGcc():
-	print "************runGcc************"
-	run(workFolder + gccbin + " > " + workFolder + gccout, 1)
-
-#copyed
-def runFile():
-	print "************runFile************"
-	runGcc()
-	for opt in opts:
-		optbin = opt + avrbinsuff
-		runAvr(1, opt, optbin)
-
 def compileArd(opt, bin):
 	#needs root permissions!
 	run("rm " + workFolder + bin, 0)
@@ -166,16 +108,16 @@ def main():
 	for file in os.listdir(srcFolder):
 		print "now processing " + file
 		addprintsrun(srcFolder + file)
-		compileFile()
-		runFile()
+		compileFile(workFolder, srcFilePath, gccbin, avrbinsuff)
+		runFile(workFolder, gccbin, gccout, avrbinsuff, avroutsuff)
 		lineId = compareResults()
 		marklineAndSave(id2lineNum(lineId), file)
 		print "************** " + file + " finished and the line is marked in " + outFolder
 
 def secondary(file):
 	addprintsrun(srcFolder + file)
-	compileFile()
-	runFile()
+	compileFile(workFolder, srcFilePath, gccbin, avrbinsuff)
+	runFile(workFolder, gccbin, gccout, avrbinsuff, avroutsuff)
 	lineId = compareResults()
 	marklineAndSave(id2lineNum(lineId), file)
 	print "************** " + file + " finished and the line is marked in " + outFolder
