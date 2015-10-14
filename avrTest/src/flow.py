@@ -79,11 +79,13 @@ def main(numRuns):
 			saveBug(timestamp)
 		if numRuns != 1:
 			print "------------ finished running test no {} ---------------\n".format(testsDone)
-		
-
+	
+	return foundbug
+	#return 1
 if __name__ == '__main__':
 	if len(sys.argv) == 2:
-		main(int(sys.argv[1]))
+		out = main(int(sys.argv[1]))
 	else:
-		main(-1)
+		out = main(-1)
+	exit(out)
 

@@ -112,25 +112,38 @@ class Console(cmd.Cmd):
 	#run once
 	def do_flow_run_once(self, line):
 		"runs flow for 1 iteration, [usage] flow_run_once"
-		Console.do_flow_run_n(self, "1");
+		return Console.do_flow_run_n(self, "1");
 
 	#run n times
 	def do_flow_run_n(self, line):
 		"runs flow for # iterations, [usage] flow_run_n #"
 		if line:
 			if line.isdigit():
-				os.system("python " + flow_run + " " + line)
-				return
+				out = os.system("python " + flow_run + " " + line)
+				print out
+				return int(out)
 		print "input not digit"
 	#run indefenatly
 	def do_flow_run_inf(self, line):
 		"runs flow indefenatly, [usage] flow_run_inf"
 		testNum = 1
+		bugNum = 0
+		failNum = 0
 		while 1:
 			print "=================== starting test number {} ===================".format(testNum)
-			Console.do_flow_run_once(self, line)
-			print "=================== finished test number {} ===================".format(testNum)
+			out = Console.do_flow_run_once(self, line)
+			#foundBug
+			if out==256:
+				bugNum = bugNum + 1
+			#failed
+			if out==768:
+				failNum = failNum + 1
+
+			print "=================== finished test number {0}, {1} bugs, {2} failed ===================".format(testNum,bugNum,failNum)
 			testNum = testNum + 1
+			#ctrl-C
+			if out==2:
+				break
 
 ## Debug
 	#catagorize

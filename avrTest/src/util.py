@@ -33,7 +33,7 @@ def run(cmd, exitOnFail, runSafely=1):
 		print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n" + cmd + "\n\t\t\tFAILED\n" + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"      
 		if(exitOnFail):
 			print "exiting...\n"
-			sys.exit()
+			sys.exit(3)
 
 def compileGcc(wf, sfp, gccb):
 	print "************compileGcc************"
