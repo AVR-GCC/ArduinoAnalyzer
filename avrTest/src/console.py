@@ -4,7 +4,7 @@ import catagorize
 from settings import *
 import flow
 import lineChooser
-
+import util
 class Console(cmd.Cmd):
 	
 	
@@ -42,19 +42,71 @@ class Console(cmd.Cmd):
 ## Utilities
 	#compile & run - gcc/avr/ard w/ opt flags input_file output_file
 	def do_compile_run_gcc(self, line):
-		"compiles using GCC & runs program, [usage] compile_run_gcc <opt_flag> <.c file> <out.txt file>"
-		#TODO call gcc-compile
-		#TODO call gcc-run
+		"compiles using GCC & runs program, [usage] compile_run_gcc <.c file>"
+		c_path = line.split(" ")[0]
+		
+		c_dir = os.path.split(c_path)[0] + "/"
+		c_file = os.path.split(c_path)[1]
+
+		out_file = "tempgcc.out"
+		out_path = os.path.join(c_dir,out_file)
+		out_print = 1
+
+		bin_file = "temp.gcc"
+		#call gcc-compile
+		util.compileGcc(c_dir, c_path, bin_file)
+		#call gcc-run
+		util.runGcc(c_dir, bin_file, out_file)
+		
+		if out_print:
+			output = os.popen("cat " + out_path).read()
+			print output
 
 	def do_compile_run_avr(self, line):
-			"compiles using AVR-GCC & runs simlavr, [usage] compile_run_avr <opt_flag> <.c file> <out.txt file>"
-		#TODO call avr-compile
-		#TODO call avr-run
+		"compiles using AVR-GCC & runs simlavr, [usage] compile_run_avr <.c file> <opt_flag>"
+		c_path = line.split(" ")[0]
+		opt_flag = line.split(" ")[1]
+
+		c_dir = os.path.split(c_path)[0] + "/"
+		c_file = os.path.split(c_path)[1]
+
+		out_file = "tempavr.out"
+		out_path = os.path.join(c_dir,out_file)
+		out_print = 1
+
+		bin_file = "temp.avr"
+		#call avr-compile
+		util.compileOpt(opt_flag, bin_file, c_dir, c_path)
+		#call avr-run
+		util.runAvr(1, "", bin_file, c_dir, out_file)
+		
+		if out_print:
+			output = os.popen("cat " + out_path).read()
+			print output
 
 	def do_compile_run_arduino(self, line):
-			"compiles using arduino_compile & uploads using arduino_dude, [usage] compile_run_gcc <opt_flag> <.c file> <out.txt file>"
-		#TODO call ard-compile
-		#TODO call ard-run
+		"compiles using arduino_compile & uploads using arduino_dude, [usage] compile_run_gcc <.c file> <opt_flag>"
+		
+		c_path = line.split(" ")[0]
+		opt_flag = line.split(" ")[1]
+
+		c_dir = os.path.split(c_path)[0] + "/"
+		c_file = os.path.split(c_path)[1]
+
+		out_file = "tempard.out"
+		out_path = os.path.join(c_dir,out_file)
+		out_print = 1
+
+		bin_file = "temp.ard"
+		#call Arduino-compile
+		util.compileArd(opt_flag, bin_file, c_dir, c_path)
+		#call Arduino-run
+		util.runAvr(0, "", bin_file, c_dir, out_file)
+		
+		if out_print:
+			output = os.popen("cat " + out_path).read()
+			print output
+
 
 ## Flow
 	#run once

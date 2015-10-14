@@ -16,21 +16,6 @@ gccbin = lineChooser_gccbin
 avroutsuff = lineChooser_avroutsuff 
 avrbinsuff = lineChooser_avrbinsuff 
 
-#Example of run:
-#srcF = "/home/student/avr/avrTest/FailedCFiles/20150825-16:53:56/avrtest.c"
-#compileArd(srcF,"O1","alonArd.elf")
-#avrDude("O1","alonArd.elf")
-
-def compileArd(opt, bin):
-	#needs root permissions!
-	run("rm " + workFolder + bin, 0)
-	#arguments: 1-srcFile,  2-opt flag,3-device, 4-com, 5-out_file 
-	run(ardgcc + " " + srcFilePath + " " + opt + " " + devArd + " " + com + " " + workFolder + bin + " " + ard_home + " " + runtime_ard, 1)
-
-
-def avrDude(opt, bin):
-	#arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
-	run(arddude + " " + workFolder + bin + " " + devArd + " " + com + " " + workFolder + opt + avroutsuff + " " + ard_home, 1)
 
 def compareResults():
 	foundmismatch = 0
@@ -100,7 +85,7 @@ def marklineAndSave(lindex, timestamp):
 	
 
 def addprintsrun(srcPath):
-	run("rm " + srcFilePath, 0)
+	run("rm -f " + srcFilePath, 0)
 	#run("python " + insertPrints + " " + srcPath + " " + srcFilePath, 1)
 	addprints.addprints(srcPath, srcFilePath)
 

@@ -21,11 +21,14 @@ def nae(optouts):
 		return 1
 	return res
 
-def run(cmd, exitOnFail):
+def run(cmd, exitOnFail, runSafely=1):
 	print("running " + cmd + "\n")
 	#out = os.system(cmd)
 	thrd = command.Command(cmd)
-	out = thrd.run(timeout=5)
+	if runSafely:
+		out = thrd.run(timeout=5)
+	else:
+		out = thrd.run(None)
 	if(out != 0):
 		print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n" + cmd + "\n\t\t\tFAILED\n" + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"      
 		if(exitOnFail):
@@ -34,7 +37,7 @@ def run(cmd, exitOnFail):
 
 def compileGcc(wf, sfp, gccb):
 	print "************compileGcc************"
-	run("rm " + wf + gccb, 0)
+	run("rm -f " + wf + gccb, 0)
 	run("gcc " + sfp + " -o " + wf + gccb + " " + runtimeGcc, 1)
 
 def compileAvr(wf, sfp, avrbs):
@@ -46,7 +49,7 @@ def compileAvr(wf, sfp, avrbs):
 
 def compileOpt(opt, bin, wf, sfp):
 	print "************compileOpt************"
-	run("rm " + wf + bin, 0)
+	run("rm -f " + wf + bin, 0)
 	run(avrgcc + " -" + opt + " -mmcu=" + dev + " " + sfp + " " + runtimeAvr + " -o " + wf + bin, 1)
 
 def compileFile(wf, sfp, gccb, avrbs):
@@ -79,3 +82,14 @@ def runFile(wf, gccb, gcco, avrbs, avros):
 	for opt in opts:
 		optbin = opt + avrbs
 		runAvr(1, opt, optbin, wf, avros)
+
+
+def compileArd(opt, bin, wf, sfp):
+	#needs root permissions!
+	run("rm -f " + wf + bin, 0)
+	#arguments: 1-srcFile,  2-opt flag,3-device, 4-com, 5-out_file 
+	run(ardgcc + " " + sfp + " " + opt + " " + devArd + " " + com + " " + wf + bin + " " + ard_home + " " + runtime_ard, 1,0)
+
+def avrDude(opt, bin, wf, avros):
+	#arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
+	run(arddude + " " + wf + bin + " " + devArd + " " + com + " " + wf + opt + avros + " " + ard_home, 1,0)
