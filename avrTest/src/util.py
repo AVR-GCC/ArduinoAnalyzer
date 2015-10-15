@@ -38,7 +38,7 @@ def run(cmd, exitOnFail, runSafely=1):
 def compileGcc(wf, sfp, gccb):
 	print "************compileGcc************"
 	run("rm -f " + wf + gccb, 0)
-	run("gcc " + sfp + " -o " + wf + gccb + " " + runtimeGcc, 1)
+	run("gcc " + "-w " + sfp + " -o " + wf + gccb + " " + runtimeGcc, 1)
 
 def compileAvr(wf, sfp, avrbs):
 	print "************compileAvr************"
@@ -50,7 +50,7 @@ def compileAvr(wf, sfp, avrbs):
 def compileOpt(opt, bin, wf, sfp):
 	print "************compileOpt************"
 	run("rm -f " + wf + bin, 0)
-	run(avrgcc + " -" + opt + " -mmcu=" + dev + " " + sfp + " " + runtimeAvr + " -o " + wf + bin, 1)
+	run(avrgcc +" -w " + " -" + opt + " -mmcu=" + dev + " " + sfp + " " + runtimeAvr + " -o " + wf + bin, 1)
 
 def compileFile(wf, sfp, gccb, avrbs):
 	print "************compileFile************"

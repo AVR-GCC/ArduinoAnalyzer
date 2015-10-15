@@ -35,6 +35,8 @@ def compareResults():
 			(gccchecksum, idgcc) = gccline.split('$')
 			avrchecksums += [gccchecksum]
 			foundmismatch = nae(avrchecksums)
+			if debug:
+				print "DEBUG: nae mismatch opt - {}".format(foundmismatch)
 	return int(idgcc.rstrip())
 		
 def id2lineNum(idgcc):
@@ -56,11 +58,11 @@ def id2lineNum(idgcc):
 	# 	pass
 	return idgcc
 
-def marklineAndSave(lindex, timestamp):
+def marklineAndSave(lindex, timestamp, sf, of):
 	print lindex
-	srcFd = open(srcFolder + timestamp, 'r')
+	srcFd = open(sf + timestamp, 'r')
 	#notInComment = 1
-	with open(outFolder + timestamp, "w+") as outFd:
+	with open(of + "m"+ timestamp, "w+") as outFd:
 		i = 1
 		for line in srcFd:
 			#print str(i) + " == " + str(lindex)
@@ -69,7 +71,8 @@ def marklineAndSave(lindex, timestamp):
 				print line.rstrip() + " //this line is the problem!!!\n"
 			else:
 				outFd.write(line)
-			print line + str(i)
+			if debug:
+				print line
 			#if('/*' in line):
 			#	notInComment = 0
 			#if('*/' in line):
@@ -81,7 +84,7 @@ def marklineAndSave(lindex, timestamp):
 	print lindex
 	srcFd.close()
 	outFd.close()
-	run("cp " + workFolder + wp + " " + outFolder + "wp" + timestamp, 0)
+	run("cp " + workFolder + wp + " " + of + "wp" + timestamp, 0)
 	
 
 def addprintsrun(srcPath):
@@ -96,15 +99,18 @@ def main():
 		compileFile(workFolder, srcFilePath, gccbin, avrbinsuff)
 		runFile(workFolder, gccbin, gccout, avrbinsuff, avroutsuff)
 		lineId = compareResults()
-		marklineAndSave(id2lineNum(lineId), file)
+		marklineAndSave(id2lineNum(lineId), file, srcFolder, outFolder)
 		print "************** " + file + " finished and the line is marked in " + outFolder
 
 def secondary(file):
-	addprintsrun(srcFolder + file)
+	addprintsrun(file)
 	compileFile(workFolder, srcFilePath, gccbin, avrbinsuff)
 	runFile(workFolder, gccbin, gccout, avrbinsuff, avroutsuff)
 	lineId = compareResults()
-	marklineAndSave(id2lineNum(lineId), file)
+	sf=os.path.split(file)[0] + "/"
+	file_name=os.path.split(file)[1]
+	of=sf
+	marklineAndSave(id2lineNum(lineId), file_name, sf, of)
 	print "************** " + file + " finished and the line is marked in " + outFolder
 
 

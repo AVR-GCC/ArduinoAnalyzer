@@ -33,7 +33,7 @@ class AssignmentVisitor(NodeVisitor):
                 typename_obj = Typename(None,[],typedecl_obj)
                 id_obj = ID("k")
                 cast_obj = Cast(typename_obj,id_obj)
-                newfc=FuncCall(ID("sprintf"),ExprList([ID("str"),Constant('string',r'''"%lu$%lu\n"'''),cast_obj,ID("(int32_t) count")]))
+                newfc=FuncCall(ID("sprintf"),ExprList([ID("str"),Constant('string',r'''"%d$%d\n"'''),cast_obj,ID("count")]))
                 return newfc
 
 

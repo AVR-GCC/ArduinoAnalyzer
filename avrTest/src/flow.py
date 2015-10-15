@@ -80,7 +80,7 @@ def main(numRuns):
 		if numRuns != 1:
 			print "------------ finished running test no {} ---------------\n".format(testsDone)
 	
-	return foundbug
+	return (foundbug!=0)
 	#return 1
 if __name__ == '__main__':
 	if len(sys.argv) == 2:
