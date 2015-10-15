@@ -1,4 +1,15 @@
 
+# *****************************************************************
+# **                                                             **
+# **  ======***=== AVR-GCC bug seeker ===***======               **
+# **                                                             **
+# **  an interactive tool for testing avr C tools                **
+# **                   settings.py:                              **
+# ** utility functions such as compile file, run file and run    **
+# ** command.                                                    **
+# ***************************************************************** 
+
+
 import os
 import sys
 import command
@@ -26,7 +37,7 @@ def run(cmd, exitOnFail, runSafely=1):
 	#out = os.system(cmd)
 	thrd = command.Command(cmd)
 	if runSafely:
-		out = thrd.run(timeout=5)
+		out = thrd.run(timeout=10)
 	else:
 		out = thrd.run(None)
 	if(out != 0):
@@ -57,31 +68,31 @@ def compileFile(wf, sfp, gccb, avrbs):
 	compileGcc(wf, sfp, gccb)
 	compileAvr(wf, sfp, avrbs)
 
-def simulator(opt, bin, wf, avros):
+def simulator(opt, bin, wf, avros, runSafely):
 	print "************simulator************"
 	simstring = simulavr + " -d " + dev + " -f " + wf + bin + " -W0x20," + wf + opt + avros
 	if traceDump == 1:
 		simstring = simstring + " -t " + wf + opt + tracestring
 	simstring = simstring + " -T  __stop_program"
-	run(simstring, 1)
+	run(simstring, 0, runSafely)
 
-def runAvr(simulate, opt, bin, wf, avros):
+def runAvr(simulate, opt, bin, wf, avros, runSafely):
 	print "************runAvr************"
 	if simulate == 1:
-		simulator(opt, bin, wf, avros)
+		simulator(opt, bin, wf, avros, runSafely)
 	if simulate == 0:
 		avrDude(opt, bin, wf, avros)
 
-def runGcc(wf, gccb, gcco):
+def runGcc(wf, gccb, gcco, runSafely):
 	print "************runGcc************"
-	run(wf + gccb + " > " + wf + gcco, 1)
+	run(wf + gccb + " > " + wf + gcco, 1, runSafely)
 
-def runFile(wf, gccb, gcco, avrbs, avros):
+def runFile(wf, gccb, gcco, avrbs, avros, runSafely):
 	print "************runFile************"
-	runGcc(wf, gccb, gcco)
+	runGcc(wf, gccb, gcco, runSafely)
 	for opt in opts:
 		optbin = opt + avrbs
-		runAvr(1, opt, optbin, wf, avros)
+		runAvr(1, opt, optbin, wf, avros, runSafely)
 
 
 def compileArd(opt, bin, wf, sfp):

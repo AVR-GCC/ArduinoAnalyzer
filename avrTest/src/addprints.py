@@ -1,4 +1,16 @@
 
+# *****************************************************************
+# **                                                             **
+# **  ======***=== AVR-GCC bug seeker ===***======               **
+# **                                                             **
+# **  an interactive tool for testing avr C tools                **
+# **                   addprints.py:                             **
+# ** uses pycparser to insert debug prints automatically, adds a **
+# ** print for each assignment in the code, to print the checksum**
+# ** and the id of the assignment line in the original source    **
+# ** file.                                                       **
+# ***************************************************************** 
+
 from pycparser import parse_file, c_parser, c_generator
 from pycparser.c_ast import *
 from copy import deepcopy

@@ -1,3 +1,13 @@
+
+# *****************************************************************
+# **                                                             **
+# **  ======***=== AVR-GCC bug seeker ===***======               **
+# **                                                             **
+# **  an interactive tool for testing avr C tools                **
+# **                    console.py:                              **
+# ** an all in one interface for AVR-GCC bug seeker.             **
+# ***************************************************************** 
+
 import cmd
 import os
 import catagorize

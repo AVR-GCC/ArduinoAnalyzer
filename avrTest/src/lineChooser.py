@@ -1,3 +1,16 @@
+
+# *****************************************************************
+# **                                                             **
+# **  ======***=== AVR-GCC bug seeker ===***======               **
+# **                                                             **
+# **  an interactive tool for testing avr C tools                **
+# **                  lineChooser.py:                            **
+# ** periodically takes a c file that has been found to have a   **
+# ** bug and chooses the line in which the bug first appeared.   **
+# ** to do so it uses utility functions and its own compare      **
+# ** function.                                                   **
+# ***************************************************************** 
+
 import os
 import sys
 
@@ -38,7 +51,11 @@ def compareResults():
 			if debug:
 				print "DEBUG: nae mismatch opt - {}".format(foundmismatch)
 	return int(idgcc.rstrip())
-		
+
+def structFile(fp):
+	fd = open(fp, 'r').read()
+	return ("struct S0 {" in fd)	
+
 def id2lineNum(idgcc):
 	# i = 0
 	# foundFirst = 0
@@ -89,15 +106,16 @@ def marklineAndSave(lindex, timestamp, sf, of):
 
 def addprintsrun(srcPath):
 	run("rm -f " + srcFilePath, 0)
-	#run("python " + insertPrints + " " + srcPath + " " + srcFilePath, 1)
 	addprints.addprints(srcPath, srcFilePath)
 
 def main():
 	for file in os.listdir(srcFolder):
+		if(structFile(srcFolder + file)):
+			continue
 		print "now processing " + file
 		addprintsrun(srcFolder + file)
 		compileFile(workFolder, srcFilePath, gccbin, avrbinsuff)
-		runFile(workFolder, gccbin, gccout, avrbinsuff, avroutsuff)
+		runFile(workFolder, gccbin, gccout, avrbinsuff, avroutsuff, 1)
 		lineId = compareResults()
 		marklineAndSave(id2lineNum(lineId), file, srcFolder, outFolder)
 		print "************** " + file + " finished and the line is marked in " + outFolder

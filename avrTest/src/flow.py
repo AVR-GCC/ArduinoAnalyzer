@@ -1,4 +1,15 @@
 
+# *****************************************************************
+# **                                                             **
+# **  ======***=== AVR-GCC bug seeker ===***======               **
+# **                                                             **
+# **  an interactive tool for testing avr C tools                **
+# ** 					flow.py:                                 **
+# ** this file holds the functionality of the basic bug finding, **
+# ** it generates the code using csmith, then compiles and runs  **
+# ** (using utility functions) then compares the results and     **
+# ** saves the code if a bug is found.                           **
+# ***************************************************************** 
 import os
 import sys
 import datetime
@@ -15,7 +26,6 @@ from util import *
 from settings import *
 srcFolder = flow_srcFolder 
 workFolder = flow_workFolder 
-outFolder = flow_outFolder 
 srcFilePath = flow_srcFilePath 
 gccout = flow_gccout 
 gccbin = flow_gccbin 
