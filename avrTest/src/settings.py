@@ -1,13 +1,18 @@
-#
-# Setting for AVR-GCC tester
-#
-#
+# *****************************************************************
+# **                                                             **
+# **  ======***=== AVR-GCC bug seeker ===***======               **
+# **                                                             **
+# **  an interactive tool for testing avr C tools                **
+# **                   settings.py:                              **
+# ** the parameters file for all other files.                     **
+# ***************************************************************** 
+
 
 debug =0
 #Folders:
-#home = "/home/student/AVRfinal/avrTest/"
+home = "/home/student/AVRfinal/avrTest/"
 
-home = "/home/student/avr/public/avrTest/"
+#home = "/home/student/avr/public/avrTest/"
 csmith = home + "Utils/csmith-2.2.0/"
 
 lineChooser_srcFolder = home + "FailedCFiles/cfiles2Debug/"
@@ -15,7 +20,6 @@ lineChooser_workFolder = home + "DebugFolder/"
 lineChooser_outFolder = home + "DebugFolder/lineMarked/"
 flow_srcFolder = home + "WorkFolder/"
 flow_workFolder = home + "WorkFolder/"
-flow_outFolder = home + "DebugFolder/"
 
 FailedCFiles = home + "FailedCFiles/"
 cfiles2debug = FailedCFiles + "cfiles2Debug/"

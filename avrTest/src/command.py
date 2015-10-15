@@ -1,3 +1,14 @@
+
+# *****************************************************************
+# **                                                             **
+# **  ======***=== AVR-GCC bug seeker ===***======               **
+# **                                                             **
+# **  an interactive tool for testing avr C tools                **
+# **                    command.py:                              **
+# ** in order to keep the flow running despite the infinite loops**
+# ** that generated programs some times produce, using command.py**
+# ***************************************************************** 
+
 import subprocess, threading
 
 class Command(object):
@@ -15,7 +26,7 @@ class Command(object):
 
         thread.join(timeout)
         if thread.is_alive():
-            print 'process timed out... 5 secs or more... terminating flow'
+            print 'process timed out... 10 secs or more... terminating'
             self.process.terminate()
             thread.join()
         return self.process.returncode
