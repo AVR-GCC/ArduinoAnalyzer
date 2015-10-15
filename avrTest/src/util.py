@@ -103,4 +103,4 @@ def compileArd(opt, bin, wf, sfp):
 
 def avrDude(opt, bin, wf, avros):
 	#arguments: 1-srcFile, 2-device, 3-com, 4-checksum_out_file 
-	run(arddude + " " + wf + bin + " " + devArd + " " + com + " " + wf + opt + avros + " " + ard_home, 1,0)
+	run(arddude + " " + wf + bin + " " + devArd + " " + com + " " + wf + opt + avros + " " + ard_home, 1, 0)

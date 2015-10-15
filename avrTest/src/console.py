@@ -53,6 +53,11 @@ class Console(cmd.Cmd):
 	#compile & run - gcc/avr/ard w/ opt flags input_file output_file
 	def do_compile_run_gcc(self, line):
 		"compiles using GCC & runs program, [usage] compile_run_gcc <.c file>"
+
+		if (len(line.split(" ")) != 1):
+			print "try: help compile_run_gcc"
+			return
+
 		c_path = line.split(" ")[0]
 		
 		c_dir = os.path.split(c_path)[0] + "/"
@@ -66,7 +71,7 @@ class Console(cmd.Cmd):
 		#call gcc-compile
 		util.compileGcc(c_dir, c_path, bin_file)
 		#call gcc-run
-		util.runGcc(c_dir, bin_file, out_file)
+		util.runGcc(c_dir, bin_file, out_file, 1)
 		
 		if out_print:
 			output = os.popen("cat " + out_path).read()
@@ -74,6 +79,9 @@ class Console(cmd.Cmd):
 
 	def do_compile_run_avr(self, line):
 		"compiles using AVR-GCC & runs simlavr, [usage] compile_run_avr <.c file> <opt_flag>"
+		if (len(line.split(" ")) != 2):
+			print "try: help compile_run_avr"
+			return
 		c_path = line.split(" ")[0]
 		opt_flag = line.split(" ")[1]
 
@@ -88,7 +96,7 @@ class Console(cmd.Cmd):
 		#call avr-compile
 		util.compileOpt(opt_flag, bin_file, c_dir, c_path)
 		#call avr-run
-		util.runAvr(1, "", bin_file, c_dir, out_file)
+		util.runAvr(1, "", bin_file, c_dir, out_file, 1)
 		
 		if out_print:
 			output = os.popen("cat " + out_path).read()
@@ -111,7 +119,7 @@ class Console(cmd.Cmd):
 		#call Arduino-compile
 		util.compileArd(opt_flag, bin_file, c_dir, c_path)
 		#call Arduino-run
-		util.runAvr(0, "", bin_file, c_dir, out_file)
+		util.runAvr(0, "", bin_file, c_dir, out_file, 1)
 		
 		if out_print:
 			output = os.popen("cat " + out_path).read()
